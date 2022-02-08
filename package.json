@@ -9,7 +9,9 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "eslint \"src/**/*.+{js|jsx}\"",
+    "format": "prettier \"src/**/*.+{js|jsx}\" --write"
   },
   "dependencies": {
     "gatsby": "^4.0.0",
@@ -30,6 +32,19 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.3",
     "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/src/**/*.{js,jsx}": [
+      "npm run lint --fix",
+      "npm run format"
+    ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react"],
+  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react", "plugin:react-hooks/recommended"],
   "env": {
     "browser": true,
     "commonjs": true,
@@ -7,7 +7,53 @@
     "jest": true,
     "node": true
   },
+  "plugins": [
+    "react",
+    "prettier",
+    "react-hooks",
+    "eslint-plugin-import-helpers",
+    "eslint-plugin-node"
+  ],
   "rules": {
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }]
+    "prettier/prettier": "error",
+
+    "no-console": "off",
+    "lines-between-class-members": "off",
+    "class-methods-use-this": "off",
+    "no-plusplus": "off",
+    "space-before-function-paren": "off",
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off",
+    "no-useless-constructor": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": "off",
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+
+    "import/prefer-default-export": "off",
+    "import/no-dynamic-require": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          "/^@shared/",
+          ["/^@components/", "/^@models/"],
+          "/public/",
+          ["parent", "sibling", "index"]
+        ]
+      }
+    ]
   }
 }

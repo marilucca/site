@@ -1,0 +1,27 @@
+---
+title: "São Paulo: cidade da intolerância, ou o urbanismo \"à brasileira\""
+date: "2018-01-20T20:05:00.000Z"
+tags:
+  - "São Paulo"
+  - "Urbanismo"
+featuredImage: "./first.jpg"
+---
+
+![Foto da cidade de São Paulo](./first.jpg)
+
+A história mostra que as cidades sempre tiveram conflitos e que a desigualdade social esteve presente em todos os momentos. São Paulo é um exemplo. A cidade evidencia os conflitos capitalistas juntamente com os problemas do subdesenvolvimento. Precisamos lembrar que a urbanização depende da relação entre Estado, mercado e sociedade. E o conflito aparece justamente aí. O mercado procura o lucro, com a compra de terras privilegiadas e suas posteriores valorizações. Enquanto a sociedade se interessa pelo uso da terra. Só que o poder está do lado de quem tem mais dinheiro, e as melhores áreas acabam caindo nas mãos das classes dominantes. E nesse meio o Estado deveria entrar e intervir, promovendo uma democrática distribuição de terras. Mas na verdade, o Estado acaba por aumentar a desigualdade e valorizar ainda mais as áreas. Como isso acontece? Uma terra mais valorizada se encontra num lugar mais central da cidade, perto de transporte público, com acesso a saneamento, água, luz, obras de infraestrutura em geral, e o responsável por todas essas obras em áreas específicas é o próprio Estado, ou seja, ele acaba por criar uma urbanização injusta, quando deveria investir em uma urbanização mais homogênea pensando no contexto geral de cidade, das áreas centrais até as mais afastadas, garantindo o retorno do dinheiro público á sociedade.
+
+
+Em São Paulo, o Estado não promoveu uma urbanização linear e a cidade se desenvolveu na “modernização excludente”, um crescimento econômico acompanhado da manutenção da pobreza. Áreas muito beneficiadas pelo poder público e outras abandonadas pelo descaso. Um centro rico e uma periferia pobre. O padrão urbanístico criado nas periferias foi o assentamento precário, vulnerável as calamidades naturais e na maioria das vezes irregular. Não fazia sentido. Devemos lembrar também que a mão de obra ativa morando longe do centro significa uma contramão logística, mas o Estado permitiu tal subdesenvolvimento. No entanto o problema de planejamento de São Paulo não deve passar apenas pela periferia. O lado rico também é responsável por grandes problemas nas metrópoles, e provavelmente os maiores. Muros gigantes que eliminam a vitalidade das ruas. Impermeabilização dos solos (garagens e estacionamentos feitos de concreto não podem absorver a água da chuva) contribuindo com os alagamentos. Favorecimento do automóvel e consequentemente de obras viárias para o transporte privado, deixando o transporte público de lado (um carro leva 4 pessoas, um ônibus 40, cadê a mobilidade urbana?). No fim, muita liberdade ao mercado imobiliário e pouca gestão urbana inteligente.
+
+
+O culpado da urbanização desigual é sim o Estado, junto com a indiferença da cidade em achar que ela se move sozinha por cima, e não depende da mão de obra pobre que a constrói por baixo. Vemos um desprezo e uma desconsideração com as condições de vida da população da periferia. Em fortes palavras: segregação dos mais pobres. A cidade moderna, da elite, não pode ser ameaçada pelo cenário de pobreza. Tanto que muitas ações e atitudes já foram vistas levando em conta essa conversa. Moradores de bairros e condomínios de classe média alta protestando contra a construção de conjuntos habitacionais perto de seus endereços. Ditam quem pode ou não se tornar seus vizinhos. Estranho.
+
+
+Contudo, seria possível contornar o mau planejamento e criar novas diretrizes. Não seriam soluções para todos os problemas, mas melhorariam as condições da cidade. Começaríamos com a “reforma urbana”, – um movimento comprometido em mobilizar diversos setores da sociedade na busca por uma cidade mais justa. Algumas iniciativas básicas já foram tomadas, como por exemplo, permitir e garantir o acesso de todas as pessoas da periferia à saúde e à educação, começando um processo para diminuir o abismo que existe entre os dois lados da cidade. Aparecem também os instrumentos urbanísticos do Estatuto da Cidade, que funcionariam como um caminho para a reversão da injustiça urbana no Brasil, mas que por enquanto mantêm o desequilíbrio. E muitos projetos de infraestrutura urbana que poderiam melhorar as cidades, como as “Operações Urbanas”, são voltados apenas para as classes de alto padrão. Será um longo e difícil caminho, o Estado dificulta a transformação do meio urbano porque tal reforma poderia mudar o estilo de vida daqueles que comandam o poder público. Algo inimaginável é claro.
+
+
+Portanto a grande questão da transformação está na política e na mudança do pensamento singular das pessoas. O coletivo tem que se sobrepor para haver uma melhora nos setores que necessitam. As prioridades das políticas públicas precisam mudar e os investimentos devem ser direcionados às periferias, construindo um novo planejamento urbano, que priorize a igualdade e tente acabar com os problemas da metrópole, mesmo que seja um sacrifício de começo. O planejamento territorial e a integração de ideias são soluções, mas devemos tomar cuidado com a modernidade e o desenvolvimento. Tais processos não podem prejudicar e excluir os mais pobres, isso resultaria numa “tragédia urbana ainda maior”. Precisamos reciclar nossa urbanização
+
+
+Por J. Whitaker Ferreira

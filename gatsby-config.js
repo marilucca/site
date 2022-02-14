@@ -3,8 +3,15 @@ module.exports = {
     title: `Seiva Júnior`,
     description: `Seiva Júnior Consultoria em Sustentabilidade`,
     siteUrl: `https://seivajr.com`,
-    // social: {
-    // },
+    author: {
+      name: 'Seiva Júnior',
+      summary: 'Consultoria em Sustentabilidade',
+    },
+    social: {
+      instagram: 'seivajr',
+      facebook: 'seivajr',
+      linkedin: 'seivajr',
+    },
   },
 
   plugins: [
@@ -33,33 +40,6 @@ module.exports = {
         custom: [],
       },
     },
-    `gatsby-plugin-image`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          // {
-          //   resolve: `gatsby-remark-images`,
-          //   options: {
-          //     maxWidth: 630,
-          //   },
-          // },
-          // {
-          //   resolve: `gatsby-remark-responsive-iframe`,
-          //   options: {
-          //     wrapperStyle: `margin-bottom: 1.0725rem`,
-          //   },
-          // },
-          // `gatsby-remark-prismjs`,
-          // `gatsby-remark-copy-linked-files`,
-          // `gatsby-remark-smartypants`,
-        ],
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     // {
     //   resolve: `gatsby-plugin-feed`,
     //   options: {
@@ -117,7 +97,6 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`,
       },
     },
     {
@@ -125,6 +104,33 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/static/images`,
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
+          // {
+          //   resolve: `gatsby-remark-responsive-iframe`,
+          //   options: {
+          //     wrapperStyle: `margin-bottom: 1.0725rem`,
+          //   },
+          // },
+          // `gatsby-remark-prismjs`,
+          // `gatsby-remark-copy-linked-files`,
+          // `gatsby-remark-smartypants`,
+        ],
       },
     },
   ]

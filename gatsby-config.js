@@ -133,5 +133,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-anchor-links`
   ]
 };

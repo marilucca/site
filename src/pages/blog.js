@@ -12,7 +12,7 @@ const Blog = ({ data }) => {
     return (
       <Layout>
         <section className="pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
-          <Seo title="All posts" />
+          <Seo title="Blog" />
           {/* <Bio /> */}
           <p>
             Ainda não possuimos nenhum texto em nosso blog. Logo adicionaremos mais textos.

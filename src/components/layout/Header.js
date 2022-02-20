@@ -1,6 +1,5 @@
 import React from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { Link } from 'gatsby';
 import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
 
@@ -16,24 +15,24 @@ const Header = () => (
         </AnchorLink>
       </div>
       <div className="flex mt-4 sm:mt-0">
-        <AnchorLink className="px-4" to="/#features">
-          Features
+        <AnchorLink className="px-4" to="/">
+          Início
         </AnchorLink>
-        <AnchorLink className="px-4" to="/#services">
-          Services
+        <AnchorLink className="px-4" to="/sobre">
+          Sobre
         </AnchorLink>
-        <AnchorLink className="px-4" to="/#stats">
-          Stats
+        <AnchorLink className="px-4" to="/portfolio">
+          Portfólio
         </AnchorLink>
-        <AnchorLink className="px-4" to="/#testimonials">
-          Testimonials
+        <AnchorLink className="px-4" to="/processo-seletivo">
+          Processo Seletivo
         </AnchorLink>
         <AnchorLink className="px-4" to="/blog">
           Blog
         </AnchorLink>
       </div>
       <div className="hidden md:block">
-        <Button className="text-sm">Start Free Trial</Button>
+        <Button className="text-sm">Entre em Contato</Button>
       </div>
     </div>
   </header>

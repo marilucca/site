@@ -7,22 +7,21 @@ const sizes = {
   xl: `py-5 px-16 text-lg`
 };
 
-const Button = ({ children, className = '', size, to }) => {
+const OutlinedButton = ({ children, className = '', size, to }) => {
   return (
     <AnchorLink
       className={`
         ${sizes[size] || sizes.default}
         ${className}
-        bg-primary
-        hover:bg-primary-darker
         border-solid
         border-4
         border-primary
         hover:border-primary-darker
         rounded
-        text-white
-        hover:text-white
+        text-primary
+        hover:text-primary-darker
         font-bold
+        cursor-pointer
     `}
       to={to}
     >
@@ -31,4 +30,4 @@ const Button = ({ children, className = '', size, to }) => {
   );
 };
 
-export default Button;
+export default OutlinedButton;

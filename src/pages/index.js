@@ -1,31 +1,35 @@
 import React from 'react';
 import Button from '../components/Button';
+import OutlinedButton from '../components/OutlinedButton';
 import Card from '../components/Card';
 import CustomerCard from '../components/CustomerCard';
 import LabelText from '../components/LabelText';
 import Layout from '../components/layout/Layout';
 import SplitSection from '../components/SplitSection';
+import Seo from '../components/Seo';
 import StatsBox from '../components/StatsBox';
+import ContactForm from '../components/ContactForm';
 import customerData from '../data/customer-data';
 import HeroImage from '../svg/HeroImage';
 import SvgCharts from '../svg/SvgCharts';
 
 const Index = () => (
   <Layout>
+    <Seo title="Início" />
     <section className="pt-20 md:pt-40">
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            Main title of your landing page
+            Ideias sustentáveis integrando o mundo
           </h1>
           <p className="text-xl lg:text-2xl mt-6 font-light">
-            Free landing page template to promote your business startup and generate leads for the
-            offered services
+            A Seiva Jr. acredita que, juntos, podemos tornar o mundo mais sustentável, criando uma relação de respeito com o meio ambiente.
+            É possível fazer as coisas de um jeito diferente!
           </p>
           <p className="mt-8 md:mt-12">
-            <Button size="lg">Get Started</Button>
+            <Button className="mr-8" size="lg">Entre em Contato</Button>
+            <OutlinedButton size="lg" to="/#features">Saiba Mais</OutlinedButton>
           </p>
-          <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>
         </div>
         <div className="lg:w-1/2">
           <HeroImage />
@@ -137,13 +141,8 @@ const Index = () => (
       </div>
     </section>
     <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
-      <h3 className="text-5xl font-semibold">Ready to grow your business?</h3>
-      <p className="mt-8 text-xl font-light">
-        Quis lectus nulla at volutpat diam ut. Enim lobortis scelerisque fermentum dui faucibus in.
-      </p>
-      <p className="mt-8">
-        <Button size="xl">Get Started Now</Button>
-      </p>
+      <h3 className="text-5xl text-primary font-semibold mb-8">Procurando soluções práticas em Consultorias e Projetos Ambientais?</h3>
+      <ContactForm />
     </section>
   </Layout>
 );

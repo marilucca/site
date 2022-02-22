@@ -12,7 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   const date = new Date(post.frontmatter.date).toLocaleDateString()
-  const tags = post.frontmatter.tags
+  const tags = post.frontmatter.tags || []
 
   return (
     <Layout>

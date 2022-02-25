@@ -1,17 +1,17 @@
-import React from 'react';
-import Button from '../components/Button';
-import OutlinedButton from '../components/OutlinedButton';
-import Card from '../components/Card';
-import CustomerCard from '../components/CustomerCard';
-import LabelText from '../components/LabelText';
-import Layout from '../components/layout/Layout';
-import SplitSection from '../components/SplitSection';
-import Seo from '../components/Seo';
-import StatsBox from '../components/StatsBox';
-import ContactForm from '../components/ContactForm';
-import customerData from '../data/customer-data';
-import HeroImage from '../svg/HeroImage';
-import SvgCharts from '../svg/SvgCharts';
+import React from 'react'
+import Button from '../components/Button'
+import OutlinedButton from '../components/OutlinedButton'
+import Card from '../components/Card'
+import CustomerCard from '../components/CustomerCard'
+import LabelText from '../components/LabelText'
+import Layout from '../components/layout/Layout'
+import SplitSection from '../components/SplitSection'
+import Seo from '../components/Seo'
+import StatsBox from '../components/StatsBox'
+import ContactForm from '../components/ContactForm'
+import customerData from '../data/customer-data'
+import HeroImage from '../svg/HeroImage'
+import SvgCharts from '../svg/SvgCharts'
 
 const Index = () => (
   <Layout>

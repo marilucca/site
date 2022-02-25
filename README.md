@@ -1,4 +1,4 @@
-# Site Seiva Júnior Consultoria em Sustentabilidade
+# Site Seiva Júnior
 
 ## Arquivos importantes de serem lidos
 - [Como mudar cores](./docs/Cores.md)

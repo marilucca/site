@@ -4,13 +4,21 @@ date: 2018-04-22T00:00:00.000Z
 tags:
   - Gaia
   - Terra
+featuredImage: './featured.jpg'
 ---
 
-<span style="font-weight: 400;">Dia 22 é dia da Terra e, para comemorar e conscientizar, fomos na mitologia grega buscar a força e a representação do nosso planeta: Gaia!</span>
-&nbsp;
-<span style="font-weight: 400;">Gaia, de acordo com a mitologia, é a personificação da Terra, a Grande-mãe, representando também o poder feminino e a fecundidade.</span>
-<span style="font-weight: 400;">Segundo Hesíodo, poeta grego contemporâneo de Homero, e sua obra Teogonia (um poema que descreve a origem do mundo segundo o autor), no princípio surgiu o Caos (o vazio) e a partir dele, nasceram Gaia, Tártaro (o abismo), Eros (o amor), Érebo (as trevas) e Nix (a noite).</span>
-<span style="font-weight: 400;">Gaia surgiu do vazio eterno, dançando e girando sobre si como uma esfera.</span>
+<span style="font-weight: 400;">
+  Dia 22 é dia da Terra e, para comemorar e conscientizar, fomos na mitologia grega buscar a força e a representação do nosso planeta: Gaia!
+</span>&nbsp;
+<span style="font-weight: 400;">
+  Gaia, de acordo com a mitologia, é a personificação da Terra, a Grande-mãe, representando também o poder feminino e a fecundidade.
+</span>
+<span style="font-weight: 400;">
+  Segundo Hesíodo, poeta grego contemporâneo de Homero, e sua obra Teogonia (um poema que descreve a origem do mundo segundo o autor), no princípio surgiu o Caos (o vazio) e a partir dele, nasceram Gaia, Tártaro (o abismo), Eros (o amor), Érebo (as trevas) e Nix (a noite).
+</span>
+<span style="font-weight: 400;">
+  Gaia surgiu do vazio eterno, dançando e girando sobre si como uma esfera.
+</span>
 <p style="text-align: center;"><img class="aligncenter size-full" src="https://img.buzzfeed.com/buzzfeed-static/static/2017-04/20/14/asset/buzzfeed-prod-fastlane-02/anigif_sub-buzz-23192-1492712599-5.gif?downsize=715:*&amp;output-format=auto&amp;output-quality=auto" width="320" height="180" /></p>
 <p style="text-align: center;">Mais uma vez gringos imitando</p>
 <span style="font-weight: 400;">Gerou então Ponto (o mar), Óreas (as montanhas) e Urano (personificação do céu) -  seu igual - com o desejo de ter alguém que a cobrisse totalmente e que fosse lar eterno dos deuses.</span>
@@ -31,7 +39,7 @@ tags:
 <span style="font-weight: 400;">Então, Cronos sobe ao trono e também fica louco com o poder, fazendo com que Gaia trame uma vingança novamente. A história segue e personagens conhecidos, como Zeus, surgem e são protegidos pela mãe.</span>
 &nbsp;
 <span style="font-weight: 400;">Mas, mais importante neste momento é a representação de Gaia. </span>
-<p style="text-align: center;"><a href="http://seivajr.com/a-historia-de-gaia/gaea/" rel="attachment wp-att-654"><img class="alignnone size-full wp-image-654" src="http://seivajr.com/wp-content/uploads/2018/04/gaea.jpg" alt="" width="425" height="265" /></a></p>
+<p style="text-align: center;"><img class="alignnone size-full wp-image-654" src="./05.jpg" alt="" width="425" height="265" /></p>
 <p style="text-align: center;"><strong><b>Mãe, mulher, guerreira e a origem de tudo</b><span style="font-weight: 400;">. </span></strong></p>
 <span style="font-weight: 400;">O ordenamento do cosmos frente ao caos, manancial dos sonhos e protetora da fecundidade. Segundo os gregos, é de seu ventre que o nosso planeta nasce.</span>
 <span style="font-weight: 400;">Atualmente, o nome Gaia, ou Géia, é utilizado na ciência em tudo que se relaciona com o estudo do planeta. Sua fertilidade coloca a terra como um ser vivo, onde, segundo a teoria de 1969 da Biologia e ecologia, todos os organismos se manifestam em uma correlação infinita, com a própria Terra criando suas condições de sobrevivência.</span>

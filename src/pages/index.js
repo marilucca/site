@@ -44,7 +44,7 @@ const Index = () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">Missão</p>
               <p className="mt-4">
-              Promover soluções sustentáveis e inovadoras através de equipes interdisciplinares comprometidas em integrar os espaços acadêmico, empresarial e ambiental.
+                Promover soluções sustentáveis e inovadoras através de equipes interdisciplinares comprometidas em integrar os espaços acadêmico, empresarial e ambiental.
               </p>
             </Card>
           </div>
@@ -52,15 +52,14 @@ const Index = () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">Visão</p>
               <p className="mt-4">
-              Ser uma empresa júnior reconhecida em âmbito nacional por sua excelência em serviços de sustentabilidade.
+                Ser uma empresa júnior reconhecida em âmbito nacional por sua excelência em serviços de sustentabilidade.
               </p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
               <p className="font-semibold text-xl">Valores</p>
-              <p className="mt-4">
-              Sustentabilidade</p>
+              <p className="mt-4">Sustentabilidade</p>
               <p>Transparência</p>
               <p>Diversidade</p>
               <p>Interdisciplinaridade</p>
@@ -114,6 +113,46 @@ const Index = () => (
       }
       secondarySlot={<SvgCharts />}
     />
+     <section id="features" className="py-20 lg:pb-40 lg:pt-48">
+       <div className="container mx-auto text-center">
+        <h2 className="text-3xl lg:text-5xl font-semibold">Nossos Parceiros</h2>
+        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Parceiro 1</p>
+              <p className="mt-4">
+                Descrição ou somente o logo ou os dois
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Parceiro 2</p>
+              <p className="mt-4">
+                Descrição ou somente o logo ou os dois
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Parceiro 3</p>
+              <p className="mt-4">
+                Descrição ou somente o logo ou os dois
+              </p>
+            </Card>
+          </div>
+          <div className="flex-1 px-3">
+            <Card className="mb-8">
+              <p className="font-semibold text-xl">Parceiro 4</p>
+              <p className="mt-4">
+                Descrição ou somente o logo ou os dois
+              </p>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="stats" className="py-20 lg:pt-32">
       <div className="container mx-auto text-center">
         <LabelText className="text-gray-600">Our customers get results</LabelText>

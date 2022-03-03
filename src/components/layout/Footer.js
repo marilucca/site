@@ -1,28 +1,62 @@
-import React from 'react';
+import React from 'react'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  } from '@fortawesome/free-regular-svg-icons'
+
+import Logo from '../../svg/LogoIcon'
 
 const Footer = () => (
   <footer className="container mx-auto py-16 px-3 mb-8 text-gray-800">
     <div className="flex -mx-3">
-      <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">About Us</h2>
-        <p className="mt-5">Ridiculus mus mauris vitae ultricies leo integer malesuada nunc.</p>
+      <div className="flex flex-row justify-center align-center flex-1 px-3">
+        <Logo size={80} />
+        <div className="ml-4">
+          <p className="font-bold text-lg">Seiva Júnior</p>
+          <p className="text-md text-gray-700">Consultoria Júnior em Sustentabilidade</p>
+        </div>
       </div>
       <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">Important Links</h2>
-        <ul className="mt-4 leading-loose">
+        <h2 className="footer-title">Seiva Jr.</h2>
+        <ul className="leading-loose">
           <li>
-            <a href="https://codebushi.com">Terms &amp; Conditions</a>
+            <AnchorLink to="/">
+              Início
+            </AnchorLink>
           </li>
+
           <li>
-            <a href="https://codebushi.com">Privacy Policy</a>
+            <AnchorLink to="/sobre">
+              Sobre
+            </AnchorLink>
+          </li>
+
+          <li>
+            <AnchorLink to="/portfolio">
+              Portfólio
+            </AnchorLink>
+          </li>
+
+          <li>
+            <AnchorLink to="/processo-seletivo">
+              Processo Seletivo
+            </AnchorLink>
+          </li>
+
+          <li>
+            <AnchorLink to="/blog">
+              Blog
+            </AnchorLink>
           </li>
         </ul>
       </div>
       <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">Social Media</h2>
+        <h2 className="footer-title">Social Media</h2>
         <ul className="mt-4 leading-loose">
           <li>
-            <a href="https://dev.to/changoman">Dev.to</a>
+            <a href="https://dev.to/changoman">
+              <FontAwesomeIcon icon="fa-brands fa-instagram" />
+              @seivajr
+            </a>
           </li>
           <li>
             <a href="https://twitter.com/HuntaroSan">Twitter</a>

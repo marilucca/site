@@ -133,6 +133,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-anchor-links`
+    `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-fontawesome-css`
   ]
 };

@@ -1,11 +1,11 @@
 import React from 'react'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  } from '@fortawesome/free-regular-svg-icons'
 
 import Logo from '../../svg/LogoIcon'
+import Socials from '../Socials'
 
-const Footer = () => (
+const Footer = () => {
+  return (
   <footer className="container mx-auto py-16 px-3 mb-8 text-gray-800">
     <div className="flex -mx-3">
       <div className="flex flex-row justify-center align-center flex-1 px-3">
@@ -50,24 +50,11 @@ const Footer = () => (
         </ul>
       </div>
       <div className="flex-1 px-3">
-        <h2 className="footer-title">Social Media</h2>
-        <ul className="mt-4 leading-loose">
-          <li>
-            <a href="https://dev.to/changoman">
-              <FontAwesomeIcon icon="fa-brands fa-instagram" />
-              @seivajr
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/HuntaroSan">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/codebushi/gatsby-starter-lander">GitHub</a>
-          </li>
-        </ul>
+        <Socials />  
       </div>
     </div>
   </footer>
-);
+  );
+};
 
 export default Footer;

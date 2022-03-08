@@ -8,9 +8,11 @@ module.exports = {
       summary: 'Consultoria em Sustentabilidade',
     },
     social: {
-      instagram: 'seivajr',
-      facebook: 'seivajr',
-      linkedin: 'seivajr',
+      instagram: 'https://www.instagram.com/seivajr',
+      facebook: 'https://www.facebook.com/seivajr',
+      linkedin: 'https://www.linkedin.com/company/seivajr',
+      twitter: 'https://twitter.com/seivajr',
+      tiktok: 'https://www.tiktok.com/@seivajr'
     },
   },
 

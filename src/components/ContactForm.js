@@ -1,24 +1,11 @@
 import React, { useState, useRef } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios'
 import * as qs from 'query-string'
+import Socials from "./Socials"
 
 const ContactForm = () => {
-    const data = useStaticQuery(graphql`
-  query ContactFormQuery {
-    site {
-      siteMetadata {
-        social {
-          facebook
-          instagram
-          linkedin
-        }
-      }
-    }
-  }
-  `)
-
   const formRef = useRef();
   const [formState, setFormState] = useState('idle');
   const [name, setName] = useState('');
@@ -57,8 +44,6 @@ const ContactForm = () => {
             setFormState('error');
         })
   };
-
-  const social = data.site.siteMetadata?.social
 
     return (
       <div className="flex px-16">
@@ -142,23 +127,12 @@ const ContactForm = () => {
             ">Enviar</button>
         </form>
 
-        <div>
-            <p className="font-md font-bold text-left mb-4">Nos encontre em nossas redes sociais</p>
-            <a className="flex mb-2 font-bold" href={`https://instagram.com/${social?.instagram || ``}`}>
-                <StaticImage src="../../static/images/instagram.png" alt="Logo Instagram" width={24} height={24} layout="fixed" />
-                <p className="ml-2">@{social.instagram}</p>
-            </a>
-            <a className="flex mb-2 font-bold" href={`https://facebook.com/${social?.facebook || ``}`}>
-                <StaticImage src="../../static/images/facebook.png" alt="Logo Facebook" width={24} height={24} layout="fixed" />
-                <p className="ml-2">@{social.facebook}</p>
-            </a>
-            <a className="flex font-bold mb-6" href={`https://pt.linkedin.com/company/${social?.linkedin || ``}`}>
-                <StaticImage src="../../static/images/linkedin.png" alt="Logo LinkedIn" width={24} height={24} layout="fixed" />
-                <p className="ml-2">@{social.linkedin}</p>
-            </a>
+        <div className="flex flex-col justify-start">
+            <Socials />
 
-            <p className="font-md font-bold text-left mb-4">Ou nos envie um email</p>
-            <a className="flex mb-2 font-bold" href="mailto:seiva.ambientaljr@gmail.com">
+            <h3 className="footer-title text-left mt-4 mb-4">Ou nos envie um email</h3>
+            <a href="mailto:seiva.ambientaljr@gmail.com">
+                <FontAwesomeIcon icon={faEnvelope} className="mr-4" />
                 seiva.ambientaljr@gmail.com
             </a>
         </div>

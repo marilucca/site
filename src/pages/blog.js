@@ -4,6 +4,7 @@ import Seo from '../components/Seo'
 import Tag from '../components/Tag'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import Bio from '../components/Bio'
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes

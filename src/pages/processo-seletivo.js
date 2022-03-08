@@ -16,7 +16,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 const ProcessoSeletivo = () => {
     return (
     <Layout>
-      <section className="pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
+      <section className="py-20 lg:pb-40 lg:pt-48 container mx-auto">
         <Seo title="Processo Seletivo" />
         
         <div className="flex flex-col">

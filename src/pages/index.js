@@ -27,7 +27,7 @@ const Index = () => (
             É possível fazer as coisas de um jeito diferente!
           </p>
           <p className="mt-8 md:mt-12">
-            <Button className="mr-8" size="lg">Entre em Contato</Button>
+            <Button className="mr-8" size="lg" to="/#contact">Entre em Contato</Button>
             <OutlinedButton size="lg" to="/#features">Saiba Mais</OutlinedButton>
           </p>
         </div>
@@ -181,7 +181,7 @@ const Index = () => (
         </div>
       </div>
     </section>
-    <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
+    <section id="contact" className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
       <h3 className="text-5xl text-primary font-semibold mb-8">Procurando soluções práticas em Consultorias e Projetos Ambientais?</h3>
       <ContactForm />
     </section>

@@ -32,7 +32,7 @@ const Header = () => (
         </AnchorLink>
       </div>
       <div className="hidden md:block">
-        <Button className="text-sm">Entre em Contato</Button>
+        <Button className="text-sm" to="/#contact">Entre em Contato</Button>
       </div>
     </div>
   </header>

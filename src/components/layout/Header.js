@@ -64,7 +64,7 @@ const Header = () => {
             </div>
           ) : null
         }
-        <div className="hidden md:block">
+        <div className="ml-4 hidden md:block">
           <Button className="text-sm" to="/#contact">Entre em Contato</Button>
         </div>
       </div>

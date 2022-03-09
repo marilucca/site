@@ -16,10 +16,10 @@ import { StaticImage } from 'gatsby-plugin-image'
 const ProcessoSeletivo = () => {
     return (
     <Layout>
-      <section className="py-20 lg:pb-40 lg:pt-48 container mx-auto">
+      <section className="py-20 lg:pb-40 lg:pt-48">
         <Seo title="Processo Seletivo" />
         
-        <div className="flex flex-col">
+        <div className="container mx-auto flex flex-col">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none mb-4">
             Processo Seletivo 2022
           </h1>

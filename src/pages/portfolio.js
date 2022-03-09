@@ -15,17 +15,19 @@ import SvgCharts from '../svg/SvgCharts'
 const Portfolio = () => {
     return (
     <Layout>
-      <section className="py-20 lg:pb-40 lg:pt-48 container mx-auto">
+      <section className="py-20 lg:pb-40 lg:pt-48">
         <Seo title="Portfólio" />
         
-        <div>
-          <h2 className="text-3xl lg:text-5xl font-semibold">O que podemos fazer por você?</h2>
-          <p className="text-xl">
-            Você entra com a sua necessidade, tanto pessoal quanto empresarial e nós entramos com a atitude, visão e conhecimento universitário sobre Sustentabilidade integrada em todas as áreas. A Seiva Jr. pode tornar seus projetos eco-friendly ou então ajudar a desenvolver uma nova ideia.
-          </p>
+        <div className="container mx-auto">
+          <div>
+            <h2 className="text-3xl lg:text-5xl font-semibold">O que podemos fazer por você?</h2>
+            <p className="text-xl">
+              Você entra com a sua necessidade, tanto pessoal quanto empresarial e nós entramos com a atitude, visão e conhecimento universitário sobre Sustentabilidade integrada em todas as áreas. A Seiva Jr. pode tornar seus projetos eco-friendly ou então ajudar a desenvolver uma nova ideia.
+            </p>
+          </div>
         </div>
-
-        <SplitSection
+      </section>
+      <SplitSection
           primarySlot={
             <div className="lg:pr-32 xl:pr-48">
               <h3 className="text-3xl font-semibold leading-tight">
@@ -142,7 +144,6 @@ const Portfolio = () => {
             </div>
           }
         />
-      </section>
     </Layout>
     );
 };

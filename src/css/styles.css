@@ -8,3 +8,13 @@
   font-size: 1.125rem;
   letter-spacing: 1px;
 }
+
+/* Navbar */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 50;
+
+  width: 100%;
+}

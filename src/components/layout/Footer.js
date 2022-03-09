@@ -7,7 +7,7 @@ import Socials from '../Socials'
 const Footer = () => {
   return (
   <footer className="container mx-auto py-16 px-3 mb-8 text-gray-800">
-    <div className="flex -mx-3">
+    <div className="flex -mx-3 flex-col md:flex-row">
       <div className="flex flex-row justify-center align-center flex-1 px-3">
         <Logo size={80} />
         <div className="ml-4">

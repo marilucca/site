@@ -39,7 +39,7 @@ const Socials = () => {
     return (
         <div className="flex flex-col align-start">
             <h2 className="footer-title">Redes Sociais</h2>
-            <ul className="mt-4 leading-loose">
+            <ul className="leading-loose">
             {Object.entries(socials).map(([key, value]) => (
                 <li className="flex flex-row align-start">
                     <a href={value} target="_blank" rel="norefferer">

@@ -12,19 +12,24 @@ import customerData from '../data/customer-data'
 import HeroImage from '../svg/HeroImage'
 import SvgCharts from '../svg/SvgCharts'
 
+import ConsultoriaPersonalizada from '../svg/portfolio/ConsultoriaPersonalizada'
+import PlanoDeGerenciamento from '../svg/portfolio/PlanoDeGerenciamento'
+import SustentabilidadeNasEscolas from '../svg/portfolio/SustentabilidadeNasEscolas'
+import ConsultoriaResidencial from '../svg/portfolio/ConsultoriaResidencial'
+import EducacaoAmbiental from '../svg/portfolio/EducacaoAmbiental'
+import EventosOnline from '../svg/portfolio/EventosOnline'
+
 const Portfolio = () => {
     return (
     <Layout>
-      <section className="py-20 lg:pb-40 lg:pt-48">
+      <section className="mt-8 pt-20 lg:pb-20 lg:pt-48">
         <Seo title="Portfólio" />
         
-        <div className="container mx-auto">
-          <div>
-            <h2 className="text-3xl lg:text-5xl font-semibold">O que podemos fazer por você?</h2>
-            <p className="text-xl">
-              Você entra com a sua necessidade, tanto pessoal quanto empresarial e nós entramos com a atitude, visão e conhecimento universitário sobre Sustentabilidade integrada em todas as áreas. A Seiva Jr. pode tornar seus projetos eco-friendly ou então ajudar a desenvolver uma nova ideia.
-            </p>
-          </div>
+        <div className="container mx-auto flex flex-col items-center md:items-start">
+          <h2 className="text-3xl lg:text-5xl font-semibold">O que podemos fazer por você?</h2>
+          <p className="text-xl lg:text-2xl mt-6 font-light px-8">
+            Você entra com a sua necessidade, tanto pessoal quanto empresarial e nós entramos com a atitude, visão e conhecimento universitário sobre Sustentabilidade integrada em todas as áreas. A Seiva Jr. pode tornar seus projetos eco-friendly ou então ajudar a desenvolver uma nova ideia.
+          </p>
         </div>
       </section>
       <SplitSection
@@ -38,17 +43,13 @@ const Portfolio = () => {
               </p>
             </div>
           }
-          secondarySlot={
-            <div>
-              FIND IMAGE
-            </div>
-          }
+          secondarySlot={<ConsultoriaPersonalizada />}
         />
 
         <SplitSection
           reverseOrder
           primarySlot={
-            <div className="lg:pr-32 xl:pr-48">
+            <div className="lg:pl-32 xl:pl-48">
               <h3 className="text-3xl font-semibold leading-tight">
                 Consultoria Residencial
               </h3>
@@ -57,11 +58,7 @@ const Portfolio = () => {
               </p>
             </div>
           }
-          secondarySlot={
-            <div>
-              FIND IMAGE
-            </div>
-          }
+          secondarySlot={<ConsultoriaResidencial />}
         />
 
 
@@ -76,17 +73,13 @@ const Portfolio = () => {
               </p>
             </div>
           }
-          secondarySlot={
-            <div>
-              FIND IMAGE
-            </div>
-          }
+          secondarySlot={<EducacaoAmbiental />}
         />
 
         <SplitSection
           reverseOrder
           primarySlot={
-            <div className="lg:pr-32 xl:pr-48">
+            <div className="lg:pl-32 xl:pl-48">
               <h3 className="text-3xl font-semibold leading-tight">
                 Plano de Gerenciamento de Resíduos Sólidos
               </h3>
@@ -95,11 +88,7 @@ const Portfolio = () => {
               </p>
             </div>
           }
-          secondarySlot={
-            <div>
-              FIND IMAGE
-            </div>
-          }
+          secondarySlot={<PlanoDeGerenciamento />}
         />
 
         <SplitSection
@@ -116,17 +105,13 @@ const Portfolio = () => {
               </p>
             </div>
           }
-          secondarySlot={
-            <div>
-              FIND IMAGE
-            </div>
-          }
+          secondarySlot={<SustentabilidadeNasEscolas />}
         />
 
         <SplitSection
           reverseOrder
           primarySlot={
-            <div className="lg:pr-32 xl:pr-48">
+            <div className="lg:pl-32 xl:pl-48">
               <h3 className="text-3xl font-semibold leading-tight">
                 Eventos Online
               </h3>
@@ -138,11 +123,7 @@ const Portfolio = () => {
               </p>
             </div>
           }
-          secondarySlot={
-            <div>
-              FIND IMAGE
-            </div>
-          }
+          secondarySlot={<EventosOnline />}
         />
     </Layout>
     );

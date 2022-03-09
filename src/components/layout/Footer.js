@@ -8,14 +8,14 @@ const Footer = () => {
   return (
   <footer className="container mx-auto py-16 px-3 text-gray-800">
     <div className="flex -mx-3 flex-col md:flex-row">
-      <div className="flex flex-row justify-center align-center flex-1 px-3 mb-4">
+      <div className="flex flex-row justify-center items-start flex-1 px-3 mb-4 md:mb-0">
         <Logo size={80} />
         <div className="ml-4">
           <p className="font-bold text-lg">Seiva Júnior</p>
           <p className="text-md text-gray-700">Consultoria Júnior em Sustentabilidade</p>
         </div>
       </div>
-      <div className="mx-4">
+      <div className="mx-4 flex flex-row justify-center flex-1 px-3">
         <div className="flex-1 px-3">
           <h2 className="footer-title">Seiva Jr.</h2>
           <ul className="leading-loose">

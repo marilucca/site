@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className="navbar-container shadow">
       <div className="container flex justify-center items-center mx-auto py-4 px-8">
-        <div className="flex items-center justify-start text-2xl">
+        <div className="flex items-center justify-start text-2xl w-full md:w-auto">
           <AnchorLink to="/" className="flex items-center">
             <div className="w-12 mr-3">
               <LogoIcon size={48} />

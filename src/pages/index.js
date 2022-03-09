@@ -39,9 +39,12 @@ const Index = () => (
     <section id="features" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Nosso Propósito</h2>
-        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+        {/* <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
+          
+        </div> */}
+        <div className="card-grid">
           <div className="flex-1 px-3">
-            <Card className="mb-8">
+            <Card className="mb-8 h-full">
               <p className="font-semibold text-xl">Missão</p>
               <p className="mt-4">
                 Promover soluções sustentáveis e inovadoras através de equipes interdisciplinares comprometidas em integrar os espaços acadêmico, empresarial e ambiental.
@@ -49,7 +52,7 @@ const Index = () => (
             </Card>
           </div>
           <div className="flex-1 px-3">
-            <Card className="mb-8">
+            <Card className="mb-8 h-full">
               <p className="font-semibold text-xl">Visão</p>
               <p className="mt-4">
                 Ser uma empresa júnior reconhecida em âmbito nacional por sua excelência em serviços de sustentabilidade.
@@ -57,7 +60,7 @@ const Index = () => (
             </Card>
           </div>
           <div className="flex-1 px-3">
-            <Card className="mb-8">
+            <Card className="mb-8 h-full">
               <p className="font-semibold text-xl">Valores</p>
               <p className="mt-4">Sustentabilidade</p>
               <p>Transparência</p>

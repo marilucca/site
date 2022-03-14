@@ -108,10 +108,25 @@ module.exports = {
         path: `${__dirname}/static/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/data`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'membros',
+        path: `${__dirname}/src/images/membros`
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,

@@ -41,7 +41,7 @@ const Socials = () => {
             <h2 className="footer-title">Redes Sociais</h2>
             <ul className="leading-loose">
             {Object.entries(socials).map(([key, value]) => (
-                <li className="flex flex-row align-start">
+                <li key={key} className="flex flex-row align-start">
                     <a href={value} target="_blank" rel="norefferer">
                         <FontAwesomeIcon icon={socialLogo[key]} size="lg" className="mr-4" />
                         {capitalize(key)}

@@ -6,6 +6,40 @@ import { graphql, Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Bio from '../components/Bio'
 
+export const pageQuery = graphql`
+  query BlogList {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date
+          title
+          description
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(
+                layout: CONSTRAINED
+                height: 300
+              )
+            }
+          }
+          tags
+        }
+      }
+    }
+  }
+`
+
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
 
@@ -82,35 +116,3 @@ const Blog = ({ data }) => {
 }
 
 export default Blog;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date
-          title
-          description
-          featuredImage {
-            childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED
-                height: 300
-              )
-            }
-          }
-          tags
-        }
-      }
-    }
-  }
-`

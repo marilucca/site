@@ -57,16 +57,18 @@ const Sobre = ({ data }) => {
         <Seo title="Equipe" />
         
         <div className="container mx-auto flex flex-col items-center md:items-start">
-          <h2 className="title lg:text-5xl">Equipe</h2>
+          <h2 className="title lg:text-5xl mb-4">Equipe</h2>
 
-          {membros.map(membro => (
-            <GatsbyImage
-              key={membro.node.name}
-              image={membro.node.image.childImageSharp.gatsbyImageData}
-              alt={membro.node.name}
-              style={{ borderRadius: '100%' }}
-            />
-          ))}
+          <div className="equipe-grid">
+            {membros.map(membro => (
+              <GatsbyImage
+                key={membro.node.name}
+                image={membro.node.image.childImageSharp.gatsbyImageData}
+                alt={membro.node.name}
+                style={{ borderRadius: '100%' }}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </Layout>

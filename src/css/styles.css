@@ -32,3 +32,17 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
 }
+
+/* Sobre */
+.equipe-grid {
+  display: grid;
+  align-self: center;
+  gap: 2rem;
+}
+
+/* Estilos para telas grandes */
+@media (min-width: 1024px) {
+  .equipe-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}

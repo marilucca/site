@@ -3,6 +3,10 @@
   text-align: justify;
 }
 
+.blog-number {
+  align-self: center;
+}
+
 .footer-title {
   font-weight: semibold;
   font-size: 1.125rem;

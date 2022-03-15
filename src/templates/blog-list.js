@@ -28,8 +28,9 @@ query BlogListQuery($skip: Int!, $limit: Int!) {
                 featuredImage {
                     childImageSharp {
                         gatsbyImageData(
-                            layout: CONSTRAINED
-                            height: 300
+                            layout: FIXED
+                            width: 325
+                            height: 225
                         )
                     }
                 }
@@ -47,7 +48,7 @@ const BlogList = ({ data, pageContext }) => {
           <Layout>
             <Seo title="Blog" />
             
-            <section className="pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
+            <section className="mt-8 pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
               <Bio />
               <p>
                 Ainda não possuimos nenhum texto em nosso blog. Logo adicionaremos mais textos.
@@ -63,11 +64,9 @@ const BlogList = ({ data, pageContext }) => {
         <Layout>
             <Seo title="Blog" />
 
-            <section className="pt-20 md:pt-40 container flex-col mx-auto px-8 lg:px-32 lg:flex">
+            <section className="mt-8 pt-20 md:pt-40 container flex-col mx-auto px-8 lg:px-32 lg:flex">
             <ol style={{ listStyle: `none` }}>
                 {posts.map(post => {
-                    console.log(post.frontmatter.featuredImage)
-
                     const title = post.frontmatter.title || post.fields.slug
                     const preview = post.frontmatter.featuredImage?.childImageSharp.gatsbyImageData
                     const tags = post.frontmatter.tags || []
@@ -81,31 +80,40 @@ const BlogList = ({ data, pageContext }) => {
                             itemScope
                             itemType="http://schema.org/Article"
                         >
-                            <div className="flex">
-                            <GatsbyImage className="rounded-lg" image={preview} alt={title} />
-                            <div className="ml-4 flex items-center justify-center">
-                                <header className="mb-4 flex flex-col">
-                                <h2 className="text-primary mt-0 text-2xl font-bold">
-                                    <span>{title}</span>
-                                </h2>
-                                <small>{date}</small>
-
-                                <div className="mt-2">
-                                    {tags.map(tag => (
-                                    <Tag>{tag}</Tag>
-                                    ))}
+                            <div className="flex flex-col md:flex-row">
+                                <div style={{ maxWidth: 325, maxHeight: 225 }}>
+                                    <GatsbyImage 
+                                        className="rounded-lg" 
+                                        image={preview} 
+                                        alt={title} 
+                                        width={325} 
+                                        height={225}
+                                    />
                                 </div>
-                                </header>
-                                <section>
-                                <p
-                                    dangerouslySetInnerHTML={{
-                                    __html: post.frontmatter.description || post.excerpt,
-                                    }}
-                                    itemProp="description"
-                                    className="text-gray-600"
-                                />
-                                </section>
-                            </div>
+                                
+                                <div className="md:ml-4 flex items-center justify-center">
+                                    <header className="mb-4 flex flex-col">
+                                    <h2 className="text-primary mt-0 text-2xl font-bold" style={{ lineHeight: 1.1 }}>
+                                        <span>{title}</span>
+                                    </h2>
+                                    <small>{date}</small>
+
+                                    <div className="mt-2">
+                                        {tags.map(tag => (
+                                            <Tag>{tag}</Tag>
+                                        ))}
+                                    </div>
+                                    </header>
+                                    <section>
+                                    <p
+                                        dangerouslySetInnerHTML={{
+                                        __html: post.frontmatter.description || post.excerpt,
+                                        }}
+                                        itemProp="description"
+                                        className="text-gray-600"
+                                    />
+                                    </section>
+                                </div>
                             </div>
                         </article>
                         </Link>

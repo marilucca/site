@@ -138,6 +138,7 @@ module.exports = {
               maxWidth: 630,
             },
           },
+          `gatsby-remark-embed-spotify`,
           // {
           //   resolve: `gatsby-remark-responsive-iframe`,
           //   options: {

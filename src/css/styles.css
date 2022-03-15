@@ -1,6 +1,31 @@
-.blog-post-content-container p {
+.blog-post-content-container p + p {
   margin-bottom: 2rem;
   text-align: justify;
+}
+
+.blog-post-content-container ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.blog-post-content-container figure {
+  color: gray;
+  margin-bottom: 2rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.blog-post-content-container figure img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-post-content-container figure figcaption {
+  text-align: center;
+  font-size: 0.825rem;
+  margin-top: 0.5rem;
 }
 
 .blog-number {

@@ -1,17 +1,17 @@
 import React from 'react'
+
 import Button from '../components/Button'
 import OutlinedButton from '../components/OutlinedButton'
 import Card from '../components/Card'
 import CustomerCard from '../components/CustomerCard'
 import LabelText from '../components/LabelText'
 import Layout from '../components/layout/Layout'
-import SplitSection from '../components/SplitSection'
 import Seo from '../components/Seo'
 import StatsBox from '../components/StatsBox'
 import ContactForm from '../components/ContactForm'
 import customerData from '../data/customer-data'
 import HeroImage from '../svg/HeroImage'
-import SvgCharts from '../svg/SvgCharts'
+import Services from '../components/Services'
 
 const Index = () => (
   <Layout>
@@ -32,6 +32,7 @@ const Index = () => (
           </p>
         </div>
         <div className="lg:w-1/2">
+          { /* imagem principal */ }
           <HeroImage />
         </div>
       </div>
@@ -71,81 +72,43 @@ const Index = () => (
         </div>
       </div>
     </section>
-    <SplitSection
-      id="services"
-      primarySlot={
-        <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Market Analysis</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            Our team of enthusiastic marketers will analyse and evaluate how your company stacks
-            against the closest competitors
-          </p>
+    
+    <section id="services">
+      <div className="py-20 lg:pb-40 lg:pt-48">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl lg:text-5xl font-semibold">
+            Nossos Serviços
+          </h2>
         </div>
-      }
-      secondarySlot={<SvgCharts />}
-    />
-    <SplitSection
-      reverseOrder
-      primarySlot={
-        <div className="lg:pl-32 xl:pl-48">
-          <h3 className="text-3xl font-semibold leading-tight">
-            Design And Plan Your Business Growth Steps
-          </h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            Once the market analysis process is completed our staff will search for opportunities
-            that are in reach
-          </p>
-        </div>
-      }
-      secondarySlot={<SvgCharts />}
-    />
-    <SplitSection
-      primarySlot={
-        <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">
-            Search For Performance Optimization
-          </h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            With all the information in place you will be presented with an action plan that your
-            company needs to follow
-          </p>
-        </div>
-      }
-      secondarySlot={<SvgCharts />}
-    />
+      </div>
+      <Services />
+    </section>
+
      <section id="features" className="py-20 lg:pb-40 lg:pt-48">
        <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">Nossos Parceiros</h2>
+        <h2 className="text-3xl lg:text-5xl font-semibold">Nossas parcerias</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Parceiro 1</p>
+              <p className="font-semibold text-xl">Biotera</p>
               <p className="mt-4">
-                Descrição ou somente o logo ou os dois
+              Estudo e comparação entre três ferramentas para análise de ciclo vida, relacionando-os com informações disponíveis na literatura referente ao produto no cenário nacional.
               </p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Parceiro 2</p>
+              <p className="font-semibold text-xl">EURECICLO</p>
               <p className="mt-4">
-                Descrição ou somente o logo ou os dois
+              Montagem de um guia educativo para as marcas clientes da eureciclo, sobre as embalagens que eles utilizam em seus produtos, com detalhes sobre 17 materiais.
               </p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Parceiro 3</p>
+              <p className="font-semibold text-xl">Solaris</p>
               <p className="mt-4">
-                Descrição ou somente o logo ou os dois
-              </p>
-            </Card>
-          </div>
-          <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="font-semibold text-xl">Parceiro 4</p>
-              <p className="mt-4">
-                Descrição ou somente o logo ou os dois
+              Pensando no enfoque em PGRS, o trabalho consistiu no recolhimento de informações, diagnóstico e caracterização dos resíduos sólidos de empresas.
               </p>
             </Card>
           </div>
@@ -155,23 +118,23 @@ const Index = () => (
 
     <section id="stats" className="py-20 lg:pt-32">
       <div className="container mx-auto text-center">
-        <LabelText className="text-gray-600">Our customers get results</LabelText>
+        <LabelText className="text-gray-600">Nossos resultados</LabelText>
         <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
           <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
+            <StatsBox primaryText="+100%" secondaryText="Com comprometimento" />
           </div>
           <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
+            <StatsBox primaryText="+100%" secondaryText="Com prontidão" />
           </div>
           <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
+            <StatsBox primaryText="+100%" secondaryText="Sustentáveis" />
           </div>
         </div>
       </div>
     </section>
     <section id="testimonials" className="py-20 lg:py-40">
       <div className="container mx-auto">
-        <LabelText className="mb-8 text-gray-600 text-center">What customers are saying</LabelText>
+        <LabelText className="mb-8 text-gray-600 text-center">O que nossos clientes estão dizendo</LabelText>
         <div className="flex flex-col md:flex-row md:-mx-3">
           {customerData.map(customer => (
             <div key={customer.customerName} className="flex-1 px-3">

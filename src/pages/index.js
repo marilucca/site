@@ -16,7 +16,7 @@ import Services from '../components/Services'
 const Index = () => (
   <Layout>
     <Seo title="Início" />
-    <section className="pt-20 md:pt-40">
+    <section className="mt-8 pt-20 md:pt-40">
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
@@ -26,13 +26,12 @@ const Index = () => (
             A Seiva Jr. acredita que, juntos, podemos tornar o mundo mais sustentável, criando uma relação de respeito com o meio ambiente.
             É possível fazer as coisas de um jeito diferente!
           </p>
-          <p className="mt-8 md:mt-12">
-            <Button className="mr-8" size="lg" to="/#contact">Entre em Contato</Button>
+          <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-start">
+            <Button className="mr-0 md:mr-8 mb-8 md:mb-0" size="lg" to="/#contact">Entre em Contato</Button>
             <OutlinedButton size="lg" to="/#features">Saiba Mais</OutlinedButton>
-          </p>
+          </div>
         </div>
         <div className="lg:w-1/2">
-          { /* imagem principal */ }
           <HeroImage />
         </div>
       </div>
@@ -44,7 +43,7 @@ const Index = () => (
           <div className="flex-1 px-3">
             <Card className="mb-8 h-full">
               <p className="font-semibold text-xl">Missão</p>
-              <p className="mt-4">
+              <p className="mt-12">
                 Promover soluções sustentáveis e inovadoras através de equipes interdisciplinares comprometidas em integrar os espaços acadêmico, empresarial e ambiental.
               </p>
             </Card>
@@ -52,7 +51,7 @@ const Index = () => (
           <div className="flex-1 px-3">
             <Card className="mb-8 h-full">
               <p className="font-semibold text-xl">Visão</p>
-              <p className="mt-4">
+              <p className="mt-12">
                 Ser uma empresa júnior reconhecida em âmbito nacional por sua excelência em serviços de sustentabilidade.
               </p>
             </Card>
@@ -118,16 +117,16 @@ const Index = () => (
 
     <section id="stats" className="py-20 lg:pt-32">
       <div className="container mx-auto text-center">
-        <LabelText className="text-gray-600">Nossos resultados</LabelText>
+        <LabelText className="text-gray-600">Nossos resultados são</LabelText>
         <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
           <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Com comprometimento" />
+            <StatsBox primaryText="100%" secondaryText="Com Comprometimento" />
           </div>
           <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Com prontidão" />
+            <StatsBox primaryText="100%" secondaryText="Com Prontidão" />
           </div>
           <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Sustentáveis" />
+            <StatsBox primaryText="100%" secondaryText="Sustentáveis" />
           </div>
         </div>
       </div>

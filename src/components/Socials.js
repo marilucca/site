@@ -37,7 +37,7 @@ const Socials = () => {
     const socials = data.site.siteMetadata?.social
 
     return (
-        <div className="flex flex-col align-start">
+        <div className="flex flex-col items-start">
             <h2 className="footer-title">Redes Sociais</h2>
             <ul className="leading-loose">
             {Object.entries(socials).map(([key, value]) => (

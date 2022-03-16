@@ -46,8 +46,8 @@ const ContactForm = () => {
   };
 
     return (
-      <div className="flex px-16">
-          <form ref={formRef} className="flex-1 mr-16" name="Formulário de Contato" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+      <div className="flex flex-col md:flex-row px-16">
+          <form ref={formRef} className="flex-1 md:mr-16" name="Formulário de Contato" method="POST" data-netlify="true" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="Formulário de Contato" />
 
             <div className="mb-4">
@@ -127,7 +127,7 @@ const ContactForm = () => {
             ">Enviar</button>
         </form>
 
-        <div className="flex flex-col justify-start">
+        <div className="flex flex-col mt-8 md:mt-0 justify-start items-start">
             <Socials />
 
             <h3 className="footer-title text-left mt-4 mb-4">Ou nos envie um email</h3>

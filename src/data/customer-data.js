@@ -1,26 +1,26 @@
 export default [
   {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+    title: 'Futura Consultoria',
     content:
-      'Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet consectetur adipiscing elit duis.',
-    customerName: 'Jane Doe',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
+      '"Pessoas jovens com muita responsabilidade e profissionalismo!"',
+    customerName: 'Patricia Martin Alves',
+    customerTitle: 'Diretora Técnica',
+    customerImage: 'https://hotmart.s3.amazonaws.com/profile_pictures/df284e04-97bc-49ee-b685-6c9de7280f51/futura.jpg'
   },
   {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+    title: 'BIOTERA - Inteligência Sustentável nos Negócios',
     content:
-      'Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet consectetur adipiscing elit duis.',
-    customerName: 'John Doe',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
+      '"Dedicação, comprometimento, qualidade e pontualidade."',
+    customerName: 'Alexandre Meza',
+    customerTitle: '',
+    customerImage: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxERDhESERATExIVEBgQGBYYDxAYFxAWFRIYFhcVGxMYHSggGBolGxMVITEhJSkrLi4vFx8zODMtNygtLisBCgoKDQ0NFw0PDi0ZFRkrKystLTc3LSstKy0rKystKy03Kys3KysrLSsrKysrKy0rKy0rKys3KysrKystKysrK//AABEIALQAtAMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQECAwj/xABMEAABAwIDBAYFBggMBwAAAAABAAIDBBEFEiEGBxMxFCJBUWGBI3GRobEyMzVzwdEVQlJUcnSy0hYXJENVYpKToqOkwiVERYKEhZT/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAHBEBAQADAQADAAAAAAAAAAAAAAECETEhEkFR/9oADAMBAAIRAxEAPwC8UREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQERY9bVxwxuklcGMaMxcToAgyFwqsxjeucxFLAC29s8hdd3qYOXtWgxTeRWzwui9HHm0Low8Ot2gEk2WflGphVpY5tjR0hIkmBePxGdZ3nbl5qK/xtw5rdFflva/Fbe3fa32qpiUWflW5hH0LgO1tHWaQzDPa+R3Vd5A8/Jb5fOOz2BVNZLlp26tIcX3sIu4l/YfVqr8wKnnjp2MqJRLI3QvDSMw7L958e1axu2MsZGzREWmRERAREQEREBERAREQEREBERBwqc3tY86Sp6K13o4bF2uj5CL6+ofarkXzrto1wxOszc+kPI9RNx7rLOXG8J60qIi5uoiIgv8A3f0LIcMp8gF3xiVxtq5z9T93kpKoFujxZ81E6FzTaBwY199HNNyG+sfCynq6zjheiIiqCIiAiIgIiICIiAiIgIiICIiDhVnvY2YL7VkLbua3LK0DUtHJ/lyPkrNUX3j1rocLnLTYuAiv3B5sfddS8axvqg0RFydhSDYnFaalq89TEJIywsvla7hkuHWseaj6Ilm1sUbfwVihkvbDqy2VzfkRPOrb9w528D4KygbqIbCYY9+ExQ1kbXNN8rHtv6K92BwPb9llL2tsLDQcvUusca7IiKoIiICIiAiIgIiICIiAiIgIiIOAo7t7h5qM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'
   },
   {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+    title: 'TRAMA Júnior Consultoria',
     content:
-      'Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Sit amet consectetur adipiscing elit duis.',
-    customerName: 'Jane Smith',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
+      '"Qualidade excelente do trabalho da empresa e postura profissional gentil dos integrantes!"',
+    customerName: 'Julia Marcon',
+    customerTitle: 'Membro da TRAMA Jr.',
+    customerImage: 'https://media-exp1.licdn.com/dms/image/C560BAQHlfNlQCUawRQ/company-logo_200_200/0/1553972377011?e=2147483647&v=beta&t=xMMHNSYg3_MHSFiojPRKlZ_N3YTxEW475vSxgthYsRE'
   }
 ];

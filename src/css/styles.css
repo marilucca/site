@@ -1,3 +1,23 @@
+/* Início */
+.landing-section {
+  background-image: 
+    linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../static/images/landing.jpg");
+  background-size: cover;
+  height: 80vh;
+}
+
+.landing-title {
+  max-width: 23ch;
+}
+
+@media (min-width: 1024px) {
+  .landing-section p {
+    max-width: 65%;
+  }
+}
+
+/* Blog */
 .blog-post-content-container p + p {
   margin-bottom: 2rem;
   text-align: justify;

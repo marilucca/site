@@ -7,7 +7,7 @@ import CustomerCard from '../components/CustomerCard';
 import LabelText from '../components/LabelText';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/Seo';
-import StatsBox from '../components/StatsBox';
+// import StatsBox from '../components/StatsBox';
 import ContactForm from '../components/ContactForm';
 import customerData from '../data/customer-data';
 import Services from '../components/Services';
@@ -143,7 +143,7 @@ const Index = () => (
       </div>
     </section>
 
-    <section id="stats" className="py-20 lg:pt-32">
+    {/* <section id="stats" className="py-20 lg:pt-32">
       <div className="container mx-auto text-center">
         <LabelText className="text-gray-600">Nossos resultados são</LabelText>
         <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
@@ -158,7 +158,7 @@ const Index = () => (
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
     <section id="testimonials" className="py-20 lg:py-40">
       <div className="container mx-auto">
         <LabelText className="mb-8 text-gray-600 text-center">

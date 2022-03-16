@@ -28,6 +28,25 @@
   list-style-position: inside;
 }
 
+.blog-post-content-container p + ul {
+  margin-bottom: 2rem;
+}
+
+.blog-post-content-container img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-post-content-container * > img, 
+.blog-post-content-container * > iframe {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-post-content-container * > iframe + p {
+  text-align: center;
+}
+
 .blog-post-content-container figure {
   color: gray;
   margin-bottom: 2rem;

@@ -4,10 +4,10 @@ date: "2018-01-20T20:05:00.000Z"
 tags:
   - "São Paulo"
   - "Urbanismo"
-featuredImage: "./first.jpg"
+featuredImage: "./featured.jpg"
 ---
 
-![Foto da cidade de São Paulo](./first.jpg)
+![Foto da cidade de São Paulo](./featured.jpg)
 
 A história mostra que as cidades sempre tiveram conflitos e que a desigualdade social esteve presente em todos os momentos. São Paulo é um exemplo. A cidade evidencia os conflitos capitalistas juntamente com os problemas do subdesenvolvimento. Precisamos lembrar que a urbanização depende da relação entre Estado, mercado e sociedade. E o conflito aparece justamente aí. O mercado procura o lucro, com a compra de terras privilegiadas e suas posteriores valorizações. Enquanto a sociedade se interessa pelo uso da terra. Só que o poder está do lado de quem tem mais dinheiro, e as melhores áreas acabam caindo nas mãos das classes dominantes. E nesse meio o Estado deveria entrar e intervir, promovendo uma democrática distribuição de terras. Mas na verdade, o Estado acaba por aumentar a desigualdade e valorizar ainda mais as áreas. Como isso acontece? Uma terra mais valorizada se encontra num lugar mais central da cidade, perto de transporte público, com acesso a saneamento, água, luz, obras de infraestrutura em geral, e o responsável por todas essas obras em áreas específicas é o próprio Estado, ou seja, ele acaba por criar uma urbanização injusta, quando deveria investir em uma urbanização mais homogênea pensando no contexto geral de cidade, das áreas centrais até as mais afastadas, garantindo o retorno do dinheiro público á sociedade.
 

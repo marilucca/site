@@ -91,7 +91,7 @@ const BlogList = ({ data, pageContext }) => {
                                     />
                                 </div>
                                 
-                                <div className="md:ml-4 flex items-center justify-center">
+                                <div className="md:ml-4 flex flex-col items-start justify-center">
                                     <header className="mb-4 flex flex-col">
                                     <h2 className="text-primary mt-0 text-2xl font-bold" style={{ lineHeight: 1.1 }}>
                                         <span>{title}</span>

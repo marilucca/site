@@ -1,18 +1,16 @@
-import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react';
 
-import Button from '../components/Button'
-import OutlinedButton from '../components/OutlinedButton'
-import Card from '../components/Card'
-import CustomerCard from '../components/CustomerCard'
-import LabelText from '../components/LabelText'
-import Layout from '../components/layout/Layout'
-import Seo from '../components/Seo'
-import StatsBox from '../components/StatsBox'
-import ContactForm from '../components/ContactForm'
-import customerData from '../data/customer-data'
-import HeroImage from '../svg/HeroImage'
-import Services from '../components/Services'
+import Button from '../components/Button';
+import OutlinedButton from '../components/OutlinedButton';
+import Card from '../components/Card';
+import CustomerCard from '../components/CustomerCard';
+import LabelText from '../components/LabelText';
+import Layout from '../components/layout/Layout';
+import Seo from '../components/Seo';
+import StatsBox from '../components/StatsBox';
+import ContactForm from '../components/ContactForm';
+import customerData from '../data/customer-data';
+import Services from '../components/Services';
 
 const Index = () => (
   <Layout>
@@ -37,22 +35,30 @@ const Index = () => (
         </div>
       </div>
     </section> */}
-    <section id="start" className="mt-20 md:mt-0 pt-20 md:pt-40 pb-20 md:pb-20 relative landing-section flex flex-col items-center justify-center">
+    <section
+      id="start"
+      className="mt-20 md:mt-0 pt-20 md:pt-40 pb-20 md:pb-20 relative landing-section flex flex-col items-center justify-center"
+    >
       <div className="container mx-auto px-8 lg:flex">
-          <div className="text-center lg:text-left">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none text-white landing-title">
-              Ideias sustentáveis integrando o mundo
-            </h1>
-            <p className="text-xl lg:text-2xl mt-6 font-light text-white">
-              A Seiva Jr. acredita que, juntos, podemos tornar o mundo mais sustentável, criando uma relação de respeito com o meio ambiente.
-              É possível fazer as coisas de um jeito diferente!
-            </p>
-            <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-start">
-              <Button className="mr-0 md:mr-8 mb-8 md:mb-0" size="lg" to="/#contact">Entre em Contato</Button>
-              <OutlinedButton size="lg" to="/#features">Saiba Mais</OutlinedButton>
-            </div>
+        <div className="text-center lg:text-left">
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none text-white landing-title">
+            Ideias sustentáveis integrando o mundo
+          </h1>
+          <p className="text-xl lg:text-2xl mt-6 font-light text-white">
+            A Seiva Jr. acredita que, juntos, podemos tornar o mundo mais sustentável, criando uma
+            relação de respeito com o meio ambiente. É possível fazer as coisas de um jeito
+            diferente!
+          </p>
+          <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-start">
+            <Button className="mr-0 md:mr-8 mb-8 md:mb-0" size="lg" to="/#contact">
+              Entre em Contato
+            </Button>
+            <OutlinedButton size="lg" to="/#features">
+              Saiba Mais
+            </OutlinedButton>
           </div>
         </div>
+      </div>
     </section>
     <section id="features" className="py-20 lg:pb-20 lg:pt-32">
       <div className="container mx-auto text-center">
@@ -62,7 +68,8 @@ const Index = () => (
             <Card className="mb-8 h-full">
               <p className="font-semibold text-xl">Missão</p>
               <p className="mt-12">
-                Promover soluções sustentáveis e inovadoras através de equipes interdisciplinares comprometidas em integrar os espaços acadêmico, empresarial e ambiental.
+                Promover soluções sustentáveis e inovadoras através de equipes interdisciplinares
+                comprometidas em integrar os espaços acadêmico, empresarial e ambiental.
               </p>
             </Card>
           </div>
@@ -70,7 +77,8 @@ const Index = () => (
             <Card className="mb-8 h-full">
               <p className="font-semibold text-xl">Visão</p>
               <p className="mt-12">
-                Ser uma empresa júnior reconhecida em âmbito nacional por sua excelência em serviços de sustentabilidade.
+                Ser uma empresa júnior reconhecida em âmbito nacional por sua excelência em serviços
+                de sustentabilidade.
               </p>
             </Card>
           </div>
@@ -89,27 +97,27 @@ const Index = () => (
         </div>
       </div>
     </section>
-    
+
     <section id="services">
       <div className="py-10 lg:pt-48">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl lg:text-5xl font-semibold">
-            Nossos Serviços
-          </h2>
+          <h2 className="text-3xl lg:text-5xl font-semibold">Nossos Serviços</h2>
         </div>
       </div>
       <Services />
     </section>
 
-     <section id="features" className="py-20 lg:pb-40 lg:pt-48">
-       <div className="container mx-auto text-center">
+    <section id="features" className="py-20 lg:pb-40 lg:pt-48">
+      <div className="container mx-auto text-center">
         <h2 className="text-3xl lg:text-5xl font-semibold">Nossas parcerias</h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
               <p className="font-semibold text-xl">Biotera</p>
               <p className="mt-4">
-              Estudo e comparação entre três ferramentas para análise de ciclo vida, relacionando-os com informações disponíveis na literatura referente ao produto no cenário nacional.
+                Estudo e comparação entre três ferramentas para análise de ciclo vida,
+                relacionando-os com informações disponíveis na literatura referente ao produto no
+                cenário nacional.
               </p>
             </Card>
           </div>
@@ -117,7 +125,8 @@ const Index = () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">EURECICLO</p>
               <p className="mt-4">
-              Montagem de um guia educativo para as marcas clientes da eureciclo, sobre as embalagens que eles utilizam em seus produtos, com detalhes sobre 17 materiais.
+                Montagem de um guia educativo para as marcas clientes da eureciclo, sobre as
+                embalagens que eles utilizam em seus produtos, com detalhes sobre 17 materiais.
               </p>
             </Card>
           </div>
@@ -125,7 +134,8 @@ const Index = () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">Solaris</p>
               <p className="mt-4">
-              Pensando no enfoque em PGRS, o trabalho consistiu no recolhimento de informações, diagnóstico e caracterização dos resíduos sólidos de empresas.
+                Pensando no enfoque em PGRS, o trabalho consistiu no recolhimento de informações,
+                diagnóstico e caracterização dos resíduos sólidos de empresas.
               </p>
             </Card>
           </div>
@@ -151,9 +161,11 @@ const Index = () => (
     </section>
     <section id="testimonials" className="py-20 lg:py-40">
       <div className="container mx-auto">
-        <LabelText className="mb-8 text-gray-600 text-center">O que nossos clientes e parceiros estão dizendo</LabelText>
+        <LabelText className="mb-8 text-gray-600 text-center">
+          O que nossos clientes e parceiros estão dizendo
+        </LabelText>
         <div className="flex flex-col md:flex-row md:-mx-3">
-          {customerData.map(customer => (
+          {customerData.map((customer) => (
             <div key={customer.customerName} className="flex-1 px-3">
               <CustomerCard customer={customer} />
             </div>
@@ -161,8 +173,13 @@ const Index = () => (
         </div>
       </div>
     </section>
-    <section id="contact" className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
-      <h2 className="text-3xl lg:text-5xl font-semibold text-primary mb-8">Procurando soluções práticas em Projetos Ambientais?</h2>
+    <section
+      id="contact"
+      className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center"
+    >
+      <h2 className="text-3xl lg:text-5xl font-semibold text-primary mb-8">
+        Procurando soluções práticas em Projetos Ambientais?
+      </h2>
       <ContactForm />
     </section>
   </Layout>

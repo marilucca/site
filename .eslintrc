@@ -1,12 +1,16 @@
 {
-  "extends": ["airbnb", "plugin:prettier/recommended", "prettier/react", "plugin:react-hooks/recommended"],
   "env": {
     "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "jest": true,
-    "node": true
+    "es2020": true,
+    "node": true,
+    "jest": true
   },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended"
+  ],
   "plugins": [
     "react",
     "prettier",
@@ -14,6 +18,12 @@
     "eslint-plugin-import-helpers",
     "eslint-plugin-node"
   ],
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     "prettier/prettier": "error",
 
@@ -39,8 +49,15 @@
     "react-hooks/exhaustive-deps": "warn",
 
     "import/prefer-default-export": "off",
+    "import/no-named-as-default-member": "off",
+    "import/no-named-as-default": "off",
     "import/no-dynamic-require": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      { "ts": "never", "tsx": "never", "js": "never" }
+    ],
 
     "import-helpers/order-imports": [
       "warn",
@@ -49,7 +66,6 @@
         "groups": [
           "module",
           "/^@shared/",
-          ["/^@components/", "/^@models/"],
           "/public/",
           ["parent", "sibling", "index"]
         ]

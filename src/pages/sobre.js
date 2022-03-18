@@ -1,8 +1,8 @@
 import React from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
 
 import Seo from '../components/Seo';
+import Person from '../components/Person';
 import Layout from '../components/layout/Layout';
 
 // import membros from '../data/membros-data.json'
@@ -13,6 +13,7 @@ export const pageData = graphql`
       edges {
         node {
           name
+          title
           image {
             childImageSharp {
               gatsbyImageData(width: 120, height: 120)
@@ -44,11 +45,11 @@ const Sobre = ({ data }) => {
 
           <div className="equipe-grid">
             {membros.map((membro) => (
-              <GatsbyImage
+              <Person
                 key={membro.node.name}
                 image={membro.node.image.childImageSharp.gatsbyImageData}
-                alt={membro.node.name}
-                style={{ borderRadius: '100%' }}
+                name={membro.node.name}
+                title={membro.node.title}
               />
             ))}
           </div>

@@ -67,6 +67,10 @@
   margin-bottom: 2rem;
 }
 
+.blog-post-content-container p + figure {
+  margin-top: 2rem;
+}
+
 .blog-post-content-container img {
   margin-left: auto;
   margin-right: auto;

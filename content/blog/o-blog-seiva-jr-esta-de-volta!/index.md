@@ -6,15 +6,8 @@ tags:
   - Meio ambiente
   - SeivaJuntos
   - Sustentabilidade
+featuredImage: './featured.jpg'
 ---
-
-<!-- wp:social-links -->
-<ul class="wp-block-social-links">
-
-
-
-</ul>
-
 
 <p>O <strong>Blog Seiva Jr</strong> está de volta!</p>
 <p><iframe src="//giphy.com/embed/5GoVLqeAOo6PK" width="480" height="374" frameborder="0"></iframe></p>
@@ -23,5 +16,3 @@ tags:
 <p><iframe src="//giphy.com/embed/3o7abKhOpu0NwenH3O" width="480" height="270" frameborder="0"></iframe></p>
 <p>Não deixem de nos seguir nas nossas mídias sociais.</p>
 <p><b>#SeivaJuntos</b></p>
-
-

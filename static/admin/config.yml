@@ -15,8 +15,11 @@ collections:
     path: '{{title}}/index'
     editor:
       preview: true
+    locale: 'pt'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Thumbnail', name: 'featuredImage', widget: 'image' }
+      - { label: 'Data de Publicação', name: 'date', widget: 'datetime', date_format: 'DD/MM/YYYY', time_format: 'HH:mm' }
+      - { label: 'Descrição', name: 'description', widget: 'string', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Texto', name: 'body', widget: 'markdown' }

@@ -12,7 +12,7 @@ module.exports = {
       facebook: 'https://www.facebook.com/seivajr',
       linkedin: 'https://www.linkedin.com/company/seivajr',
       twitter: 'https://twitter.com/seivajr',
-      tiktok: 'https://www.tiktok.com/@seivajr'
+      tiktok: 'https://www.tiktok.com/@seivajr',
     },
   },
 
@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-theme-codebushi`,
       options: {
-        tailwindConfig: `tailwind.config.js`
+        tailwindConfig: `tailwind.config.js`,
       }
     },
     {
@@ -124,7 +124,12 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,

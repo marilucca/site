@@ -6,9 +6,9 @@ tags:
   - Brasil
   - Disponibilidade
   - Mundo
+featuredImage: './featured.jpg'
 ---
 
-<!-- wp:paragraph -->
 <p>A água é basicamente tudo na nossa vida. Seja para beber, preparar aquela comida boa, plantar alimentos, tomar banho… tudo que fazemos, de um jeito ou de outro, tem água envolvida.<br></p>
 
 

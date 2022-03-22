@@ -4,6 +4,7 @@ date: 2018-05-22T00:00:00.000Z
 tags:
   - Biodiversidade
   - Plano estratégico de biodiversidade
+featuredImage: './featured.jpg'
 ---
 
 <p style="text-align: center;"><span style="color: #509e37;"><b>Feliz dia da Biodiversidade!</b></span></p>
@@ -18,9 +19,9 @@ tags:
 <p style="text-align: center;"><iframe src="//giphy.com/embed/UdoS9OzIS2lgY" width="480" height="270" frameborder="0"></iframe></p>
 <p style="text-align: center;"><span style="font-weight: 400;">Boa Brasil!</span></p>
 <p style="text-align: justify;"><span style="font-weight: 400;">Para esse plano acontecer surgiram as Metas de Aichi na 10ª Conferência das Partes da CDB, realizada em Nagoia, no Japão. São 20 proposições para evitar a perda de biodiversidade no mundo que se subdividem em 5 grupos menores.</span></p>
-<p style="text-align: justify;"><a href="http://seivajr.com/?attachment_id=681" rel="attachment wp-att-681"><img class="alignnone size-full wp-image-681" src="http://seivajr.com/wp-content/uploads/2018/05/Capturar.png" alt="" width="959" height="567" /></a></p>
+<p style="text-align: justify;"><img class="alignnone size-full wp-image-681" src="./02.png" alt="" width="959" height="567" /></p>
 <p style="text-align: justify;"><span style="font-weight: 400;">A preservação da biodiversidade também está presente nas Metas do Milênio, criadas pela ONU em 2000. </span></p>
-<p style="text-align: justify;"><a href="http://seivajr.com/?attachment_id=682" rel="attachment wp-att-682"><img class="wp-image-682 aligncenter" src="http://seivajr.com/wp-content/uploads/2018/05/8-jeitos-de-mudar-o-mundo.jpg" alt="" width="600" height="614" /></a></p>
+<p style="text-align: justify;"><img class="wp-image-682 aligncenter" src="./03.jpg" alt="" width="600" height="614" /></p>
 <p style="text-align: justify;"><span style="font-weight: 400;">Garantir a sustentabilidade ambiental é a Meta número 7 e inclui a redução na taxa de perda de biodiversidade. </span></p>
 <p style="text-align: justify;"><span style="font-weight: 400;">De acordo com a ONG World Wildlife Fund (WWF), o “Brasil é uma potência de biodiversidade e líder global nos esforços da CDB. Entretanto, a biodiversidade ainda não tem sido tratada com ênfase nas suas estratégias de desenvolvimento, e isso leva à perda gradual de um diferencial importante do País. É importante que o Brasil demonstre sua liderança na prática”, já que abriga a maior biodiversidade do planeta. Sua variedade de biomas reflete a enorme riqueza que se traduz em mais de 20% do número total de espécies da Terra.</span></p>
 <p style="text-align: center;"><iframe src="//giphy.com/embed/pZdtSr6SARRdK" width="480" height="480" frameborder="0"></iframe></p>

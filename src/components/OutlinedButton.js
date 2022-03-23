@@ -4,7 +4,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 const sizes = {
   default: `py-3 px-8`,
   lg: `py-4 px-12`,
-  xl: `py-5 px-16 text-lg`
+  xl: `py-5 px-16 text-lg`,
 };
 
 const OutlinedButton = ({ children, className = '', size, to }) => {

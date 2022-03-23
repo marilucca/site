@@ -1,15 +1,17 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClose, faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClose, faBars } from '@fortawesome/free-solid-svg-icons';
 
 import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  
-  const toggle = () => setIsOpen(state => !state)
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen((state) => !state);
 
   return (
     <header className="navbar-container shadow">
@@ -22,7 +24,11 @@ const Header = () => {
             Seiva Jr.
           </AnchorLink>
 
-          <div className="ml-auto lg:hidden text-primary active:text-primary-darker cursor-pointer" onClick={toggle}>
+          <div
+            className="ml-auto lg:hidden text-primary active:text-primary-darker cursor-pointer"
+            onClick={toggle}
+            role="navigation"
+          >
             <FontAwesomeIcon icon={isOpen ? faClose : faBars} size="lg" />
           </div>
         </div>
@@ -43,33 +49,26 @@ const Header = () => {
             Blog
           </AnchorLink>
         </div>
-        {
-          isOpen ? (
-            <div className="fixed z-50 bg-white w-full h-full flex flex-col items-center justify-evenly" style={{ top: '10vh' }}>
-              <AnchorLink to="/">
-                Início
-              </AnchorLink>
-              <AnchorLink to="/sobre">
-                Sobre
-              </AnchorLink>
-              <AnchorLink to="/portfolio">
-                Portfólio
-              </AnchorLink>
-              <AnchorLink to="/processo-seletivo">
-                Processo Seletivo
-              </AnchorLink>
-              <AnchorLink to="/blog">
-                Blog
-              </AnchorLink>
-            </div>
-          ) : null
-        }
+        {isOpen ? (
+          <div
+            className="fixed z-50 bg-white w-full h-full flex flex-col items-center justify-evenly"
+            style={{ top: '10vh' }}
+          >
+            <AnchorLink to="/">Início</AnchorLink>
+            <AnchorLink to="/sobre">Sobre</AnchorLink>
+            <AnchorLink to="/portfolio">Portfólio</AnchorLink>
+            <AnchorLink to="/processo-seletivo">Processo Seletivo</AnchorLink>
+            <AnchorLink to="/blog">Blog</AnchorLink>
+          </div>
+        ) : null}
         <div className="ml-4 hidden lg:block">
-          <Button className="text-sm" to="/#contact">Entre em Contato</Button>
+          <Button className="text-sm" to="/#contact">
+            Entre em Contato
+          </Button>
         </div>
       </div>
     </header>
-  )
+  );
 };
 
 export default Header;

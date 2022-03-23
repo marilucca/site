@@ -27,7 +27,7 @@ const ImageWithCaption = {
   </figure>
   `,
   toPreview: (props, getAsset, fields) => {
-    const imageField = fields?.find(f => f.get('widget') === 'image');
+    const imageField = fields?.find((f) => f.get('widget') === 'image');
     const src = getAsset(props.image, imageField);
 
     return (
@@ -35,7 +35,7 @@ const ImageWithCaption = {
         <img src={src} alt="" />
         <figcaption>{props.caption}</figcaption>
       </figure>
-    )
+    );
   },
 };
 

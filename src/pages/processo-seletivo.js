@@ -29,25 +29,28 @@ const ProcessoSeletivo = () => {
             saber quando o processo abrirá e como ele funcionará!
             <br />
             <br /> A Seiva Jr. é uma Empresa Júnior da Universidade Federal do ABC (UFABC) que visa
-            promover o conceito de <span className="text-primary font-bold">SUSTENTABILIDADE</span> a partir da{' '}
-            <span className="text-primary font-bold">DIFUSÃO de CONHECIMENTO</span>, da{' '}
+            promover o conceito de <span className="text-primary font-bold">
+              SUSTENTABILIDADE
+            </span>{' '}
+            a partir da <span className="text-primary font-bold">DIFUSÃO de CONHECIMENTO</span>, da{' '}
             <span className="text-primary font-bold">INOVAÇÃO</span> e de{' '}
             <span className="text-primary font-bold">CONSULTORIAS</span>.
-            <br/>
-            <br/>
-            A empresa é organizada de maneira matricial, o que permite um crescimento profissional para todos os membros, 
-            visto que todos são igualmente aptos a tomar decisões importantes e propor novas ideias.
-            <br/>
-            <br/>
+            <br />
+            <br />
+            A empresa é organizada de maneira matricial, o que permite um crescimento profissional
+            para todos os membros, visto que todos são igualmente aptos a tomar decisões importantes
+            e propor novas ideias.
+            <br />
+            <br />
             Coloque suas ideias em prática e faça parte da nossa história!
-            <br/>
-            <br/>
+            <br />
+            <br />
             Qualquer dúvida, contate a equipe Seiva através das redes sociais.
           </p>
         </div>
       </section>
     </Layout>
-    );
+  );
 };
 
 export default ProcessoSeletivo;

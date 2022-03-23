@@ -1,10 +1,10 @@
-import React from 'react'
-import Layout from '../components/layout/Layout'
-import Seo from '../components/Seo'
-import Tag from '../components/Tag'
-import { graphql, Link } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import Bio from '../components/Bio'
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import Seo from '../components/Seo';
+import Tag from '../components/Tag';
+import { graphql, Link } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import Bio from '../components/Bio';
 
 export const pageQuery = graphql`
   query BlogList {
@@ -13,9 +13,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt
         fields {
@@ -27,10 +25,7 @@ export const pageQuery = graphql`
           description
           featuredImage {
             childImageSharp {
-              gatsbyImageData(
-                layout: CONSTRAINED
-                height: 300
-              )
+              gatsbyImageData(layout: CONSTRAINED, height: 300)
             }
           }
           tags
@@ -38,10 +33,10 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 const Blog = ({ data }) => {
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
     return (
@@ -49,12 +44,10 @@ const Blog = ({ data }) => {
         <section className="pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
           <Seo title="Blog" />
           <Bio />
-          <p>
-            Ainda não possuimos nenhum texto em nosso blog. Logo adicionaremos mais textos.
-          </p>
+          <p>Ainda não possuimos nenhum texto em nosso blog. Logo adicionaremos mais textos.</p>
         </section>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -64,20 +57,16 @@ const Blog = ({ data }) => {
         <Bio />
 
         <ol style={{ listStyle: `none` }}>
-          {posts.map(post => {
-            const title = post.frontmatter.title || post.fields.slug
-            const preview = post.frontmatter.featuredImage?.childImageSharp.gatsbyImageData
-            const tags = post.frontmatter.tags || []
-            const date = new Date(post.frontmatter.date).toLocaleDateString()
+          {posts.map((post) => {
+            const title = post.frontmatter.title || post.fields.slug;
+            const preview = post.frontmatter.featuredImage?.childImageSharp.gatsbyImageData;
+            const tags = post.frontmatter.tags || [];
+            const date = new Date(post.frontmatter.date).toLocaleDateString();
 
             return (
               <li key={post.fields.slug}>
                 <Link to={post.fields.slug} itemProp="url">
-                  <article
-                    className="mb-16"
-                    itemScope
-                    itemType="http://schema.org/Article"
-                  >
+                  <article className="mb-16" itemScope itemType="http://schema.org/Article">
                     <div className="flex">
                       <GatsbyImage className="rounded-lg" image={preview} alt={title} />
                       <div className="ml-4 flex items-center justify-center">
@@ -88,7 +77,7 @@ const Blog = ({ data }) => {
                           <small>{date}</small>
 
                           <div className="mt-2">
-                            {tags.map(tag => (
+                            {tags.map((tag) => (
                               <Tag>{tag}</Tag>
                             ))}
                           </div>
@@ -107,12 +96,12 @@ const Blog = ({ data }) => {
                   </article>
                 </Link>
               </li>
-            )
+            );
           })}
         </ol>
       </section>
     </Layout>
   );
-}
+};
 
 export default Blog;

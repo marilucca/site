@@ -3,8 +3,12 @@
  * extension registration methods, such as `registerWidget` and
  * `registerPreviewTemplate`.
  */
+import '../css/editor.css';
+
 import CMS from 'netlify-cms-app';
 import { pt } from 'netlify-cms-locales';
+
+import ImageWithCaption from './ImageWithCaption';
 
 /**
  * Any imported styles should be automatically be applied to the editor preview
@@ -33,3 +37,4 @@ import { pt } from 'netlify-cms-locales';
 // CMS.registerWidget(`image-gallery`, ImageGalleryWidget, ImageGalleryPreview);
 
 CMS.registerLocale('pt', pt);
+CMS.registerEditorComponent(ImageWithCaption);

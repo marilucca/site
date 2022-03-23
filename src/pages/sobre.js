@@ -35,21 +35,22 @@ const Sobre = ({ data }) => {
 
         <div className="container mx-auto flex flex-col items-center md:items-start">
           <h2 className="title lg:text-5xl mb-2">Sobre Nós</h2>
-
           <p className="text-lg font-light px-8">
-            A Seiva Júnior nasceu em 03 de Dezembro de 2013 na Universidade Federal do ABC como um
-            grupo de estudos. Em 2014, uma oportunidade de projeto remunerado tournou necessário a
-            busca por um CNPJ. Com esse objetivo em mente, a Seiva foi se estruturando como uma
-            Empresa Júnior focada no âmbito da sustentabilidade. Em 10 de junho de 2021, depois de
-            quase 8 anos de existência, a Seiva obteu seu CNPJ, oficializando-se como uma empresa.
+            A Seiva Júnior nasceu em 03 de Dezembro de 2013 na Universidade Federal do ABC com o
+            desejo de cristalizar a temática ambiental, os conhecimentos acadêmicos e a integração
+            entre discentes e docentes dos diferentes cursos e áreas do conhecimento da
+            universidade. Em 2014, uma oportunidade de projeto remunerado tournou necessário a busca
+            por um CNPJ. Com esse objetivo em mente, a Seiva foi se estruturando como uma Empresa
+            Júnior focada no âmbito da sustentabilidade. Em 10 de junho de 2021, depois de quase 8
+            anos de existência, a Seiva obteu seu CNPJ, oficializando-se como uma empresa.
           </p>
-
           <p className="text-lg mt-6 font-light px-8">
-            Focada na área ambiental, temos como missão promover soluções sustentáveis e inovadoras
-            através de equipes interdisciplinares comprometidas em integrar os espaços acadêmico,
-            empresarial e ambiental.
+            Desde então, nosso trabalho é desenvolver projetos focados na minimização de impactos
+            ambientais e na melhoria do desempenho das instituições em seu processo produtivo e
+            organizacional, além de garantir o debate sobre sustentabilidade e mobilizar pessoas,
+            recursos e empresas parceiras. Para isso aplicamos, de forma colaborativa e matricial,
+            os conhecimentos teóricos e práticos de uma equipe interdisciplinar.
           </p>
-
           <p className="text-lg mt-6 font-light px-8">
             Atualmente, a Seiva é estruturada por meio de um sistema matricial, sendo dividida nas
             seguintes áreas:

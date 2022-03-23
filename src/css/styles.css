@@ -127,6 +127,11 @@
   align-self: center;
 }
 
+.blog-post-image-container {
+  display: grid;
+  grid-template-columns: 325px auto;
+}
+
 .footer-title {
   font-weight: semibold;
   font-size: 1.125rem;

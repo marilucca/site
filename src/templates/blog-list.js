@@ -25,12 +25,11 @@ query BlogListQuery($skip: Int!, $limit: Int!) {
                 title
                 description
                 tags
-                featuredImage {
+                featuredImage  {
                     childImageSharp {
                         gatsbyImageData(
-                            layout: FIXED
-                            width: 325
-                            height: 225
+                            width: 450
+                            height: 300
                         )
                     }
                 }
@@ -81,13 +80,15 @@ const BlogList = ({ data, pageContext }) => {
                             itemType="http://schema.org/Article"
                         >
                             <div className="flex flex-col md:flex-row">
-                                <div style={{ maxWidth: 325, maxHeight: 225 }}>
-                                    <GatsbyImage 
+                                <div className="blog-post-image-container">
+                                    <GatsbyImage
                                         className="rounded-lg" 
-                                        image={preview} 
+                                        image={preview}
                                         alt={title} 
-                                        width={325} 
-                                        height={225}
+                                        // width={325} 
+                                        // height={225}
+                                        // style={{ width: 325, height: 225 }}
+                                        // imgStyle={{ width: 325, height: 225 }}
                                     />
                                 </div>
                                 

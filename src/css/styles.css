@@ -127,9 +127,20 @@
   align-self: center;
 }
 
-.blog-post-image-container {
-  display: grid;
-  grid-template-columns: 325px auto;
+.post-list-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .post-list-grid {
+    display: grid;
+    grid-template-columns: 325px auto;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 .footer-title {

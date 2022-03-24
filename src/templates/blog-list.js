@@ -70,7 +70,7 @@ const BlogList = ({ data, pageContext }) => {
               <li key={post.fields.slug}>
                 <Link to={post.fields.slug} itemProp="url">
                   <article className="mb-16" itemScope itemType="http://schema.org/Article">
-                    <div style={{ display: 'grid', gridTemplateColumns: '325px auto' }}>
+                    <div className="post-list-grid">
                       <GatsbyImage
                         className="rounded-lg"
                         image={preview}

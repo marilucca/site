@@ -132,11 +132,11 @@ const ContactForm = () => {
           type="submit"
           disabled={formState === 'pending'}
           className="
-            bg-primary
+            bg-primary-default
             hover:bg-primary-darker
             border-solid
             border-4
-            border-primary
+            border-primary-default
             hover:border-primary-darker
             rounded
             text-white

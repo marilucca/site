@@ -15,10 +15,10 @@ const OutlinedButton = ({ children, className = '', size, to }) => {
         ${className}
         border-solid
         border-4
-        border-primary
+        border-primary-default
         hover:border-primary-darker
         rounded
-        text-primary
+        text-primary-default
         hover:text-primary-darker
         font-bold
         cursor-pointer

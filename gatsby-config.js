@@ -1,3 +1,6 @@
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   siteMetadata: {
     title: `Seiva Júnior`,
@@ -17,10 +20,18 @@ module.exports = {
   },
 
   plugins: [
+    `gatsby-plugin-emotion`,
     {
-      resolve: `gatsby-theme-codebushi`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        tailwindConfig: `tailwind.config.js`,
+        postCssPlugins: [tailwindcss(`${__dirname}/tailwind.config.js`), autoprefixer],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: [`src/css/tailwind.css`],
       },
     },
     {
@@ -42,59 +53,6 @@ module.exports = {
         custom: [],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-feed`,
-    //   options: {
-    //     query: `
-    //       {
-    //         site {
-    //           siteMetadata {
-    //             title
-    //             description
-    //             siteUrl
-    //             site_url: siteUrl
-    //           }
-    //         }
-    //       }
-    //     `,
-    //     feeds: [
-    //       {
-    //         serialize: ({ query: { site, allMarkdownRemark } }) => {
-    //           return allMarkdownRemark.nodes.map(node => {
-    //             return Object.assign({}, node.frontmatter, {
-    //               description: node.excerpt,
-    //               date: node.frontmatter.date,
-    //               url: site.siteMetadata.siteUrl + node.fields.slug,
-    //               guid: site.siteMetadata.siteUrl + node.fields.slug,
-    //               custom_elements: [{ "content:encoded": node.html }],
-    //             })
-    //           })
-    //         },
-    //         query: `
-    //           {
-    //             allMarkdownRemark(
-    //               sort: { order: DESC, fields: [frontmatter___date] },
-    //             ) {
-    //               nodes {
-    //                 excerpt
-    //                 html
-    //                 fields {
-    //                   slug
-    //                 }
-    //                 frontmatter {
-    //                   title
-    //                   date
-    //                 }
-    //               }
-    //             }
-    //           }
-    //         `,
-    //         output: "/rss.xml",
-    //         title: "Gatsby Starter Blog RSS Feed",
-    //       },
-    //     ],
-    //   },
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

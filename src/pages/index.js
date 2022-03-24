@@ -15,26 +15,6 @@ import Services from '../components/Services';
 const Index = () => (
   <Layout>
     <Seo title="Início" />
-    {/* <section className="mt-8 pt-20 md:pt-40">
-      <div className="container mx-auto px-8 lg:flex">
-        <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            Ideias sustentáveis integrando o mundo
-          </h1>
-          <p className="text-xl lg:text-2xl mt-6 font-light">
-            A Seiva Jr. acredita que, juntos, podemos tornar o mundo mais sustentável, criando uma relação de respeito com o meio ambiente.
-            É possível fazer as coisas de um jeito diferente!
-          </p>
-          <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-start">
-            <Button className="mr-0 md:mr-8 mb-8 md:mb-0" size="lg" to="/#contact">Entre em Contato</Button>
-            <OutlinedButton size="lg" to="/#features">Saiba Mais</OutlinedButton>
-          </div>
-        </div>
-        <div className="lg:w-1/2">
-          <HeroImage />
-        </div>
-      </div>
-    </section> */}
     <section
       id="start"
       className="mt-20 md:mt-0 pt-20 md:pt-40 pb-20 md:pb-20 relative landing-section flex flex-col items-center justify-center"
@@ -177,7 +157,7 @@ const Index = () => (
       id="contact"
       className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center"
     >
-      <h2 className="text-3xl lg:text-5xl font-semibold text-primary mb-8">
+      <h2 className="text-3xl lg:text-5xl font-semibold text-primary-default mb-8">
         Procurando soluções práticas em Projetos Ambientais?
       </h2>
       <ContactForm />

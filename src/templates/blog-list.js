@@ -68,47 +68,44 @@ const BlogList = ({ data, pageContext }) => {
 
             return (
               <li key={post.fields.slug}>
-                <Link to={post.fields.slug} itemProp="url">
-                  <article className="mb-16" itemScope itemType="http://schema.org/Article">
-                    <div className="post-list-grid">
-                      <GatsbyImage
-                        className="rounded-lg"
-                        image={preview}
-                        alt={title}
-                        // width={325}
-                        // height={225}
-                        // style={{ width: 325, height: 225 }}
-                        // imgStyle={{ width: 325, height: 225 }}
-                      />
+                <Link to={post.fields.slug}>
+                  <div className="mb-16 post-list-grid">
+                    <GatsbyImage
+                      className="rounded-lg"
+                      image={preview}
+                      alt={title}
+                      // width={325}
+                      // height={225}
+                      // style={{ width: 325, height: 225 }}
+                      // imgStyle={{ width: 325, height: 225 }}
+                    />
 
-                      <div className="md:ml-4 flex flex-col items-start justify-center">
-                        <header className="mb-4 flex flex-col">
-                          <h2
-                            className="text-primary mt-0 text-2xl font-bold"
-                            style={{ lineHeight: 1.1 }}
-                          >
-                            <span>{title}</span>
-                          </h2>
-                          <small>{date}</small>
+                    <div className="md:ml-4 flex flex-col items-start justify-center">
+                      <header className="mb-4 flex flex-col">
+                        <h2
+                          className="text-primary-default mt-0 text-2xl font-bold"
+                          style={{ lineHeight: 1.1 }}
+                        >
+                          <span>{title}</span>
+                        </h2>
+                        <small>{date}</small>
 
-                          <div className="mt-2">
-                            {tags.map((tag) => (
-                              <Tag>{tag}</Tag>
-                            ))}
-                          </div>
-                        </header>
-                        <section>
-                          <p
-                            dangerouslySetInnerHTML={{
-                              __html: post.frontmatter.description || post.excerpt,
-                            }}
-                            itemProp="description"
-                            className="text-gray-600"
-                          />
-                        </section>
-                      </div>
+                        <div className="mt-2">
+                          {tags.map((tag) => (
+                            <Tag>{tag}</Tag>
+                          ))}
+                        </div>
+                      </header>
+                      <section>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: post.frontmatter.description || post.excerpt,
+                          }}
+                          className="text-gray-600"
+                        />
+                      </section>
                     </div>
-                  </article>
+                  </div>
                 </Link>
               </li>
             );

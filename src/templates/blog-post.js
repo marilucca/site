@@ -23,7 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <section className="pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
         <article itemScope itemType="http://schema.org/Article">
           <header className="mb-4">
-            <h1 className="mb-0 text-primary text-4xl" itemProp="headline">
+            <h1 className="mb-0 text-primary-default text-4xl" itemProp="headline">
               {post.frontmatter.title}
             </h1>
             <p className="text-md">{date}</p>

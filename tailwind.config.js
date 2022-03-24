@@ -1,9 +1,7 @@
 module.exports = {
+  content: ['./src/**/*.{js,jsx,html}'],
   theme: {
     extend: {
-      gridTemplateColumns: {
-        blog: '325px auto',
-      },
       colors: {
         primary: {
           lighter: 'hsl(103,44%, 44%)',

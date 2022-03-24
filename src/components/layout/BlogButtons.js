@@ -21,7 +21,7 @@ const BlogButtons = ({ pageContext }) => {
       {!isFirst && (
         <span className="mr-4">
           <Link to={prev} rel="prev">
-            <FontAwesomeIcon icon={faArrowLeft} className="text-primary" />
+            <FontAwesomeIcon icon={faArrowLeft} className="text-primary-default" />
             <span className="ml-2">Anterior</span>
           </Link>
         </span>
@@ -40,7 +40,7 @@ const BlogButtons = ({ pageContext }) => {
         <span className="ml-4">
           <Link to={`/blog/${next}`} rel="next">
             <span className="mr-2">Próximo</span>
-            <FontAwesomeIcon icon={faArrowRight} className="text-primary" />
+            <FontAwesomeIcon icon={faArrowRight} className="text-primary-default" />
           </Link>
         </span>
       )}

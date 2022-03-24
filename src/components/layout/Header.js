@@ -25,7 +25,7 @@ const Header = () => {
           </AnchorLink>
 
           <div
-            className="ml-auto lg:hidden text-primary active:text-primary-darker cursor-pointer"
+            className="ml-auto lg:hidden text-primary-default active:text-primary-darker cursor-pointer"
             onClick={toggle}
             role="navigation"
           >

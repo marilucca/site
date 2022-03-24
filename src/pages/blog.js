@@ -71,7 +71,7 @@ const Blog = ({ data }) => {
                       <GatsbyImage className="rounded-lg" image={preview} alt={title} />
                       <div className="ml-4 flex items-center justify-center">
                         <header className="mb-4 flex flex-col">
-                          <h2 className="text-primary mt-0 text-2xl font-bold">
+                          <h2 className="text-primary-default mt-0 text-2xl font-bold">
                             <span>{title}</span>
                           </h2>
                           <small>{date}</small>

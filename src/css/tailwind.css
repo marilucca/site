@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 h1,
 h2,
@@ -16,13 +18,9 @@ span {
 }
 
 a {
-  @apply text-primary;
+  @apply text-primary-default;
 }
 
 a:hover {
   @apply text-primary-darker;
 }
-
-@tailwind components;
-
-@tailwind utilities;

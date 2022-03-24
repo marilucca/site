@@ -20,6 +20,7 @@ module.exports = {
   },
 
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-postcss`,

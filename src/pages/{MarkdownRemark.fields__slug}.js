@@ -1,15 +1,13 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Bio from '../components/Bio';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/Seo';
 import Tag from '../components/Tag';
 
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const { previous, next } = data;
 
   const date = new Date(post.frontmatter.date).toLocaleDateString();
   const tags = post.frontmatter.tags || [];
@@ -77,12 +75,7 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+  query BlogPostBySlug($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       excerpt
@@ -92,22 +85,6 @@ export const pageQuery = graphql`
         date
         description
         tags
-      }
-    }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
       }
     }
   }

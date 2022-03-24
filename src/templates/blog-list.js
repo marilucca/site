@@ -48,7 +48,7 @@ const BlogList = ({ data, pageContext }) => {
           <Bio />
           <p>Ainda não possuimos nenhum texto em nosso blog. Logo adicionaremos mais textos.</p>
 
-          <BlogButtons pageContext={pageContext} />
+          {/* <BlogButtons pageContext={pageContext} /> */}
         </section>
       </Layout>
     );

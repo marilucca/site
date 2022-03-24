@@ -21,23 +21,23 @@ module.exports = {
       resolve: `gatsby-theme-codebushi`,
       options: {
         tailwindConfig: `tailwind.config.js`,
-      }
+      },
     },
     {
-      resolve: "gatsby-omni-font-loader",
+      resolve: 'gatsby-omni-font-loader',
       options: {
         enableListener: true,
-        preconnect: ["https://fonts.gstatic.com"],
+        preconnect: ['https://fonts.gstatic.com'],
 
         web: [
           {
             file: 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap',
-            name: "Bebas Neue",
+            name: 'Bebas Neue',
           },
           {
             file: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap',
             name: 'Montserrat',
-          }
+          },
         ],
         custom: [],
       },
@@ -112,14 +112,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'data',
-        path: `${__dirname}/src/data`
-      }
+        path: `${__dirname}/src/data`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: 'membros',
-        path: `${__dirname}/src/images/membros`
+        path: `${__dirname}/src/images/membros`,
       },
     },
     `gatsby-plugin-image`,
@@ -128,7 +128,7 @@ module.exports = {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
-      }
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
@@ -157,6 +157,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-anchor-links`,
-    `gatsby-plugin-fontawesome-css`
-  ]
+    `gatsby-plugin-fontawesome-css`,
+  ],
 };

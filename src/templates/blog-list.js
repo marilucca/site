@@ -70,18 +70,16 @@ const BlogList = ({ data, pageContext }) => {
               <li key={post.fields.slug}>
                 <Link to={post.fields.slug} itemProp="url">
                   <article className="mb-16" itemScope itemType="http://schema.org/Article">
-                    <div className="flex flex-col md:flex-row">
-                      <div className="blog-post-image-container">
-                        <GatsbyImage
-                          className="rounded-lg"
-                          image={preview}
-                          alt={title}
-                          // width={325}
-                          // height={225}
-                          // style={{ width: 325, height: 225 }}
-                          // imgStyle={{ width: 325, height: 225 }}
-                        />
-                      </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: '325px auto' }}>
+                      <GatsbyImage
+                        className="rounded-lg"
+                        image={preview}
+                        alt={title}
+                        // width={325}
+                        // height={225}
+                        // style={{ width: 325, height: 225 }}
+                        // imgStyle={{ width: 325, height: 225 }}
+                      />
 
                       <div className="md:ml-4 flex flex-col items-start justify-center">
                         <header className="mb-4 flex flex-col">

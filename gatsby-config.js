@@ -17,6 +17,7 @@ module.exports = {
       twitter: 'https://twitter.com/seivajr',
       tiktok: 'https://www.tiktok.com/@seivajr',
     },
+    keywords: 'Sustentabilidade, Consultoria, Empresa Júnior, Meio Ambiente',
   },
 
   plugins: [
@@ -33,6 +34,14 @@ module.exports = {
       options: {
         tailwind: true,
         purgeOnly: [`src/css/tailwind.css`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-193021520-1',
+        head: false,
+        enableWebVitalsTracking: true,
       },
     },
     {
@@ -117,5 +126,18 @@ module.exports = {
     },
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Seiva Júnior`,
+        short_name: `Seiva Júnior`,
+        description: `Seiva Júnior Consultoria em Sustentabilidade`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#508f38`,
+        display: `minimal-ui`,
+        icon: 'src/images/logo-seiva.png',
+      },
+    },
   ],
 };

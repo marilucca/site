@@ -35,11 +35,6 @@
         "image": "../images/membros/ElisaSilvaFreireAguilar.png.png"
     },
     {
-        "name": "Erick Victor Barbosa de Carvalho",
-        "title": "Membro Sênior do Marketing",
-        "image": "../images/membros/ErickVictorBarbosadeCarvalho.png.png"
-    },
-    {
         "name": "Érika dos Santos Gonçalves",
         "title": "Membro Sênior do Comercial e Projetos",
         "image": "../images/membros/ErikaGolcalves.png"
@@ -228,10 +223,5 @@
         "name": "Vitor Daniel Antunes Oliveira",
         "title": "Membro Júnior da Gestão de Talentos",
         "image": "../images/membros/VitorDanielAntunesOliveira.png.png"
-    },
-    {
-        "name": "Yasmin da Costa Dias",
-        "title": "Membro Júnior do Marketing",
-        "image": "../images/membros/YasmindaCostaDias.png.png"
     }
 ]

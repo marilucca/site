@@ -1,12 +1,10 @@
 import React from 'react';
 
 const SplitSection = ({ id, primarySlot, secondarySlot, reverseOrder }) => (
-  <section id={id} className="py-20">
-    <div className="container mx-auto px-16 items-center flex flex-col lg:flex-row">
-      <div className="lg:w-1/2">{primarySlot}</div>
-      <div
-        className={`mt-10 lg:mt-0 w-full lg:w-1/2 ${reverseOrder && `order-last lg:order-first`}`}
-      >
+  <section id={id} className="split-section">
+    <div className="container split-section-container">
+      <div className="split-section-primary">{primarySlot}</div>
+      <div className={`split-section-secondary ${reverseOrder && `order-last lg:order-first`}`}>
         {secondarySlot}
       </div>
     </div>

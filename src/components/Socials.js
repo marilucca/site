@@ -43,13 +43,13 @@ const Socials = () => {
   const socials = data.site.siteMetadata?.social;
 
   return (
-    <div className="flex flex-col items-start">
+    <div className="socials-container">
       <h2 className="footer-title">Redes Sociais</h2>
-      <ul className="leading-loose">
+      <ul>
         {Object.entries(socials).map(([key, value]) => (
-          <li key={key} className="flex flex-row align-start">
+          <li key={key} className="socials-item">
             <a href={value} target="_blank" rel="norefferer">
-              <FontAwesomeIcon icon={socialLogo[key]} size="lg" className="mr-4" />
+              <FontAwesomeIcon icon={socialLogo[key]} size="lg" />
               {capitalize(key)}
             </a>
           </li>

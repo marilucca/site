@@ -15,25 +15,21 @@ import Services from '../components/Services';
 const Index = () => (
   <Layout>
     <Seo title="Início" />
-    <section
-      id="start"
-      className="mt-20 md:mt-0 pt-20 md:pt-40 pb-20 md:pb-20 relative landing-section flex flex-col items-center justify-center"
-    >
-      <div className="container mx-auto px-8 lg:flex">
-        <div className="text-center lg:text-left">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none text-white landing-title">
-            Ideias sustentáveis integrando o mundo
-          </h1>
-          <p className="text-xl lg:text-2xl mt-6 font-light text-white">
+    <section id="start" className="landing-section">
+      <div className="container landing-section-container">
+        <div className="landing-section-hero">
+          <h1 className="landing-title">Ideias sustentáveis integrando o mundo</h1>
+          <p>
             A Seiva Jr. acredita que, juntos, podemos tornar o mundo mais sustentável, criando uma
             relação de respeito com o meio ambiente. É possível fazer as coisas de um jeito
             diferente!
           </p>
-          <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-center justify-start">
-            <Button className="mr-0 md:mr-8 mb-8 md:mb-0" size="lg" to="/#contact">
+          <div className="button-group">
+            <Button className="button-spaced" size="button-lg" to="/#contact">
               Entre em Contato
             </Button>
-            <OutlinedButton size="lg" to="/#features">
+
+            <OutlinedButton size="button-lg" to="/#features">
               Saiba Mais
             </OutlinedButton>
           </div>

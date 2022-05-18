@@ -1,0 +1,31 @@
+:root {
+  --color-primary-lighter: hsl(103, 44%, 44%);
+  --color-primary-default: hsl(103, 44%, 39%);
+  --color-primary-darker: hsl(103, 44%, 34%);
+
+  --color-white: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bebas Neue', cursive;
+}
+
+a,
+p,
+div,
+span {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: var(--color-primary-default);
+}
+
+a:hover {
+  color: var(--color-primary-darker);
+}

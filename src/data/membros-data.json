@@ -25,11 +25,6 @@
         "image": "../images/membros/CaiodeOliveiraPariz.png.png"
     },
     {
-        "name": "Caroline Reinbach",
-        "title": "Membro Júnior do Comerical e Projetos",
-        "image": "../images/membros/CarolineReinbach.png.png"
-    },
-    {
         "name": "Elisa Silva Freire Aguilar",
         "title": "Diretora do Financeiro",
         "image": "../images/membros/ElisaSilvaFreireAguilar.png.png"
@@ -80,11 +75,6 @@
         "image": "../images/membros/HeitorFranciscoBernardesdaSilveira.png.png"
     },
     {
-        "name": "Isabela Santiago Ribeiro dos Reis",
-        "title": "Membro Sênior do Marketing",
-        "image": "../images/membros/IsabelaSantiagoRibeirodosReis.png.png"
-    },
-    {
         "name": "Ivete da Silva Batista",
         "title": "Membro Júnior do Publicidade e Propaganda",
         "image": "../images/membros/IvetedaSilvaBatista.png.png"
@@ -98,16 +88,6 @@
         "name": "João Victor Nascimento Mota",
         "title": "Membro Sênior do Marketing",
         "image": "../images/membros/JoaoVictorNascimentoMota.png.png"
-    },
-    {
-        "name": "Julio Cesar Shinji Akamine Milanesio",
-        "title": "Membro Sênior do Comerical e Projetos",
-        "image": "../images/membros/JulioCesarShinjiAkamineMilanesio.png.png"
-    },
-    {
-        "name": "Kennedy Kelvin da Silva Teixeira",
-        "title": "Membro Sênior da Gestão de Talentos",
-        "image": "../images/membros/KennedyKelvindaSilvaTeixeira.png.png"
     },
     {
         "name": "Lucas Marin",

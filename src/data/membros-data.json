@@ -1,7 +1,7 @@
 [
     {
         "name": "Ana Carolina Menegato da Silva",
-        "title": "Membro Júnior do Marketing",
+        "title": "Membro Sênior do Marketing",
         "image": "../images/membros/AnaCarolinaMenegatodaSilva.png.png"
     },
     {
@@ -11,12 +11,12 @@
     },
     {
         "name": "Ana Harumi Fugita de Maria",
-        "title": "Membro Júnior do Publicidade e Propaganda",
+        "title": "Membro Sênior do Publicidade e Propaganda",
         "image": "../images/membros/AnaHarumiFugitadeMaria.png.png"
     },
     {
         "name": "Brenda Caroline de Moraes Duarte",
-        "title": "Membro Júnior da Presidência",
+        "title": "Membro Sênior da Presidência",
         "image": "../images/membros/BrendaCarolinedeMoraesDuarte.png.png"
     },
     {
@@ -41,7 +41,7 @@
     },
     {
         "name": "Felipe Silva Oliveira",
-        "title": "Membro Júnior do Comerical e Projetos",
+        "title": "Membro Sênior do Comerical e Projetos",
         "image": "../images/membros/FelipeSilvaOliveira.png.png"
     },
     {
@@ -66,22 +66,17 @@
     },
     {
         "name": "Gustavo Teodoro Bauke",
-        "title": "Membro Júnior do Publicidade e Propaganda",
+        "title": "Diretor de Marketing",
         "image": "../images/membros/GustavoTeodoroBauke.png.png"
     },
     {
-        "name": "Heitor Francisco Bernardes da Silveira",
-        "title": "Diretor de Marketing",
-        "image": "../images/membros/HeitorFranciscoBernardesdaSilveira.png.png"
-    },
-    {
         "name": "Ivete da Silva Batista",
-        "title": "Membro Júnior do Publicidade e Propaganda",
+        "title": "Membro Sênior do Publicidade e Propaganda",
         "image": "../images/membros/IvetedaSilvaBatista.png.png"
     },
     {
         "name": "Jessica Pioltini de Oliveira",
-        "title": "Membro Júnior do Comercial e Projetos",
+        "title": "Membro Sênior do Comercial e Projetos",
         "image": "../images/membros/JessicaPioltinideOliveira.png.png"
     },
     {
@@ -91,27 +86,27 @@
     },
     {
         "name": "Lucas Marin",
-        "title": "Membro Júnior do Financeiro",
+        "title": "Membro Sênior do Financeiro",
         "image": "../images/membros/LucasMarin.png.png"
     },
     {
         "name": "Lucas Paternez Costa Soares",
-        "title": "Membro Júnior da Presidência",
+        "title": "Membro Sênior da Presidência",
         "image": "../images/membros/LucasPaternezCostaSoares.png.png"
     },
     {
         "name": "Luiza Mayumi Iwamoto Vieira",
-        "title": "Membro Júnior do Comerical e Projetos",
+        "title": "Membro Sênior do Comerical e Projetos",
         "image": "../images/membros/LuizaMayumiIwamotoVieira.png.png"
     },
     {
         "name": "Mariana Araujo Mota",
-        "title": "Membro Júnior do Publicidade e Propaganda",
+        "title": "Membro Sênior do Publicidade e Propaganda",
         "image": "../images/membros/MarianaAraujoMota.png.png"
     },
     {
         "name": "Mariana Domingues Goncalves da Silva",
-        "title": "Mmebro Júnior do Comercial e Projetos",
+        "title": "Mmebro Sênior do Comercial e Projetos",
         "image": "../images/membros/MarianaDominguesGoncalvesdaSilva.png.png"
     },
     {
@@ -126,12 +121,12 @@
     },
     {
         "name": "Nadia Valentina Turato Pereira Bom",
-        "title": "Membro Júnior do Financeiro",
+        "title": "Membro Sênior do Financeiro",
         "image": "../images/membros/NadiaValentinaTuratoPereiraBom.png.png"
     },
     {
         "name": "Naoki Kobayakawa",
-        "title": "Membro Júnior da Gestão de Talentos",
+        "title": "Membro Sênior da Gestão de Talentos",
         "image": "../images/membros/NaokiKobayakawa.png.png"
     },
     {
@@ -161,12 +156,12 @@
     },
     {
         "name": "Priscila dos Santos Silva",
-        "title": "Membro Júnior da Gestão de Talentos",
+        "title": "Membro Sênior da Gestão de Talentos",
         "image": "../images/membros/PrisciladosSantosSilva.png.png"
     },
     {
         "name": "Sofia Sericov Barbieri",
-        "title": "Membro Júnior do Comerical e Projetos",
+        "title": "Membro Sênior do Comerical e Projetos",
         "image": "../images/membros/SofiaSericovBarbieri.png.png"
     },
     {
@@ -186,7 +181,7 @@
     },
     {
         "name": "Vitor Daniel Antunes Oliveira",
-        "title": "Membro Júnior da Gestão de Talentos",
+        "title": "Membro Sênior da Gestão de Talentos",
         "image": "../images/membros/VitorDanielAntunesOliveira.png.png"
     }
 ]

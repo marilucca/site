@@ -26,7 +26,7 @@ const Portfolio = () => {
             </p>
             <a
               className="text-xl mt-6 font-light px-8"
-              href="https://drive.google.com/file/d/1sAAt6j86k4UjabVBLi59CvqwKmF-gQj9/view"
+              href="https://drive.google.com/file/d/1w0mZYazLCiLmt19pGI1jxF8Dg1bhGri5/view"
               target="_blank"
               rel="noopener noreferrer"
             >

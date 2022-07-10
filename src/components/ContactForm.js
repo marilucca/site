@@ -1,61 +1,19 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios';
-import * as qs from 'query-string';
 
 import Socials from './Socials';
 
 const ContactForm = () => {
-  const formRef = useRef();
-  const [formState, setFormState] = useState('idle');
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [assunto, setAssunto] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setFormState('pending');
-
-    const data = {
-      name,
-      email,
-      assunto,
-      message,
-    };
-
-    const axiosConfig = {
-      url: '/',
-      method: 'post',
-      headers: { 'Content=Type': 'application/x-www-form-urlencoded' },
-      data: qs.stringify(data),
-    };
-
-    axios(axiosConfig)
-      .then(() => {
-        setFormState('success');
-        setName('');
-        setEmail('');
-        setAssunto('');
-        setMessage('');
-
-        formRef.current.reset();
-      })
-      .catch(() => {
-        setFormState('error');
-      });
-  };
-
   return (
     <div className="flex flex-col md:flex-row px-16">
       <form
-        ref={formRef}
         className="flex-1 md:mr-16"
         name="Formulário de Contato"
         method="POST"
         data-netlify="true"
-        onSubmit={handleSubmit}
+        data-netlify-honeypot="bot-field"
+        action="/sucesso"
       >
         <input type="hidden" name="form-name" value="Formulário de Contato" />
 
@@ -67,8 +25,6 @@ const ContactForm = () => {
               id="name"
               name="name"
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
             />
           </label>
         </div>
@@ -81,8 +37,6 @@ const ContactForm = () => {
               id="email"
               name="email"
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
           </label>
         </div>
@@ -95,8 +49,6 @@ const ContactForm = () => {
               id="assunto"
               name="assunto"
               type="text"
-              value={assunto}
-              onChange={(e) => setAssunto(e.target.value)}
             />
           </label>
         </div>
@@ -122,15 +74,12 @@ const ContactForm = () => {
               id="message"
               name="message"
               type="text"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
             />
           </label>
         </div>
 
         <button
           type="submit"
-          disabled={formState === 'pending'}
           className="
             bg-primary-default
             hover:bg-primary-darker

@@ -41,7 +41,7 @@ const ProcessoSeletivo = () => {
           <p className="mt-4 text-md md:text-lg px-8">
             Para mais informações acesse{' '}
             <a
-              href="https://drive.google.com/file/d/1tyA19Ji7ZOkH3Tu1veKmGGjqTV6GvFwz/view"
+              href="https://drive.google.com/file/d/1znGdvdcOZGnDNx4A830yp-mYmHEQQRZT/view"
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold"

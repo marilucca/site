@@ -1,7 +1,7 @@
 [
     {
         "name": "Ana Carolina Menegato da Silva",
-        "title": "Membro Sênior do Marketing",
+        "title": "Membro Sênior do Financeiro",
         "image": "../images/membros/AnaCarolinaMenegatodaSilva.png.png"
     },
     {
@@ -21,7 +21,7 @@
     },
     {
         "name": "Érika dos Santos Gonçalves",
-        "title": "Membro Sênior do Comercial e Projetos",
+        "title": "Membro Sênior do Marketing",
         "image": "../images/membros/ErikaGolcalves.png"
     },
     {
@@ -61,7 +61,7 @@
     },
     {
         "name": "Jessica Pioltini de Oliveira",
-        "title": "Membro Sênior do Comercial e Projetos",
+        "title": "Diretora do Comercial e Projetos",
         "image": "../images/membros/JessicaPioltinideOliveira.png.png"
     },
     {
@@ -101,7 +101,7 @@
     },
     {
         "name": "Matheus Barrionuevo de Souza",
-        "title": "Diretor Comerical e Projetos",
+        "title": "Diretor Comercial e Projetos",
         "image": "../images/membros/MatheusBarrionuevodeSouza.png.png"
     },
     {
@@ -158,11 +158,6 @@
         "name": "Tamires da Silva Teixeira",
         "title": "Membro Sênior do Marketing",
         "image": "../images/membros/TamiredaSilvaTeixeira.png.png"
-    },
-    {
-        "name": "Thalita Barttocz de Assis",
-        "title": "Diretora do Comerical e Projetos",
-        "image": "../images/membros/ThalitaBarttoczdeAssis.png.png"
     },
     {
         "name": "Vitor Daniel Antunes Oliveira",

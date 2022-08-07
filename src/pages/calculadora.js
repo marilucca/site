@@ -4,6 +4,20 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/Seo';
 
+// Potência em Watts
+const potenciaDesktop = 250;
+const potenciaNotebook = 65;
+const potenciaCarregadorCelular = 7;
+const potenciaCarregadorTablet = 10;
+const potenciaImpressora = 14;
+const potenciaRoteador = 6;
+const potenciaVentilador = 72.5;
+
+// Calcula a energia consumida por um aparelho em kWh
+const calcularEnergia = (potencia, tempo) => {
+  return (potencia * tempo) / 1000;
+};
+
 const Calculadora = () => {
   const [eletricidadeHomeOffice, setEletricidadeHomeOffice] = useState();
   const [computadorHomeOffice, setComputadorHomeOffice] = useState('selecione');
@@ -134,9 +148,9 @@ const Calculadora = () => {
           </div>
 
           <div className="mt-12 flex flex-col items-center justify-center w-full">
-            <h4 className="text-xl lg:text-2xl text-primary-darker">Home Office</h4>
-
             <div id="perguntas" className="w-full">
+              <h4 className="text-xl lg:text-2xl text-primary-darker">Home Office</h4>
+
               <label className="flex flex-col w-full" htmlFor="eletricidadeHomeOffice">
                 <p className="font-bold">Eletricidade ⚡</p>
                 <p>Valor do kWh, em R$:</p>

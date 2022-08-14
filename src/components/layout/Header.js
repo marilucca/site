@@ -45,6 +45,9 @@ const Header = () => {
           <AnchorLink className="px-4" to="/processo-seletivo">
             Processo Seletivo
           </AnchorLink>
+          <AnchorLink className="px-4" to="/calculadora">
+            Calculadora Carbônica
+          </AnchorLink>
           <AnchorLink className="px-4" to="/blog">
             Blog
           </AnchorLink>
@@ -58,6 +61,7 @@ const Header = () => {
             <AnchorLink to="/sobre">Sobre</AnchorLink>
             <AnchorLink to="/portfolio">Portfólio</AnchorLink>
             <AnchorLink to="/processo-seletivo">Processo Seletivo</AnchorLink>
+            <AnchorLink to="/calculadora">Calculadora Carbônica</AnchorLink>
             <AnchorLink to="/blog">Blog</AnchorLink>
           </div>
         ) : null}

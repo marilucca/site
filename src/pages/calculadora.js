@@ -1,39 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout/Layout';
 import Seo from '../components/Seo';
-
-// Potência em Watts
-const potenciaDesktop = 250;
-const potenciaNotebook = 65;
-const potenciaCarregadorCelular = 7;
-const potenciaCarregadorTablet = 10;
-const potenciaImpressora = 14;
-const potenciaRoteador = 6;
-const potenciaVentilador = 72.5;
-const potenciaArCondicionado = 1266.9375;
-const potenciaLampadaFluorescente = 16.3;
-const potenciaLampadaIncandescente = 66.7;
-const potenciaLampadaLED = 9.3;
-
-// Calcula a energia consumida por um aparelho em kWh
-const calcularEnergia = (potencia, tempo) => {
-  return (potencia * tempo) / 1000;
-};
-
-const comoMoeda = (valor) => {
-  const formatter = new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL',
-  });
-
-  return formatter.format(valor);
-};
-
-const diasNoAno = 365;
-const kgCarbonoPorEnergia = 0.295;
+import Perguntas from '../components/calculadora/Perguntas';
+import { calcularEnergia, comoMoeda, dados, paraKgCarbono } from '../data/calculadora';
+import Resultado from '../components/calculadora/Resultado';
 
 const Calculadora = () => {
   const [eletricidadeHomeOffice, setEletricidadeHomeOffice] = useState(0);
@@ -42,18 +15,18 @@ const Calculadora = () => {
   const [computadorHomeOfficeUso2, setComputadorHomeOfficeUso2] = useState(0);
   const [tabletHomeOffice, setTabletHomeOffice] = useState(0);
   const [ventiladorHomeOffice, setVentiladorHomeOffice] = useState(0);
-  const [pessoasVentiladorHomeOffice, setPessoasVentiladorHomeOffice] = useState(0);
+  const [pessoasVentiladorHomeOffice, setPessoasVentiladorHomeOffice] = useState(1);
   const [arCondicionadoHomeOffice, setArCondicionadoHomeOffice] = useState(0);
-  const [pessoasArCondicionadoHomeOffice, setPessoasArCondicionadoHomeOffice] = useState(0);
+  const [pessoasArCondicionadoHomeOffice, setPessoasArCondicionadoHomeOffice] = useState(1);
   const [impressoraHomeOffice, setImpressoraHomeOffice] = useState(0);
-  const [pessoasImpressoraHomeOffice, setPessoasImpressoraHomeOffice] = useState(0);
+  const [pessoasImpressoraHomeOffice, setPessoasImpressoraHomeOffice] = useState(1);
   const [celularHomeOffice, setCelularHomeOffice] = useState(0);
   const [roteadorHomeOffice, setRoteadorHomeOffice] = useState(0);
-  const [pessoasRoteadorHomeOffice, setPessoasRoteadorHomeOffice] = useState(0);
+  const [pessoasRoteadorHomeOffice, setPessoasRoteadorHomeOffice] = useState(1);
   const [lampadaHomeOffice, setLampadaHomeOffice] = useState('selecione');
   const [quantidadeLampadaHomeOffice, setQuantidadeLampadaHomeOffice] = useState(0);
   const [lampadaHomeOfficeUso, setLampadaHomeOfficeUso] = useState(0);
-  const [pessoasLampadaHomeOffice, setPessoasLampadaHomeOffice] = useState(0);
+  const [pessoasLampadaHomeOffice, setPessoasLampadaHomeOffice] = useState(1);
   const [transporteHomeOffice, setTransporteHomeOffice] = useState('selecione');
   const [distanciaHomeOffice, setDistanciaHomeOffice] = useState(0);
   const [distanciaMetroHomeOffice, setDistanciaMetroHomeOffice] = useState(0);
@@ -65,18 +38,18 @@ const Calculadora = () => {
   const [computadorPresencialUso2, setComputadorPresencialUso2] = useState(0);
   const [tabletPresencial, setTabletPresencial] = useState(0);
   const [ventiladorPresencial, setVentiladorPresencial] = useState(0);
-  const [pessoasVentiladorPresencial, setPessoasVentiladorPresencial] = useState(0);
+  const [pessoasVentiladorPresencial, setPessoasVentiladorPresencial] = useState(1);
   const [arCondicionadoPresencial, setArCondicionadoPresencial] = useState(0);
-  const [pessoasArCondicionadoPresencial, setPessoasArCondicionadoPresencial] = useState(0);
+  const [pessoasArCondicionadoPresencial, setPessoasArCondicionadoPresencial] = useState(1);
   const [impressoraPresencial, setImpressoraPresencial] = useState(0);
-  const [pessoasImpressoraPresencial, setPessoasImpressoraPresencial] = useState(0);
+  const [pessoasImpressoraPresencial, setPessoasImpressoraPresencial] = useState(1);
   const [celularPresencial, setCelularPresencial] = useState(0);
   const [roteadorPresencial, setRoteadorPresencial] = useState(0);
-  const [pessoasRoteadorPresencial, setPessoasRoteadorPresencial] = useState(0);
+  const [pessoasRoteadorPresencial, setPessoasRoteadorPresencial] = useState(1);
   const [lampadaPresencial, setLampadaPresencial] = useState('selecione');
   const [quantidadeLampadaPresencial, setQuantidadeLampadaPresencial] = useState(0);
   const [lampadaPresencialUso, setLampadaPresencialUso] = useState(0);
-  const [pessoasLampadaPresencial, setPessoasLampadaPresencial] = useState(0);
+  const [pessoasLampadaPresencial, setPessoasLampadaPresencial] = useState(1);
   const [transportePresencial, setTransportePresencial] = useState('selecione');
   const [distanciaPresencial, setDistanciaPresencial] = useState(0);
   const [distanciaMetroPresencial, setDistanciaMetroPresencial] = useState(0);
@@ -85,33 +58,17 @@ const Calculadora = () => {
   const [mostrarResultados, setMostrarResultados] = useState(false);
 
   const calcularGastoEnergiaHomeOfficePorDia = () => {
-    let energiaComputador = 0;
-    let energiaLampada = 0;
-
-    if (computadorHomeOffice === 'desktop') {
-      energiaComputador = calcularEnergia(potenciaDesktop, computadorHomeOfficeUso1);
-    } else if (computadorHomeOffice === 'notebook') {
-      energiaComputador = calcularEnergia(potenciaNotebook, computadorHomeOfficeUso1);
-    } else if (computadorHomeOffice === 'ambos') {
-      energiaComputador =
-        calcularEnergia(potenciaDesktop, computadorHomeOfficeUso1) +
-        calcularEnergia(potenciaNotebook, computadorHomeOfficeUso2);
-    }
-
-    const energiaTablet = calcularEnergia(potenciaCarregadorTablet, tabletHomeOffice);
-    const energiaVentilador = calcularEnergia(potenciaVentilador, ventiladorHomeOffice);
-    const energiaArCondicionado = calcularEnergia(potenciaArCondicionado, arCondicionadoHomeOffice);
-    const energiaImpressora = calcularEnergia(potenciaImpressora, impressoraHomeOffice);
-    const energiaCelular = calcularEnergia(potenciaCarregadorCelular, celularHomeOffice);
-    const energiaRoteador = calcularEnergia(potenciaRoteador, roteadorHomeOffice);
-
-    if (lampadaHomeOffice === 'led') {
-      energiaLampada = calcularEnergia(potenciaLampadaLED, lampadaHomeOfficeUso);
-    } else if (lampadaHomeOffice === 'fluorescente') {
-      energiaLampada = calcularEnergia(potenciaLampadaFluorescente, lampadaHomeOfficeUso);
-    } else {
-      energiaLampada = calcularEnergia(potenciaLampadaIncandescente, lampadaHomeOfficeUso);
-    }
+    const energiaComputador = calcularEnergiaComputadorHomeOffice();
+    const energiaLampada = calcularEnergiaLuzHomeOffice();
+    const energiaTablet = calcularEnergia(dados.potencias.tablet, tabletHomeOffice);
+    const energiaVentilador = calcularEnergia(dados.potencias.ventilador, ventiladorHomeOffice);
+    const energiaArCondicionado = calcularEnergia(
+      dados.potencias.arCondicionado,
+      arCondicionadoHomeOffice
+    );
+    const energiaImpressora = calcularEnergia(dados.potencias.impressora, impressoraHomeOffice);
+    const energiaCelular = calcularEnergia(dados.potencias.celular, celularHomeOffice);
+    const energiaRoteador = calcularEnergia(dados.potencias.roteador, roteadorHomeOffice);
 
     const energiaTotal =
       energiaComputador +
@@ -128,36 +85,20 @@ const Calculadora = () => {
   };
 
   const calcularGastoEnergiaHomeOfficePorAno = () =>
-    diasNoAno * calcularGastoEnergiaHomeOfficePorDia();
+    dados.diasNoAno * calcularGastoEnergiaHomeOfficePorDia();
 
   const calcularGastoEnergiaPresencialPorDia = () => {
-    let energiaComputador = 0;
-    let energiaLampada = 0;
-
-    if (computadorPresencial === 'desktop') {
-      energiaComputador = calcularEnergia(potenciaDesktop, computadorPresencialUso1);
-    } else if (computadorPresencial === 'notebook') {
-      energiaComputador = calcularEnergia(potenciaNotebook, computadorPresencialUso1);
-    } else if (computadorPresencial === 'ambos') {
-      energiaComputador =
-        calcularEnergia(potenciaDesktop, computadorPresencialUso1) +
-        calcularEnergia(potenciaNotebook, computadorPresencialUso2);
-    }
-
-    const energiaTablet = calcularEnergia(potenciaCarregadorTablet, tabletPresencial);
-    const energiaVentilador = calcularEnergia(potenciaVentilador, ventiladorPresencial);
-    const energiaArCondicionado = calcularEnergia(potenciaArCondicionado, arCondicionadoPresencial);
-    const energiaImpressora = calcularEnergia(potenciaImpressora, impressoraPresencial);
-    const energiaCelular = calcularEnergia(potenciaCarregadorCelular, celularPresencial);
-    const energiaRoteador = calcularEnergia(potenciaRoteador, roteadorPresencial);
-
-    if (lampadaPresencial === 'led') {
-      energiaLampada = calcularEnergia(potenciaLampadaLED, lampadaPresencialUso);
-    } else if (lampadaPresencial === 'fluorescente') {
-      energiaLampada = calcularEnergia(potenciaLampadaFluorescente, lampadaPresencialUso);
-    } else {
-      energiaLampada = calcularEnergia(potenciaLampadaIncandescente, lampadaPresencialUso);
-    }
+    const energiaComputador = calcularEnergiaComputadorPresencial();
+    const energiaLampada = calcularEnergiaLuzPresencial();
+    const energiaTablet = calcularEnergia(dados.potencias.tablet, tabletPresencial);
+    const energiaVentilador = calcularEnergia(dados.potencias.ventilador, ventiladorPresencial);
+    const energiaArCondicionado = calcularEnergia(
+      dados.potencias.arCondicionado,
+      arCondicionadoPresencial
+    );
+    const energiaImpressora = calcularEnergia(dados.potencias.impressora, impressoraPresencial);
+    const energiaCelular = calcularEnergia(dados.potencias.celular, celularPresencial);
+    const energiaRoteador = calcularEnergia(dados.potencias.roteador, roteadorPresencial);
 
     const energiaTotal =
       energiaComputador +
@@ -174,18 +115,18 @@ const Calculadora = () => {
   };
 
   const calcularGastoEnergiaPresencialPorAno = () =>
-    diasNoAno * calcularGastoEnergiaPresencialPorDia();
+    dados.diasNoAno * calcularGastoEnergiaPresencialPorDia();
 
   const calcularCarbonoEmitidoHomeOfficePorDia = () => {
     const gastoEnergiaHomeOfficeDia = calcularGastoEnergiaHomeOfficePorDia();
 
-    const carbonoEmitidoHomeOfficeDia = gastoEnergiaHomeOfficeDia * kgCarbonoPorEnergia;
+    const carbonoEmitidoHomeOfficeDia = gastoEnergiaHomeOfficeDia * dados.kgCarbono.porEnergia;
     return carbonoEmitidoHomeOfficeDia;
   };
 
   const calcularCarbonoEmitidoHomeOfficePorAno = () => {
     const carbonoEmitidoHomeOfficeDia = calcularCarbonoEmitidoHomeOfficePorDia();
-    const carbonoEmitidoHomeOfficeAno = carbonoEmitidoHomeOfficeDia * diasNoAno;
+    const carbonoEmitidoHomeOfficeAno = carbonoEmitidoHomeOfficeDia * dados.diasNoAno;
 
     return carbonoEmitidoHomeOfficeAno;
   };
@@ -193,16 +134,174 @@ const Calculadora = () => {
   const calcularCarbonoEmitidoPresencialPorDia = () => {
     const gastoEnergiaPresencialDia = calcularGastoEnergiaPresencialPorDia();
 
-    const carbonoEmitidoPresencialDia = gastoEnergiaPresencialDia * kgCarbonoPorEnergia;
+    const carbonoEmitidoPresencialDia = gastoEnergiaPresencialDia * dados.kgCarbono.porEnergia;
     return carbonoEmitidoPresencialDia;
   };
 
   const calcularCarbonoEmitidoPresencialPorAno = () => {
     const carbonoEmitidoPresencialDia = calcularCarbonoEmitidoPresencialPorDia();
-    const carbonoEmitidoPresencialAno = carbonoEmitidoPresencialDia * diasNoAno;
+    const carbonoEmitidoPresencialAno = carbonoEmitidoPresencialDia * dados.diasNoAno;
 
     return carbonoEmitidoPresencialAno;
   };
+
+  const calcularEnergiaComputadorHomeOffice = () => {
+    let energiaComputador = 0;
+
+    if (computadorHomeOffice === 'desktop') {
+      energiaComputador = calcularEnergia(dados.potencias.desktop, computadorHomeOfficeUso1);
+    } else if (computadorHomeOffice === 'notebook') {
+      energiaComputador = calcularEnergia(dados.potencias.notebook, computadorHomeOfficeUso1);
+    } else if (computadorHomeOffice === 'ambos') {
+      energiaComputador =
+        calcularEnergia(dados.potencias.desktop, computadorHomeOfficeUso1) +
+        calcularEnergia(dados.potencias.notebook, computadorHomeOfficeUso2);
+    }
+
+    return energiaComputador;
+  };
+
+  const calcularEnergiaLuzHomeOffice = () => {
+    let energiaLampada = 0;
+
+    if (lampadaHomeOffice === 'led') {
+      energiaLampada = calcularEnergia(dados.potencias.lampada.led, lampadaHomeOfficeUso);
+    } else if (lampadaHomeOffice === 'fluorescente') {
+      energiaLampada = calcularEnergia(dados.potencias.lampada.fluorescente, lampadaHomeOfficeUso);
+    } else {
+      energiaLampada = calcularEnergia(dados.potencias.lampada.incandescente, lampadaHomeOfficeUso);
+    }
+
+    return energiaLampada;
+  };
+
+  const calcularEnergiaComputadorPresencial = () => {
+    let energiaComputador = 0;
+
+    if (computadorPresencial === 'desktop') {
+      energiaComputador = calcularEnergia(dados.potencias.desktop, computadorPresencialUso1);
+    } else if (computadorPresencial === 'notebook') {
+      energiaComputador = calcularEnergia(dados.potencias.notebook, computadorPresencialUso1);
+    } else if (computadorPresencial === 'ambos') {
+      energiaComputador =
+        calcularEnergia(dados.potencias.desktop, computadorPresencialUso1) +
+        calcularEnergia(dados.potencias.notebook, computadorPresencialUso2);
+    }
+
+    return energiaComputador;
+  };
+
+  const calcularEnergiaLuzPresencial = () => {
+    let energiaLampada = 0;
+
+    if (lampadaPresencial === 'led') {
+      energiaLampada = calcularEnergia(dados.potencias.lampada.led, lampadaPresencialUso);
+    } else if (lampadaPresencial === 'fluorescente') {
+      energiaLampada = calcularEnergia(dados.potencias.lampada.fluorescente, lampadaPresencialUso);
+    } else {
+      energiaLampada = calcularEnergia(dados.potencias.lampada.incandescente, lampadaPresencialUso);
+    }
+
+    return energiaLampada;
+  };
+
+  const calcularCarbonoEmitidoTransporteHomeOffice = () => {
+    if (transporteHomeOffice === 'pe-bicicleta') {
+      return 0;
+    }
+
+    if (transporteHomeOffice === 'carro' || transporteHomeOffice === 'moto') {
+      return paraKgCarbono(dados.toneladasCarbono.porKm.carro) * distanciaHomeOffice;
+    }
+
+    if (transporteHomeOffice === 'onibus') {
+      return paraKgCarbono(dados.toneladasCarbono.porKm.onibus) * distanciaHomeOffice;
+    }
+
+    if (transporteHomeOffice === 'trem') {
+      return paraKgCarbono(dados.toneladasCarbono.porKm.trem) * distanciaHomeOffice;
+    }
+
+    if (transporteHomeOffice === 'metro') {
+      return paraKgCarbono(dados.toneladasCarbono.porKm.metro) * distanciaHomeOffice;
+    }
+
+    if (transporteHomeOffice === 'onibus-metro') {
+      return (
+        paraKgCarbono(dados.toneladasCarbono.porKm.onibus) * distanciaHomeOffice +
+        paraKgCarbono(dados.toneladasCarbono.porKm.metro) * distanciaMetroHomeOffice
+      );
+    }
+
+    if (transporteHomeOffice === 'onibus-trem') {
+      return (
+        paraKgCarbono(dados.toneladasCarbono.porKm.onibus) * distanciaHomeOffice +
+        paraKgCarbono(dados.toneladasCarbono.porKm.metro) * distanciaTremHomeOffice
+      );
+    }
+
+    if (transporteHomeOffice === 'onibus-metro-trem') {
+      return (
+        paraKgCarbono(dados.toneladasCarbono.porKm.onibus) * distanciaHomeOffice +
+        paraKgCarbono(dados.toneladasCarbono.porKm.metro) * distanciaMetroHomeOffice +
+        paraKgCarbono(dados.toneladasCarbono.porKm.trem) * distanciaTremHomeOffice
+      );
+    }
+
+    return 0;
+  };
+
+  const calcularCarbonoEmitidoTransportePresencial = () => {
+    if (transportePresencial === 'pe-bicicleta') {
+      return 0;
+    }
+
+    if (transportePresencial === 'carro' || transportePresencial === 'moto') {
+      return paraKgCarbono(dados.toneladasCarbono.porKm.carro) * distanciaPresencial;
+    }
+
+    if (transportePresencial === 'onibus') {
+      return paraKgCarbono(dados.toneladasCarbono.porKm.onibus) * distanciaPresencial;
+    }
+
+    if (transportePresencial === 'trem') {
+      return paraKgCarbono(dados.toneladasCarbono.porKm.trem) * distanciaPresencial;
+    }
+
+    if (transportePresencial === 'metro') {
+      return paraKgCarbono(dados.toneladasCarbono.porKm.metro) * distanciaPresencial;
+    }
+
+    if (transportePresencial === 'onibus-metro') {
+      return (
+        paraKgCarbono(dados.toneladasCarbono.porKm.onibus) * distanciaPresencial +
+        paraKgCarbono(dados.toneladasCarbono.porKm.metro) * distanciaMetroPresencial
+      );
+    }
+
+    if (transportePresencial === 'onibus-trem') {
+      return (
+        paraKgCarbono(dados.toneladasCarbono.porKm.onibus) * distanciaPresencial +
+        paraKgCarbono(dados.toneladasCarbono.porKm.metro) * distanciaTremPresencial
+      );
+    }
+
+    if (transportePresencial === 'onibus-metro-trem') {
+      return (
+        paraKgCarbono(dados.toneladasCarbono.porKm.onibus) * distanciaPresencial +
+        paraKgCarbono(dados.toneladasCarbono.porKm.metro) * distanciaMetroPresencial +
+        paraKgCarbono(dados.toneladasCarbono.porKm.trem) * distanciaTremPresencial
+      );
+    }
+
+    return 0;
+  };
+
+  useEffect(() => {
+    if (mostrarResultados) {
+      window.scrollTo(0, 900);
+    }
+  }, [mostrarResultados]);
 
   return (
     <Layout>
@@ -410,631 +509,260 @@ const Calculadora = () => {
                   height="auto"
                   objectFit="contain"
                 />
+
+                <div className="mt-12">
+                  <h4 className="text-2xl lg:text-3xl text-black">Avançado</h4>
+
+                  <Resultado
+                    title="Home Office"
+                    className="mt-4"
+                    calcularEnergiaComputador={calcularEnergiaComputadorHomeOffice}
+                    tablet={tabletHomeOffice}
+                    ventilador={ventiladorHomeOffice}
+                    pessoasVentilador={pessoasVentiladorHomeOffice}
+                    arCondicionado={arCondicionadoHomeOffice}
+                    pessoasArCondicionado={pessoasArCondicionadoHomeOffice}
+                    impressora={impressoraHomeOffice}
+                    pessoasImpressora={pessoasImpressoraHomeOffice}
+                    roteador={roteadorHomeOffice}
+                    pessoasRoteador={pessoasRoteadorHomeOffice}
+                    celular={celularHomeOffice}
+                    calcularEnergiaLuz={calcularEnergiaLuzHomeOffice}
+                    pessoasLampada={pessoasLampadaHomeOffice}
+                    calcularKgCarbonoEmitidoTransporte={calcularCarbonoEmitidoTransporteHomeOffice}
+                  />
+
+                  <Resultado
+                    title="Presencial"
+                    className="mt-8"
+                    calcularEnergiaComputador={calcularEnergiaComputadorPresencial}
+                    tablet={tabletPresencial}
+                    ventilador={ventiladorPresencial}
+                    pessoasVentilador={pessoasVentiladorPresencial}
+                    arCondicionado={arCondicionadoPresencial}
+                    pessoasArCondicionado={pessoasArCondicionadoPresencial}
+                    impressora={impressoraPresencial}
+                    pessoasImpressora={pessoasImpressoraPresencial}
+                    roteador={roteadorPresencial}
+                    pessoasRoteador={pessoasRoteadorPresencial}
+                    celular={celularPresencial}
+                    calcularEnergiaLuz={calcularEnergiaLuzPresencial}
+                    pessoasLampada={pessoasLampadaPresencial}
+                    calcularKgCarbonoEmitidoTransporte={calcularCarbonoEmitidoTransportePresencial}
+                  />
+                </div>
+
+                <div className="mt-12 text-xl">
+                  <h5 className="text-xl lg:text-2xl text-gray-600">Fontes</h5>
+
+                  <p>
+                    Toda a calculadora foi baseada na Planilha da{' '}
+                    <a
+                      href="http://ghgprotocolbrasil.com.br/ferramenta-de-calculo/?locale=pt-br"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      GHG Protocol
+                    </a>
+                    , de onde foi principalmente retirada a relação kWh/kg de Carbono equivalente,
+                    usando como referência uma média da relação mensal do ano de 2020.
+                  </p>
+
+                  <p className="mt-4">
+                    Fonte para o sequestro de CO₂ de árvores:
+                    <br />
+                    <a
+                      href="https://www.ecycle.com.br/4844-arvores.html#:~:text=Portanto%2C%20uma%20árvore%20pode%20capturar,4%20quilos%20após%20esse%20período."
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Benefícios das Árvores e seu valor
+                    </a>
+                  </p>
+
+                  <p className="mt-4">
+                    Fontes para Potências Elétricas:
+                    <br />
+                    <a
+                      href="https://www.techtudo.com.br/noticias/noticia/2015/02/descubra-quais-aparelhos-gastam-mais-energia-e-invista-no-eletronico-certo.html"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Descubra quais aparelhos gastam mais energia e invista no eletrônico certo
+                    </a>
+                    <br />
+                    <a
+                      href="http://www.procelinfo.com.br/main.asp?View=%7BE6BC2A5F-E787-48AF-B485-439862B17000%7D"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Gastos de energia ProcelInfo
+                    </a>
+                  </p>
+
+                  <p className="mt-4">
+                    Para o Ar-Condicionado, foi feita uma média a partir dos modelos encontrados e
+                    gerado um resultado de potência.
+                  </p>
+
+                  <p className="mt-4">
+                    Para os tipos de lâmpada, foi feita uma média das 3 potências mais usadas, de
+                    cada tipo, e gerada a potência resultado de cada lâmpada, usada no cálculo.
+                  </p>
+
+                  <p className="mt-4">
+                    Fontes para dados de transporte:
+                    <br />
+                    As fontes de transporte foram obtidas em conjunto com o Professor Humberto
+                    Paiva, usando as informações da Faculdade GV disponibilizadas na Planilha GHG
+                    Protocol como guia.
+                    <div className="mt-4 flex items-center justify-center">
+                      <StaticImage src="../images/calculadora/PE-veicular.jpeg" height="40%" />
+                    </div>
+                  </p>
+
+                  <p className="mt-4">
+                    Os valores anuais consideram apenas os dias úteis do ano, retirando férias,
+                    feriados e fins de semana. Na calculadora foi usado o número 233 (dias úteis do
+                    ano de 2020).
+                  </p>
+                </div>
+
+                <div className="mt-12 text-xl">
+                  <h5 className="text-xl lg:text-2xl text-gray-600">Créditos</h5>
+
+                  <p>
+                    Esta calculadora foi feita durante Outubro e Novembro de 2020, pelo esforço do
+                    Grupo de Trabalho Inovação, da Seiva Jr e seus associados.
+                  </p>
+
+                  <p className="mt-4 font-bold">Membros do GT</p>
+                  <ul className="list-disc list-inside ml-[15px]">
+                    <li>Ana Carolina Zacarias</li>
+                    <li>Diana Santiago Oliveira dos Santos</li>
+                    <li>Gabriela Gusmão Fontes Fioriti</li>
+                    <li>Heloise Cale da Rocha</li>
+                    <li>Júlio César Shinji Akamine Milanesio</li>
+                    <li>Olivia de Macedo Gasparini</li>
+                    <li>Tamires da Silva Teixeira</li>
+                  </ul>
+
+                  <p className="mt-4 font-bold">Consultores</p>
+                  <ul className="list-disc list-inside ml-[15px]">
+                    <li>Camila Rodrigues Bresio</li>
+                    <li>Humberto Yago da Silva Pinto</li>
+                  </ul>
+
+                  <p className="mt-4 font-bold">Coordenador</p>
+                  <ul className="list-disc list-inside ml-[15px]">
+                    <li>João Victor Nascimento Mota</li>
+                  </ul>
+
+                  <p className="mt-4 font-bold">Professor Orientador</p>
+                  <ul className="list-disc list-inside ml-[15px]">
+                    <li>Humberto de Paiva Junior</li>
+                  </ul>
+                </div>
               </div>
             ) : (
               <div id="calculadora" className="w-full">
                 <div id="perguntas" className="w-full">
-                  <h4 className="text-2xl lg:text-3xl text-primary-darker">Home Office</h4>
+                  <Perguntas
+                    title="Home Office"
+                    eletricidade={eletricidadeHomeOffice}
+                    setEletricidade={setEletricidadeHomeOffice}
+                    computador={computadorHomeOffice}
+                    setComputador={setComputadorHomeOffice}
+                    computadorUso1={computadorHomeOfficeUso1}
+                    setComputadorUso1={setComputadorHomeOfficeUso1}
+                    computadorUso2={computadorHomeOfficeUso2}
+                    setComputadorUso2={setComputadorHomeOfficeUso2}
+                    tablet={tabletHomeOffice}
+                    setTablet={setTabletHomeOffice}
+                    celular={celularHomeOffice}
+                    setCelular={setCelularHomeOffice}
+                    ventilador={ventiladorHomeOffice}
+                    setVentilador={setVentiladorHomeOffice}
+                    pessoasVentilador={pessoasVentiladorHomeOffice}
+                    setPessoasVentilador={setPessoasVentiladorHomeOffice}
+                    arCondicionado={arCondicionadoHomeOffice}
+                    setArCondicionado={setArCondicionadoHomeOffice}
+                    pessoasArCondicionado={pessoasArCondicionadoHomeOffice}
+                    setPessoasArCondicionado={setPessoasArCondicionadoHomeOffice}
+                    impressora={impressoraHomeOffice}
+                    setImpressora={setImpressoraHomeOffice}
+                    pessoasImpressora={pessoasImpressoraHomeOffice}
+                    setPessoasImpressora={setPessoasImpressoraHomeOffice}
+                    roteador={roteadorHomeOffice}
+                    setRoteador={setRoteadorHomeOffice}
+                    pessoasRoteador={pessoasRoteadorHomeOffice}
+                    setPessoasRoteador={setPessoasRoteadorHomeOffice}
+                    lampada={lampadaHomeOffice}
+                    setLampada={setLampadaHomeOffice}
+                    quantidadeLampada={quantidadeLampadaHomeOffice}
+                    setQuantidadeLampada={setQuantidadeLampadaHomeOffice}
+                    lampadaUso={lampadaHomeOfficeUso}
+                    setLampadaUso={setLampadaHomeOfficeUso}
+                    pessoasLampada={pessoasLampadaHomeOffice}
+                    setPessoasLampada={setPessoasLampadaHomeOffice}
+                    transporte={transporteHomeOffice}
+                    setTransporte={setTransporteHomeOffice}
+                    distancia={distanciaHomeOffice}
+                    setDistancia={setDistanciaHomeOffice}
+                    distanciaTrem={distanciaTremHomeOffice}
+                    setDistanciaTrem={setDistanciaTremHomeOffice}
+                    distanciaMetro={distanciaMetroHomeOffice}
+                    setDistanciaMetro={setDistanciaMetroHomeOffice}
+                  />
 
-                  <label className="flex flex-col w-full" htmlFor="eletricidadeHomeOffice">
-                    <p className="font-bold">Eletricidade ⚡</p>
-                    <p>Valor do kWh, em R$:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="eletricidadeHomeOffice"
-                      name="eletricidadeHomeOffice"
-                      value={eletricidadeHomeOffice}
-                      onChange={(e) => setEletricidadeHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-8 flex flex-col w-full" htmlFor="computadorHomeOffice">
-                    <p className="font-bold">Eletroeletrônicos 📱</p>
-                    <p>Tipo de computador:</p>
-                    <select
-                      className="bg-gray-100 p-2 w-full"
-                      id="computadorHomeOffice"
-                      name="computadorHomeOffice"
-                      value={computadorHomeOffice}
-                      onChange={(e) => setComputadorHomeOffice(e.target.value)}
-                    >
-                      <option value="selecione">Selecione</option>
-                      <option value="desktop">Desktop</option>
-                      <option value="notebook">Notebook</option>
-                      <option value="ambos">Ambos</option>
-                      <option value="nenhum">Nenhum</option>
-                    </select>
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="computadorUso1HomeOffice">
-                    <p>Tempo de uso diário, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="computadorUso1HomeOffice"
-                      name="computadorUso1HomeOffice"
-                      value={computadorHomeOfficeUso1}
-                      onChange={(e) => setComputadorHomeOfficeUso1(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="computadorUso2HomeOffice">
-                    <p>
-                      Em caso de usar ambos, coloque aqui seu tempo de uso diário do Notebook, em
-                      horas:
-                    </p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="computadorUso2HomeOffice"
-                      name="computadorUso2HomeOffice"
-                      value={computadorHomeOfficeUso2}
-                      onChange={(e) => setComputadorHomeOfficeUso2(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="tabletHomeOffice">
-                    <p>Tempo diário carregando o Tablet, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="tabletHomeOffice"
-                      name="tabletHomeOffice"
-                      value={tabletHomeOffice}
-                      onChange={(e) => setTabletHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="ventiladorHomeOffice">
-                    <p>Tempo de uso diário do Ventilador, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="ventiladorHomeOffice"
-                      name="ventiladorHomeOffice"
-                      value={ventiladorHomeOffice}
-                      onChange={(e) => setVentiladorHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label
-                    className="mt-4 flex flex-col w-full"
-                    htmlFor="pessoasVentiladorHomeOffice"
-                  >
-                    <p>Número de pessoas usando o Ventilador ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasVentiladorHomeOffice"
-                      name="pessoasVentiladorHomeOffice"
-                      value={pessoasVentiladorHomeOffice}
-                      onChange={(e) => setPessoasVentiladorHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="arCondicionadoHomeOffice">
-                    <p>Tempo de uso diário do Ar Condicionado, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="arCondicionadoHomeOffice"
-                      name="arCondicionadoHomeOffice"
-                      value={arCondicionadoHomeOffice}
-                      onChange={(e) => setArCondicionadoHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label
-                    className="mt-4 flex flex-col w-full"
-                    htmlFor="pessoasArCondicionadoHomeOffice"
-                  >
-                    <p>Número de pessoas usando o Ar Condicionado ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasArCondicionadoHomeOffice"
-                      name="pessoasArCondicionadoHomeOffice"
-                      value={pessoasArCondicionadoHomeOffice}
-                      onChange={(e) => setPessoasArCondicionadoHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="impressoraHomeOffice">
-                    <p>Tempo de uso diário da Impressora, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="impressoraHomeOffice"
-                      name="impressoraHomeOffice"
-                      value={impressoraHomeOffice}
-                      onChange={(e) => setImpressoraHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label
-                    className="mt-4 flex flex-col w-full"
-                    htmlFor="pessoasImpressoraHomeOffice"
-                  >
-                    <p>Número de pessoas usando a Impressora ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasImpressoraHomeOffice"
-                      name="pessoasImpressoraHomeOffice"
-                      value={pessoasImpressoraHomeOffice}
-                      onChange={(e) => setPessoasImpressoraHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="celularHomeOffice">
-                    <p>Tempo diário carregando o Celular, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="celularHomeOffice"
-                      name="celularHomeOffice"
-                      value={celularHomeOffice}
-                      onChange={(e) => setCelularHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-8 flex flex-col w-full" htmlFor="roteadorHomeOffice">
-                    <p className="font-bold">Internet 📡</p>
-                    <p>Tempo de uso diário do Roteador, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="roteadorHomeOffice"
-                      name="roteadorHomeOffice"
-                      value={roteadorHomeOffice}
-                      onChange={(e) => setRoteadorHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="pessoasRoteadorHomeOffice">
-                    <p>Número de pessoas usando o Roteador ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasRoteadorHomeOffice"
-                      name="pessoasRoteadorHomeOffice"
-                      value={pessoasRoteadorHomeOffice}
-                      onChange={(e) => setPessoasRoteadorHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-8 flex flex-col w-full" htmlFor="lampadaHomeOffice">
-                    <p className="font-bold">Luz 💡</p>
-                    <p>Tipo da lâmpada:</p>
-                    <select
-                      className="bg-gray-100 p-2 w-full"
-                      id="lampadaHomeOffice"
-                      name="lampadaHomeOffice"
-                      value={lampadaHomeOffice}
-                      onChange={(e) => setLampadaHomeOffice(e.target.value)}
-                    >
-                      <option value="selecione">Selecione</option>
-                      <option value="incandescente">Incandescente</option>
-                      <option value="fluorescente">Fluorescente</option>
-                      <option value="led">LED</option>
-                    </select>
-                  </label>
-
-                  <label
-                    className="mt-4 flex flex-col w-full"
-                    htmlFor="quantidadeLampadaHomeOffice"
-                  >
-                    <p>Número de lâmpadas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="quantidadeLampadaHomeOffice"
-                      name="quantidadeLampadaHomeOffice"
-                      value={quantidadeLampadaHomeOffice}
-                      onChange={(e) => setQuantidadeLampadaHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="lampadaHomeOfficeUso">
-                    <p>Tempo de uso diário das lâmpadas, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="lampadaHomeOfficeUso"
-                      name="lampadaHomeOfficeUso"
-                      value={lampadaHomeOfficeUso}
-                      onChange={(e) => setLampadaHomeOfficeUso(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="pessoasLampadaHomeOffice">
-                    <p>Número de pessoas usando ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasLampadaHomeOffice"
-                      name="pessoasLampadaHomeOffice"
-                      value={pessoasLampadaHomeOffice}
-                      onChange={(e) => setPessoasLampadaHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-8 flex flex-col w-full" htmlFor="transporteHomeOffice">
-                    <p className="font-bold">Transporte 🚍</p>
-                    <p>Tipo de transporte:</p>
-                    <select
-                      className="bg-gray-100 p-2 w-full"
-                      id="transporteHomeOffice"
-                      name="transporteHomeOffice"
-                      value={transporteHomeOffice}
-                      onChange={(e) => setTransporteHomeOffice(e.target.value)}
-                    >
-                      <option value="selecione">Selecione</option>
-                      <option>A pé/Bicicleta</option>
-                      <option>Carro</option>
-                      <option>Moto</option>
-                      <option>Ônibus</option>
-                      <option>Metrô</option>
-                      <option>Trem</option>
-                      <option>Ônibus e Metrô</option>
-                      <option>Ônibus e Trem</option>
-                      <option>Ônibus, Metrô e Trem</option>
-                    </select>
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="distanciaHomeOffice">
-                    <p>Distância percorrida diária, em apenas um tipo de transporte, em km:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="distanciaHomeOffice"
-                      name="distanciaHomeOffice"
-                      value={distanciaHomeOffice}
-                      onChange={(e) => setDistanciaHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="distanciaMetroHomeOffice">
-                    <p>
-                      Em caso de usar mais de um tipo de transporte, coloque aqui a distância
-                      percorrida por Metrô, em km:
-                    </p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="distanciaMetroHomeOffice"
-                      name="distanciaMetroHomeOffice"
-                      value={distanciaMetroHomeOffice}
-                      onChange={(e) => setDistanciaMetroHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="distanciaTremHomeOffice">
-                    <p>
-                      Em caso de usar mais de um tipo de transporte, coloque aqui a distância
-                      percorrida por Trem, em km:
-                    </p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="distanciaTremHomeOffice"
-                      name="distanciaTremHomeOffice"
-                      value={distanciaTremHomeOffice}
-                      onChange={(e) => setDistanciaTremHomeOffice(e.target.value)}
-                    />
-                  </label>
-
-                  <h4 className="mt-20 text-2xl lg:text-3xl text-primary-darker">Presencial 🏢</h4>
-
-                  <label className="flex flex-col w-full" htmlFor="eletricidadePresencial">
-                    <p className="font-bold">Eletricidade ⚡</p>
-                    <p>Valor do kWh, em R$:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="eletricidadePresencial"
-                      name="eletricidadePresencial"
-                      value={eletricidadePresencial}
-                      onChange={(e) => setEletricidadePresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-8 flex flex-col w-full" htmlFor="computadorPresencial">
-                    <p className="font-bold">Eletroeletrônicos 📱</p>
-                    <p>Tipo de computador:</p>
-                    <select
-                      className="bg-gray-100 p-2 w-full"
-                      id="computadorPresencial"
-                      name="computadorPresencial"
-                      value={computadorPresencial}
-                      onChange={(e) => setComputadorPresencial(e.target.value)}
-                    >
-                      <option value="selecione">Selecione</option>
-                      <option value="desktop">Desktop</option>
-                      <option value="notebook">Notebook</option>
-                      <option value="ambos">Ambos</option>
-                      <option value="nenhum">Nenhum</option>
-                    </select>
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="computadorUso1Presencial">
-                    <p>Tempo de uso diário, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="computadorUso1Presencial"
-                      name="computadorUso1Presencial"
-                      value={computadorPresencialUso1}
-                      onChange={(e) => setComputadorPresencialUso1(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="computadorUso2Presencial">
-                    <p>
-                      Em caso de usar ambos, coloque aqui seu tempo de uso diário do Notebook, em
-                      horas:
-                    </p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="computadorUso2Presencial"
-                      name="computadorUso2Presencial"
-                      value={computadorPresencialUso2}
-                      onChange={(e) => setComputadorPresencialUso2(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="tabletPresencial">
-                    <p>Tempo diário carregando o Tablet, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="tabletPresencial"
-                      name="tabletPresencial"
-                      value={tabletPresencial}
-                      onChange={(e) => setTabletPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="ventiladorPresencial">
-                    <p>Tempo de uso diário do Ventilador, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="ventiladorPresencial"
-                      name="ventiladorPresencial"
-                      value={ventiladorPresencial}
-                      onChange={(e) => setVentiladorPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label
-                    className="mt-4 flex flex-col w-full"
-                    htmlFor="pessoasVentiladorPresencial"
-                  >
-                    <p>Número de pessoas usando o Ventilador ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasVentiladorPresencial"
-                      name="pessoasVentiladorPresencial"
-                      value={pessoasVentiladorPresencial}
-                      onChange={(e) => setPessoasVentiladorPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="arCondicionadoPresencial">
-                    <p>Tempo de uso diário do Ar Condicionado, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="arCondicionadoPresencial"
-                      name="arCondicionadoPresencial"
-                      value={arCondicionadoPresencial}
-                      onChange={(e) => setArCondicionadoPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label
-                    className="mt-4 flex flex-col w-full"
-                    htmlFor="pessoasArCondicionadoPresencial"
-                  >
-                    <p>Número de pessoas usando o Ar Condicionado ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasArCondicionadoPresencial"
-                      name="pessoasArCondicionadoPresencial"
-                      value={pessoasArCondicionadoPresencial}
-                      onChange={(e) => setPessoasArCondicionadoPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="impressoraPresencial">
-                    <p>Tempo de uso diário da Impressora, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="impressoraPresencial"
-                      name="impressoraPresencial"
-                      value={impressoraPresencial}
-                      onChange={(e) => setImpressoraPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label
-                    className="mt-4 flex flex-col w-full"
-                    htmlFor="pessoasImpressoraPresencial"
-                  >
-                    <p>Número de pessoas usando a Impressora ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasImpressoraPresencial"
-                      name="pessoasImpressoraPresencial"
-                      value={pessoasImpressoraPresencial}
-                      onChange={(e) => setPessoasImpressoraPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="celularPresencial">
-                    <p>Tempo diário carregando o Celular, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="celularPresencial"
-                      name="celularPresencial"
-                      value={celularPresencial}
-                      onChange={(e) => setCelularPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-8 flex flex-col w-full" htmlFor="roteadorPresencial">
-                    <p className="font-bold">Internet 📡</p>
-                    <p>Tempo de uso diário do Roteador, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="roteadorPresencial"
-                      name="roteadorPresencial"
-                      value={roteadorPresencial}
-                      onChange={(e) => setRoteadorPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="pessoasRoteadorPresencial">
-                    <p>Número de pessoas usando o Roteador ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasRoteadorPresencial"
-                      name="pessoasRoteadorPresencial"
-                      value={pessoasRoteadorPresencial}
-                      onChange={(e) => setPessoasRoteadorPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-8 flex flex-col w-full" htmlFor="lampadaPresencial">
-                    <p className="font-bold">Luz 💡</p>
-                    <p>Tipo da lâmpada:</p>
-                    <select
-                      className="bg-gray-100 p-2 w-full"
-                      id="lampadaPresencial"
-                      name="lampadaPresencial"
-                      value={lampadaPresencial}
-                      onChange={(e) => setLampadaPresencial(e.target.value)}
-                    >
-                      <option value="selecione">Selecione</option>
-                      <option value="incandescente">Incandescente</option>
-                      <option value="fluorescente">Fluorescente</option>
-                      <option value="led">LED</option>
-                    </select>
-                  </label>
-
-                  <label
-                    className="mt-4 flex flex-col w-full"
-                    htmlFor="quantidadeLampadaPresencial"
-                  >
-                    <p>Número de lâmpadas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="quantidadeLampadaPresencial"
-                      name="quantidadeLampadaPresencial"
-                      value={quantidadeLampadaPresencial}
-                      onChange={(e) => setQuantidadeLampadaPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="lampadaPresencialUso">
-                    <p>Tempo de uso diário das lâmpadas, em horas:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="lampadaPresencialUso"
-                      name="lampadaPresencialUso"
-                      value={lampadaPresencialUso}
-                      onChange={(e) => setLampadaPresencialUso(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="pessoasLampadaPresencial">
-                    <p>Número de pessoas usando ao mesmo tempo:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="pessoasLampadaPresencial"
-                      name="pessoasLampadaPresencial"
-                      value={pessoasLampadaPresencial}
-                      onChange={(e) => setPessoasLampadaPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-8 flex flex-col w-full" htmlFor="transportePresencial">
-                    <p className="font-bold">Transporte 🚍</p>
-                    <p>Tipo de transporte:</p>
-                    <select
-                      className="bg-gray-100 p-2 w-full"
-                      id="transportePresencial"
-                      name="transportePresencial"
-                      value={transportePresencial}
-                      onChange={(e) => setTransportePresencial(e.target.value)}
-                    >
-                      <option value="selecione">Selecione</option>
-                      <option>A pé/Bicicleta</option>
-                      <option>Carro</option>
-                      <option>Moto</option>
-                      <option>Ônibus</option>
-                      <option>Metrô</option>
-                      <option>Trem</option>
-                      <option>Ônibus e Metrô</option>
-                      <option>Ônibus e Trem</option>
-                      <option>Ônibus, Metrô e Trem</option>
-                    </select>
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="distanciaPresencial">
-                    <p>Distância percorrida diária, em apenas um tipo de transporte, em km:</p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="distanciaPresencial"
-                      name="distanciaPresencial"
-                      value={distanciaPresencial}
-                      onChange={(e) => setDistanciaPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="distanciaMetroPresencial">
-                    <p>
-                      Em caso de usar mais de um tipo de transporte, coloque aqui a distância
-                      percorrida por Metrô, em km:
-                    </p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="distanciaMetroPresencial"
-                      name="distanciaMetroPresencial"
-                      value={distanciaMetroPresencial}
-                      onChange={(e) => setDistanciaMetroPresencial(e.target.value)}
-                    />
-                  </label>
-
-                  <label className="mt-4 flex flex-col w-full" htmlFor="distanciaTremPresencial">
-                    <p>
-                      Em caso de usar mais de um tipo de transporte, coloque aqui a distância
-                      percorrida por Trem, em km:
-                    </p>
-                    <input
-                      className="bg-gray-100 p-2 w-full"
-                      type="number"
-                      id="distanciaTremPresencial"
-                      name="distanciaTremPresencial"
-                      value={distanciaTremPresencial}
-                      onChange={(e) => setDistanciaTremPresencial(e.target.value)}
-                    />
-                  </label>
+                  <Perguntas
+                    title="Presencial"
+                    className="mt-12"
+                    eletricidade={eletricidadePresencial}
+                    setEletricidade={setEletricidadePresencial}
+                    computador={computadorPresencial}
+                    setComputador={setComputadorPresencial}
+                    computadorUso1={computadorPresencialUso1}
+                    setComputadorUso1={setComputadorPresencialUso1}
+                    computadorUso2={computadorPresencialUso2}
+                    setComputadorUso2={setComputadorPresencialUso2}
+                    tablet={tabletPresencial}
+                    setTablet={setTabletPresencial}
+                    celular={celularPresencial}
+                    setCelular={setCelularPresencial}
+                    ventilador={ventiladorPresencial}
+                    setVentilador={setVentiladorPresencial}
+                    pessoasVentilador={pessoasVentiladorPresencial}
+                    setPessoasVentilador={setPessoasVentiladorPresencial}
+                    arCondicionado={arCondicionadoPresencial}
+                    setArCondicionado={setArCondicionadoPresencial}
+                    pessoasArCondicionado={pessoasArCondicionadoPresencial}
+                    setPessoasArCondicionado={setPessoasArCondicionadoPresencial}
+                    impressora={impressoraPresencial}
+                    setImpressora={setImpressoraPresencial}
+                    pessoasImpressora={pessoasImpressoraPresencial}
+                    setPessoasImpressora={setPessoasImpressoraPresencial}
+                    roteador={roteadorPresencial}
+                    setRoteador={setRoteadorPresencial}
+                    pessoasRoteador={pessoasRoteadorPresencial}
+                    setPessoasRoteador={setPessoasRoteadorPresencial}
+                    lampada={lampadaPresencial}
+                    setLampada={setLampadaPresencial}
+                    quantidadeLampada={quantidadeLampadaPresencial}
+                    setQuantidadeLampada={setQuantidadeLampadaPresencial}
+                    lampadaUso={lampadaPresencialUso}
+                    setLampadaUso={setLampadaPresencialUso}
+                    pessoasLampada={pessoasLampadaPresencial}
+                    setPessoasLampada={setPessoasLampadaPresencial}
+                    transporte={transportePresencial}
+                    setTransporte={setTransportePresencial}
+                    distancia={distanciaPresencial}
+                    setDistancia={setDistanciaPresencial}
+                    distanciaTrem={distanciaTremPresencial}
+                    setDistanciaTrem={setDistanciaTremPresencial}
+                    distanciaMetro={distanciaMetroPresencial}
+                    setDistanciaMetro={setDistanciaMetroPresencial}
+                  />
                 </div>
 
                 <button

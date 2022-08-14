@@ -16,39 +16,33 @@ const ProcessoSeletivo = () => {
             style={{ width: 'min(400px, 80vw)', height: 'min(400px, 80vw)', alignSelf: 'center' }}
           >
             <StaticImage
-              src="../../static/images/processo-seletivo-2022-abertura.png"
+              src="../../static/images/processo-seletivo.png"
               alt="Processo Seletivo Seiva Jr. 2022"
               placeholder="blurred"
               layout="constrained"
             />
           </div>
           <p className="mt-4 text-md md:text-lg px-8">
-            O tão esperado Processo Seletivo da Seiva Jr. está no ar! Até 20/07/2022, as inscrições
-            estarão abertas para estudantes de qualquer curso da Universidade Federal do ABC. Os
-            novos membros poderão fazer parte dos seguintes Grupos Administrativos (GAs):
-          </p>
-          <ul className="list-disc list-inside ml-8">
-            <li className="text-md md:text-lg px-8">Comercial &amp; Projetos</li>
-            <li className="text-md md:text-lg px-8">Financeiro</li>
-            <li className="text-md md:text-lg px-8">Gestão de Talentos</li>
-            <li className="text-md md:text-lg px-8">Presidência</li>
-            <li className="text-md md:text-lg px-8">Publicidade &amp; Propaganda e Marketing</li>
-          </ul>
-          <p className="mt-4 text-md md:text-lg px-8">
-            Venha fazer parte da empresa júnior de sustentabilidade e construir conosco projetos de
-            inovação, consultoria e difusão de conhecimento.
-          </p>
-          <p className="mt-4 text-md md:text-lg px-8">
-            Para mais informações acesse{' '}
-            <a
-              href="https://drive.google.com/file/d/1znGdvdcOZGnDNx4A830yp-mYmHEQQRZT/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-bold"
-            >
-              o edital
-            </a>{' '}
-            e siga nossas redes sociais.
+            O processo seletivo de 2022 abrirá em breve! Atente-se às nossas redes sociais para
+            saber quando o processo abrirá e como ele funcionará!
+            <br />
+            <br /> A Seiva Jr. é uma Empresa Júnior da Universidade Federal do ABC (UFABC) que visa
+            promover o conceito de{' '}
+            <span className="text-primary-default font-bold">SUSTENTABILIDADE</span> a partir da{' '}
+            <span className="text-primary-default font-bold">DIFUSÃO de CONHECIMENTO</span>, da{' '}
+            <span className="text-primary-default font-bold">INOVAÇÃO</span> e de{' '}
+            <span className="text-primary-default font-bold">CONSULTORIAS</span>.
+            <br />
+            <br />
+            A empresa é organizada de maneira matricial, o que permite um crescimento profissional
+            para todos os membros, visto que todos são igualmente aptos a tomar decisões importantes
+            e propor novas ideias.
+            <br />
+            <br />
+            Coloque suas ideias em prática e faça parte da nossa história!
+            <br />
+            <br />
+            Qualquer dúvida, contate a equipe Seiva através das redes sociais.
           </p>
         </div>
       </section>

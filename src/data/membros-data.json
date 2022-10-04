@@ -1,167 +1,267 @@
 [
     {
+        "name": "Alexandre Tae Young Lee",
+        "title": "Membro Júnior da Gestão de Talentos",
+        "image": "../images/membros/GT/AlexandreTaeYoungLee.jpg"
+    },
+    {
         "name": "Ana Carolina Menegato da Silva",
         "title": "Membro Sênior do Financeiro",
-        "image": "../images/membros/AnaCarolinaMenegatodaSilva.png.png"
+        "image": "../images/membros/Fin/AnaCarolinaMenegatodaSilva.png"
     },
     {
         "name": "Ana Carolina Zacarias",
         "title": "Presidente",
-        "image": "../images/membros/AnaCarolinaZacarias.png"
+        "image": "../images/membros/Pres/AnaCarolinaZacarias.png"
     },
     {
-        "name": "Ana Harumi Fugita de Maria",
-        "title": "Membro Sênior do Publicidade e Propaganda",
-        "image": "../images/membros/AnaHarumiFugitadeMaria.png.png"
+        "name": "Ana Clara Muniz Filippini",
+        "title": "Membro Júnior do Comercial & Projetos",
+        "image": "../images/membros/CP/AnaClaraMunizFilippini.jpg"
+    },
+    {
+        "name": "Ana Harumi Fugitade Maria",
+        "title": "Membro Sênior do Publicidade & Propaganda",
+        "image": "../images/membros/MarketingPP/AnaHarumiFugitadeMaria.png"
+    },
+    {
+        "name": "Bianca de Melo Tavari",
+        "title": "Membro Júnior do Comercial & Projetos",
+        "image": "../images/membros/CP/BiancaDeMeloTavari.jpg"
+    },
+    {
+        "name": "Daniela Guedes da Silva",
+        "title": "Membro Júnior do Comercial & Projetos",
+        "image": "../images/membros/CP/DanielaGuedesDaSilva.jpeg"
+    },
+    {
+        "name": "Edmur Bez Tavares",
+        "title": "Membro Júnior do Financeiro",
+        "image": "../images/membros/Fin/EdmurBezTavares.jpg"
+    },
+    {
+        "name": "Eduarda Figueira",
+        "title": "Membro Júnior do Financeiro",
+        "image": "../images/membros/Fin/EduardaFigueira.jpg"
     },
     {
         "name": "Elisa Silva Freire Aguilar",
         "title": "Diretora do Financeiro",
-        "image": "../images/membros/ElisaSilvaFreireAguilar.png.png"
+        "image": "../images/membros/Fin/ElisaSilvaFreireAguilar.png"
     },
     {
-        "name": "Érika dos Santos Gonçalves",
+        "name": "Érika Golçalves",
         "title": "Membro Sênior do Marketing",
-        "image": "../images/membros/ErikaGolcalves.png"
+        "image": "../images/membros/MarketingPP/ErikaGolcalves.png"
     },
     {
         "name": "Estela do Nascimento Sola",
-        "title": "Membro Sênior da Gestão de Talentos",
-        "image": "../images/membros/EsteladoNascimentoSola.png.png"
+        "title": "Membro Sênior da Presidência",
+        "image": "../images/membros/Pres/EsteladoNascimentoSola.png"
     },
     {
         "name": "Felipe Silva Oliveira",
-        "title": "Membro Sênior do Comerical e Projetos",
-        "image": "../images/membros/FelipeSilvaOliveira.png.png"
+        "title": "Membro Sênior do Comercial & Projetos",
+        "image": "../images/membros/CP/FelipeSilvaOliveira.png"
+    },
+    {
+        "name": "Gabriel Santana Silva",
+        "title": "Membro Júnior da Presidência",
+        "image": "../images/membros/Pres/GabrielSantanaSilva.jpeg"
+    },
+    {
+        "name": "Gabriela Mazzieri da Silva",
+        "title": "Membro Júnior da Presidência",
+        "image": "../images/membros/Pres/GabrielaMazzieri.jpg"
     },
     {
         "name": "Gabrielle Lui Santana",
         "title": "Vice-Presidente",
-        "image": "../images/membros/GabrielleLuiSantana.png.png"
+        "image": "../images/membros/Pres/GabrielleLuiSantana.png"
     },
     {
-        "name": "Gabrielly Stefanie Yacabode Carvalho",
-        "title": "Membro Sênior da Gestão de Talentos",
-        "image": "../images/membros/GabriellyStefanieYacabodeCarvalho.png.png"
+        "name": "Gabrielly Stefanie Yacabo de Carvalho",
+        "title": "Membro Sênior do Comercial & Projetos",
+        "image": "../images/membros/CP/GabriellyStefanieYacabodeCarvalho.png"
     },
     {
-        "name": "Giovanna Furquim Moreschi",
-        "title": "Membro Sênior do Comercial e Projetos",
-        "image": "../images/membros/GiovannaFurquimMoreschi.png.png"
+        "name": "Giovanna Mayrink Dias",
+        "title": "Membro Júnior do Financeiro",
+        "image": "../images/membros/Fin/GiovannaMayrink.jpg"
     },
     {
         "name": "Gustavo Teodoro Bauke",
         "title": "Diretor de Marketing",
-        "image": "../images/membros/GustavoTeodoroBauke.png.png"
+        "image": "../images/membros/MarketingPP/GustavoTeodoroBauke.png"
+    },
+    {
+        "name": "Iasmin Noêmia Radecki",
+        "title": "Membro Júnior da Gestão de Talentos",
+        "image": "../images/membros/GT/IasminNoemiaRadecki.jpeg"
+    },
+    {
+        "name": "Isabela da Costa Barrto",
+        "title": "Membro Júnior do Publicidade & Propaganda",
+        "image": "../images/membros/MarketingPP/IsabelaDaCostaBarrto.jpeg"
     },
     {
         "name": "Ivete da Silva Batista",
-        "title": "Membro Sênior do Publicidade e Propaganda",
-        "image": "../images/membros/IvetedaSilvaBatista.png.png"
+        "title": "Membro Sênior do Publicidade & Propaganda",
+        "image": "../images/membros/MarketingPP/IvetedaSilvaBatista.png"
     },
     {
-        "name": "Jessica Pioltini de Oliveira",
-        "title": "Diretora do Comercial e Projetos",
-        "image": "../images/membros/JessicaPioltinideOliveira.png.png"
+        "name": "Jéssica Pioltini de Oliveira",
+        "title": "Diretora do Comercial & Projetos",
+        "image": "../images/membros/CP/JessicaPioltinideOliveira.png"
     },
     {
         "name": "João Victor Nascimento Mota",
         "title": "Membro Sênior do Marketing",
-        "image": "../images/membros/JoaoVictorNascimentoMota.png.png"
+        "image": "../images/membros/MarketingPP/JoaoVictorNascimentoMota.png"
+    },
+    {
+        "name": "Karen Isabelle Lima Vieira",
+        "title": "Membro Júnior do Marketing",
+        "image": "../images/membros/MarketingPP/KarenIsabelleLimaVieira.jpg"
+    },
+    {
+        "name": "Larissa Mota de Araújo",
+        "title": "Membro Júnior do Comercial & Projetos",
+        "image": "../images/membros/CP/LarissaMotaDeAraujo.jpg"
     },
     {
         "name": "Lucas Marin",
         "title": "Membro Sênior do Financeiro",
-        "image": "../images/membros/LucasMarin.png.png"
+        "image": "../images/membros/Fin/LucasMarin.png"
+    },
+    {
+        "name": "Lucas Mossolin Gonçalves",
+        "title": "Membro Júnior do Comercial & Projetos",
+        "image": "../images/membros/CP/LucasMossolinGonçalves.jpg"
     },
     {
         "name": "Lucas Paternez Costa Soares",
         "title": "Membro Sênior da Presidência",
-        "image": "../images/membros/LucasPaternezCostaSoares.png.png"
+        "image": "../images/membros/Pres/LucasPaternezCostaSoares.png"
     },
     {
         "name": "Luiza Mayumi Iwamoto Vieira",
-        "title": "Membro Sênior do Comerical e Projetos",
-        "image": "../images/membros/LuizaMayumiIwamotoVieira.png.png"
+        "title": "Membro Sênior da Gestão de Talentos",
+        "image": "../images/membros/GT/LuizaMayumiIwamotoVieira.png"
     },
     {
-        "name": "Mariana Araujo Mota",
-        "title": "Membro Sênior do Publicidade e Propaganda",
-        "image": "../images/membros/MarianaAraujoMota.png.png"
+        "name": "Mariana Araújo Mota",
+        "title": "Membro Sênior do Comercial & Projetos",
+        "image": "../images/membros/CP/MarianaAraujoMota.png"
     },
     {
-        "name": "Mariana Domingues Goncalves da Silva",
-        "title": "Mmebro Sênior do Comercial e Projetos",
-        "image": "../images/membros/MarianaDominguesGoncalvesdaSilva.png.png"
+        "name": "Mariana Domingues Gonçalves da Silva",
+        "title": "Membro Sênior do Comercial & Projetos",
+        "image": "../images/membros/CP/MarianaDominguesGoncalvesdaSilva.png"
     },
     {
         "name": "Mariane Becherer",
         "title": "Diretora da Gestão de Talentos",
-        "image": "../images/membros/MarianeBecherer.png.png"
+        "image": "../images/membros/GT/MarianeBecherer.png"
+    },
+    {
+        "name": "Mariane Luque Thomé",
+        "title": "Membro Júnior do Comercial & Projetos",
+        "image": "../images/membros/CP/MarianeLuqueThomé.jpeg"
     },
     {
         "name": "Matheus Barrionuevo de Souza",
-        "title": "Diretor Comercial e Projetos",
-        "image": "../images/membros/MatheusBarrionuevodeSouza.png.png"
+        "title": "Diretor do Comercial & Projetos",
+        "image": "../images/membros/CP/MatheusBarrionuevodeSouza.png"
     },
     {
-        "name": "Nadia Valentina Turato Pereira Bom",
-        "title": "Membro Sênior do Financeiro",
-        "image": "../images/membros/NadiaValentinaTuratoPereiraBom.png.png"
+        "name": "Michelle Pereira Quaresma",
+        "title": "Membro Júnior do Marketing",
+        "image": "../images/membros/MarketingPP/MichelleQuaresma.jpg"
+    },
+    {
+        "name": "Murilo Moraes Giroldo",
+        "title": "Membro Júnior da Presidência",
+        "image": "../images/membros/Pres/MuriloMoraesGiroldo.jpeg"
+    },
+    {
+        "name": "Nádia Valentina Turato Pereira Bom",
+        "title": "Membro do Financeiro",
+        "image": "../images/membros/Fin/NadiaValentinaTuratoPereiraBom.png"
     },
     {
         "name": "Naoki Kobayakawa",
-        "title": "Membro Sênior da Gestão de Talentos",
-        "image": "../images/membros/NaokiKobayakawa.png.png"
+        "title": "Membro Sênior da Presidência",
+        "image": "../images/membros/Pres/NaokiKobayakawa.png"
     },
     {
-        "name": "Nathalia Banharoto Dutra da Silva",
-        "title": "Membro Sênior do Comerical e Projetos",
-        "image": "../images/membros/NathaliaBanharotoDutradaSilva.png.png"
+        "name": "Natasha Paris Da Silva Pinheiro",
+        "title": "Membro Júnior da Gestão de Talentos",
+        "image": "../images/membros/GT/NatashaParisDaSilvaPinheiro.jpg"
     },
     {
-        "name": "Nathalia de Cassia Costa",
-        "title": "Diretora de Publicidade e Propaganda",
-        "image": "../images/membros/NathaliadeCassiaCosta.png.png"
+        "name": "Nathalia Banharoto Dutrada Silva",
+        "title": "Membro Sênior do Comercial & Projetos",
+        "image": "../images/membros/CP/NathaliaBanharotoDutradaSilva.png"
+    },
+    {
+        "name": "Nathália de Cassia Costa",
+        "title": "Diretora do Publicidade & Propaganda",
+        "image": "../images/membros/MarketingPP/NathaliadeCassiaCosta.png"
     },
     {
         "name": "Nicole Oska Lopes",
-        "title": "Membro Sênior do Marketing",
-        "image": "../images/membros/NicoleOskaLopes.png.png"
+        "title": "Membro Sênior do Comercial & Projetos",
+        "image": "../images/membros/CP/NicoleOskaLopes.png"
     },
     {
         "name": "Olivia de Macedo Gasparini",
-        "title": "Membro Sênior da Gestão de Talentos",
-        "image": "../images/membros/OliviadeMacedoGasparini.png.png"
+        "title": "Conselheira de Marketing",
+        "image": "../images/membros/MarketingPP/OliviadeMacedoGasparini.png"
     },
     {
         "name": "Pietra Venegas Branco",
-        "title": "Membro Sênior do Publicidade e Propaganda",
-        "image": "../images/membros/PietraVenegasBranco.png.png"
+        "title": "Membro Sênior do Publicidade & Propaganda",
+        "image": "../images/membros/MarketingPP/PietraVenegasBranco.png"
     },
     {
         "name": "Priscila dos Santos Silva",
         "title": "Membro Sênior da Gestão de Talentos",
-        "image": "../images/membros/PrisciladosSantosSilva.png.png"
+        "image": "../images/membros/GT/PrisciladosSantosSilva.png"
+    },
+    {
+        "name": "Rackel Fernandes Vieira",
+        "title": "Membro Júnior do Publicidade & Propaganda",
+        "image": "../images/membros/MarketingPP/RackelFernandesVieira.jpeg"
     },
     {
         "name": "Sofia Sericov Barbieri",
-        "title": "Membro Sênior do Comerical e Projetos",
-        "image": "../images/membros/SofiaSericovBarbieri.png.png"
+        "title": "Membro Sênior do Comercial & Projetos",
+        "image": "../images/membros/CP/SofiaSericovBarbieri.png"
     },
     {
         "name": "Sylvia Hiromi Masuno",
         "title": "Membro Sênior da Presidência",
-        "image": "../images/membros/SylviaHiromiMasuno.png.png"
+        "image": "../images/membros/Pres/SylviaHiromiMasuno.png"
     },
     {
         "name": "Tamires da Silva Teixeira",
         "title": "Membro Sênior do Marketing",
-        "image": "../images/membros/TamiredaSilvaTeixeira.png.png"
+        "image": "../images/membros/MarketingPP/TamiredaSilvaTeixeira.png"
     },
     {
         "name": "Vitor Daniel Antunes Oliveira",
         "title": "Membro Sênior da Gestão de Talentos",
-        "image": "../images/membros/VitorDanielAntunesOliveira.png.png"
+        "image": "../images/membros/GT/VitorDanielAntunesOliveira.png"
+    },
+    {
+        "name": "Vitor Malavasi Silva",
+        "title": "Membro Júnior do Publicidade & Propaganda",
+        "image": "../images/membros/MarketingPP/VitorMalavasiSilva.jpg"
+    },
+    {
+        "name": "Ygor Batista Quelhas",
+        "title": "Membro da Gestão de Talentos",
+        "image": "../images/membros/GT/YgorBatistaQuelhas.jpg"
     }
 ]

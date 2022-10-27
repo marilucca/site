@@ -393,7 +393,7 @@ const Calculadora = () => {
                 <h4 className="text-2xl lg:text-3xl text-black">Resultado</h4>
 
                 <div className="flex flex-col justify-between items-start">
-                  {/* <div id="resultados-home-office">
+                  <div id="resultados-home-office">
                     <div id="resultado-co2-home-office" className="flex flex-row">
                       <p className="text-primary-darker font-bold mr-4">
                         Quantidade de CO<sub>2</sub> produzido em office:
@@ -416,7 +416,7 @@ const Calculadora = () => {
                         {comoMoeda(calcularGastoEnergiaHomeOfficePorAno())} por ano.
                       </p>
                     </div>
-                  </div> */}
+                  </div>
 
                   <div id="resultados-presencial" className="mt-8">
                     <div id="resultado-co2-presencial" className="flex flex-row">
@@ -513,7 +513,7 @@ const Calculadora = () => {
                 <div className="mt-12">
                   <h4 className="text-2xl lg:text-3xl text-black">Avançado</h4>
 
-                  {/* <Resultado
+                  <Resultado
                     title="Home Office"
                     className="mt-4"
                     calcularEnergiaComputador={calcularEnergiaComputadorHomeOffice}
@@ -530,7 +530,7 @@ const Calculadora = () => {
                     calcularEnergiaLuz={calcularEnergiaLuzHomeOffice}
                     pessoasLampada={pessoasLampadaHomeOffice}
                     calcularKgCarbonoEmitidoTransporte={calcularCarbonoEmitidoTransporteHomeOffice}
-                  /> */}
+                  />
 
                   <Resultado
                     title="Presencial"
@@ -667,7 +667,7 @@ const Calculadora = () => {
             ) : (
               <div id="calculadora" className="w-full">
                 <div id="perguntas" className="w-full">
-                  {/* <Perguntas
+                  <Perguntas
                     title="Home Office"
                     eletricidade={eletricidadeHomeOffice}
                     setEletricidade={setEletricidadeHomeOffice}
@@ -713,7 +713,7 @@ const Calculadora = () => {
                     setDistanciaTrem={setDistanciaTremHomeOffice}
                     distanciaMetro={distanciaMetroHomeOffice}
                     setDistanciaMetro={setDistanciaMetroHomeOffice}
-                  /> */}
+                  />
 
                   <Perguntas
                     title="Presencial"

@@ -12,9 +12,9 @@ const Services = () => (
   <>
     <SplitSection
       primarySlot={
-        <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Consultoria Personalizada</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
+        <div className="service-container-right">
+          <h3 className="service-title">Consultoria Personalizada</h3>
+          <p className="service-description">
             Oferecemos o aprimoramento de projetos já existentes, assim como o desenvolvimento de
             novas ideias. A vantagem desta proposta é que auxiliamos na tomada de decisões de acordo
             com as tendências do mercado, de modo a proporcionar uma consultoria de qualidade,
@@ -28,9 +28,9 @@ const Services = () => (
     <SplitSection
       reverseOrder
       primarySlot={
-        <div className="lg:pl-32 xl:pl-48">
-          <h3 className="text-3xl font-semibold leading-tight">Consultoria Residencial</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
+        <div className="service-container-left">
+          <h3 className="service-title">Consultoria Residencial</h3>
+          <p className="service-description">
             Oferecemos um projeto personalizado, customizando a partir do seu espaço físico e
             necessidades para sua residência, visando torna-la mais sustentável e econômica,
             aproveitando os espaços não produtivos para aumentar a qualidade de vida dos moradores.
@@ -44,9 +44,9 @@ const Services = () => (
 
     <SplitSection
       primarySlot={
-        <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Educação Ambiental</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
+        <div className="service-container-right">
+          <h3 className="service-title">Educação Ambiental</h3>
+          <p className="service-description">
             Visando a importância da educação ambiental na formação de indivíduos mais conscientes
             de sua responsabilidade com o planeta, fornecemos treinamento/capacitação na área, além
             de produzir materiais informativos.
@@ -59,11 +59,9 @@ const Services = () => (
     <SplitSection
       reverseOrder
       primarySlot={
-        <div className="lg:pl-32 xl:pl-48">
-          <h3 className="text-3xl font-semibold leading-tight">
-            Plano de Gerenciamento de Resíduos Sólidos
-          </h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
+        <div className="service-container-left">
+          <h3 className="service-title">Plano de Gerenciamento de Resíduos Sólidos</h3>
+          <p className="service-description">
             O Plano de Gerenciamento de Resíduos Sólidos (PGRS) é um instrumento da Política
             Nacional de Resíduos Sólidos (12.305/2010), parte integrante do processo de
             Licenciamento ambiental, que apresenta e especifica os procedimentos operacionais
@@ -77,9 +75,9 @@ const Services = () => (
 
     <SplitSection
       primarySlot={
-        <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Sustentabilidade nas Escolas</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
+        <div className="service-container-right">
+          <h3 className="service-title">Sustentabilidade nas Escolas</h3>
+          <p className="service-description">
             Com o propósito de incorporar o valor da Sustentabilidade na formação e crescimento de
             jovens, dando ferramentas para a construção de uma visão crítica sobre a relação entre a
             sustentabilidade e o mundo moderno.
@@ -97,9 +95,9 @@ const Services = () => (
     <SplitSection
       reverseOrder
       primarySlot={
-        <div className="lg:pl-32 xl:pl-48">
-          <h3 className="text-3xl font-semibold leading-tight">Eventos Online</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
+        <div className="service-container-left">
+          <h3 className="service-title">Eventos Online</h3>
+          <p className="service-description">
             A realização de diversos eventos online é recorrente na Seiva, sendo estes de caráter
             informativo ou capacitivo. Os eventos informativos são voltados para aulas teóricas para
             que nossos participantes possam escutar e entender sobre o tema apresentado, havendo

@@ -7,7 +7,6 @@
 
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 import Logo from '../svg/LogoIcon';
 import Socials from './Socials';
 
@@ -29,10 +28,10 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author;
 
   return (
-    <div className="flex flex-col mb-16 mt-16">
-      <div className="flex items-center justify-start mb-8">
+    <div className="bio-container">
+      <div className="bio-logo-container">
         <Logo size={48} />
-        <p className="ml-2">
+        <p className="bio-paragraph">
           <strong>{author.name}</strong> {author.summary}
         </p>
       </div>

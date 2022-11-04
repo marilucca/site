@@ -3,18 +3,14 @@ import React from 'react';
 import Card from './Card';
 
 const CustomerCard = ({ customer }) => (
-  <Card className="mb-8 h-full">
-    <p className="text-xl font-semibold">{customer.title}</p>
-    <p className="mt-6">{customer.content}</p>
-    <div className="flex items-center mt-8">
-      <img
-        className="w-12 h-12 mr-4 rounded-full"
-        src={customer.customerImage}
-        alt={customer.customerName}
-      />
+  <Card className="customer-card-container">
+    <p className="customer-title">{customer.title}</p>
+    <p>{customer.content}</p>
+    <div className="customer-image-container">
+      <img className="customer-image" src={customer.customerImage} alt={customer.customerName} />
       <div>
         <p>{customer.customerName}</p>
-        <p className="text-sm text-gray-600">{customer.customerTitle}</p>
+        <p className="customer-person-title">{customer.customerTitle}</p>
       </div>
     </div>
   </Card>

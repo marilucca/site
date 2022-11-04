@@ -3,9 +3,9 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 
 const Person = ({ image, name, title }) => {
   return (
-    <div className="person flex flex-col items-center justify-start">
+    <div className="person-container">
       <GatsbyImage image={image} alt={name} className="person-image" />
-      <div className="person-info flex mt-4">
+      <div className="person-info">
         <p className="person-name">{name}</p>
         {title ? (
           <>

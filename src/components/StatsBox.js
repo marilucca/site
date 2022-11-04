@@ -2,8 +2,8 @@ import React from 'react';
 
 const StatsBox = ({ primaryText, secondaryText }) => (
   <>
-    <p className="text-4xl lg:text-6xl font-semibold text-primary-default">{primaryText}</p>
-    <p className="font-semibold mb-6">{secondaryText}</p>
+    <p className="stats-box-primary">{primaryText}</p>
+    <p className="stats-box-secondary">{secondaryText}</p>
   </>
 );
 

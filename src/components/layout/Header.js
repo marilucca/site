@@ -43,10 +43,10 @@ const Header = () => {
             Portfólio
           </AnchorLink>
           <AnchorLink className="px-4" to="/processo-seletivo">
-            Processo Seletivo
+            Processo seletivo
           </AnchorLink>
           <AnchorLink className="px-4" to="/calculadora">
-            Calculadora Carbônica
+            Calculadora carbônica
           </AnchorLink>
           <AnchorLink className="px-4" to="/blog">
             Blog
@@ -60,14 +60,14 @@ const Header = () => {
             <AnchorLink to="/">Início</AnchorLink>
             <AnchorLink to="/sobre">Sobre</AnchorLink>
             <AnchorLink to="/portfolio">Portfólio</AnchorLink>
-            <AnchorLink to="/processo-seletivo">Processo Seletivo</AnchorLink>
-            <AnchorLink to="/calculadora">Calculadora Carbônica</AnchorLink>
+            <AnchorLink to="/processo-seletivo">Processo seletivo</AnchorLink>
+            <AnchorLink to="/calculadora">Calculadora carbônica</AnchorLink>
             <AnchorLink to="/blog">Blog</AnchorLink>
           </div>
         ) : null}
         <div className="ml-4 hidden lg:block">
           <Button className="text-sm" to="/#contact">
-            Entre em Contato
+            Entre em contato
           </Button>
         </div>
       </div>

@@ -564,3 +564,40 @@
   line-height: 1.25rem;
   color: rgb(75 85 99)
 }
+
+/* Estilos do componente Input da calculadora carbônica */
+.input-container {
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.input-container input,
+.input-container select {
+  background-color: rgb(243 244 246);
+  padding: 0.5rem;
+
+  width: 100%;
+}
+
+.input-section-text {
+  font-weight: bold;
+}
+
+/* Estilos para o componente Perguntas */
+.questions-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  color: hsl(103 44% 34%);
+}
+
+@media (min-width: 1024px) {
+  .questions-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}

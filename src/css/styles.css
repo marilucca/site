@@ -587,7 +587,7 @@
   font-weight: bold;
 }
 
-/* Estilos para o componente Perguntas */
+/* Estilos do componente Perguntas */
 .questions-title {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -599,5 +599,37 @@
   .questions-title {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+}
+
+/* Estilos do componente Resultados */
+.results-section-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  color: hsl(103 44% 34%);
+}
+
+.results-division-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+
+  color: rgb(75 85 99);
+}
+
+.results-type-text {
+  color: hsl(103 44% 34%);
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .results-section-title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .results-division-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }

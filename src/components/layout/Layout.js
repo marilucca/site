@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="text-gray-900">{children}</main>
+      <main style={{ color: 'rgb(17 24 39)' }}>{children}</main>
       <Footer />
     </>
   );

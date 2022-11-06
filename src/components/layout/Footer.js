@@ -1,7 +1,7 @@
 import React from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import Logo from '../../svg/LogoIcon';
 import Socials from '../Socials';
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="container mx-auto py-16 px-3 text-gray-800">
       <div className="flex -mx-3 flex-col md:flex-row">
         <div className="flex flex-row justify-center items-start flex-1 px-3 mb-4 md:mb-0">
-          <Logo size={80} />
+          <StaticImage src="../../images/logo-seiva.png" width={80} height={80} />
           <div className="ml-4">
             <p className="font-bold text-lg">Seiva Júnior</p>
             <p className="text-md text-gray-700">Consultoria Júnior em Sustentabilidade</p>

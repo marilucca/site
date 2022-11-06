@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faBars } from '@fortawesome/free-solid-svg-icons';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import LogoIcon from '../../svg/LogoIcon';
 import Button from '../Button';
 
 const Header = () => {
@@ -18,9 +18,7 @@ const Header = () => {
       <nav>
         <div className="logo-container">
           <AnchorLink to="/" className="logo-wrapper">
-            <div className="logo-image">
-              <LogoIcon size={48} />
-            </div>
+            <StaticImage src="../../images/logo-seiva.png" width={48} height={48} />
             Seiva Jr.
           </AnchorLink>
 
@@ -28,6 +26,7 @@ const Header = () => {
             <FontAwesomeIcon icon={isOpen ? faClose : faBars} size="lg" />
           </div>
         </div>
+
         <div className="links-container">
           <AnchorLink className="px-4" to="/">
             Início
@@ -61,9 +60,7 @@ const Header = () => {
         ) : null}
 
         <div className="contact-button-container">
-          <Button className="text-sm" to="/#contact">
-            Entre em contato
-          </Button>
+          <Button to="/#contact">Entre em contato</Button>
         </div>
       </nav>
     </header>

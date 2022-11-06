@@ -1,12 +1,7 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import SplitSection from './SplitSection';
-import ConsultoriaPersonalizada from '../svg/portfolio/ConsultoriaPersonalizada';
-import PlanoDeGerenciamento from '../svg/portfolio/PlanoDeGerenciamento';
-import SustentabilidadeNasEscolas from '../svg/portfolio/SustentabilidadeNasEscolas';
-import ConsultoriaResidencial from '../svg/portfolio/ConsultoriaResidencial';
-import EducacaoAmbiental from '../svg/portfolio/EducacaoAmbiental';
-import EventosOnline from '../svg/portfolio/EventosOnline';
 
 const Services = () => (
   <>
@@ -22,7 +17,7 @@ const Services = () => (
           </p>
         </div>
       }
-      secondarySlot={<ConsultoriaPersonalizada />}
+      secondarySlot={<StaticImage src="../images/portfolio/consultoria-personalizada.svg" />}
     />
 
     <SplitSection
@@ -39,7 +34,7 @@ const Services = () => (
           </p>
         </div>
       }
-      secondarySlot={<ConsultoriaResidencial />}
+      secondarySlot={<StaticImage src="../images/portfolio/consultoria-residencial.svg" />}
     />
 
     <SplitSection
@@ -53,7 +48,7 @@ const Services = () => (
           </p>
         </div>
       }
-      secondarySlot={<EducacaoAmbiental />}
+      secondarySlot={<StaticImage src="../images/portfolio/educação-ambiental.svg" />}
     />
 
     <SplitSection
@@ -70,7 +65,7 @@ const Services = () => (
           </p>
         </div>
       }
-      secondarySlot={<PlanoDeGerenciamento />}
+      secondarySlot={<StaticImage src="../images/portfolio/pgrs.svg" />}
     />
 
     <SplitSection
@@ -89,7 +84,7 @@ const Services = () => (
           </p>
         </div>
       }
-      secondarySlot={<SustentabilidadeNasEscolas />}
+      secondarySlot={<StaticImage src="../images/portfolio/sustentabilidade-nas-escolas.svg" />}
     />
 
     <SplitSection
@@ -110,7 +105,7 @@ const Services = () => (
           </p>
         </div>
       }
-      secondarySlot={<EventosOnline />}
+      secondarySlot={<StaticImage src="../images/portfolio/eventos-online.svg" />}
     />
   </>
 );

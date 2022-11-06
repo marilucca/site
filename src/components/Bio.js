@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
-import Logo from '../svg/LogoIcon';
 import Socials from './Socials';
 
 import { container, logoContainer } from '../css/components/Bio.module.css';
@@ -25,7 +25,7 @@ const Bio = () => {
   return (
     <div className={container}>
       <div className={logoContainer}>
-        <Logo size={48} />
+        <StaticImage src="../images/logo-seiva.png" width={48} height={48} />
         <p>
           <strong>{author.name}</strong> {author.summary}
         </p>

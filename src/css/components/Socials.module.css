@@ -1,0 +1,26 @@
+/* Estilos do componente Socials */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-weight: semibold;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+}
+
+.container > ul {
+  line-height: 2;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.item span {
+  margin-left: 1rem;
+}

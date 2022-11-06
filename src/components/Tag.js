@@ -1,5 +1,5 @@
-const Tag = ({ children }) => {
-  return <small className="tag-container">{children}</small>;
-};
+import { tagContainer } from '../css/components/Tag.module.css';
 
-export default Tag;
+export default function Tag({ children }) {
+  return <small className={tagContainer}>{children}</small>;
+}

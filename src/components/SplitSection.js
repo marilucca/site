@@ -1,12 +1,17 @@
 import React from 'react';
 
-const SplitSection = ({ id, primarySlot, secondarySlot, reverseOrder }) => (
-  <section id={id} className="split-section-container">
-    <div className="split-section-primary">{primarySlot}</div>
-    <div className={`split-section-secondary ${reverseOrder && `split-section-secondary-reverse`}`}>
-      {secondarySlot}
-    </div>
-  </section>
-);
+import {
+  container,
+  primary,
+  secondary,
+  secondaryReverse,
+} from '../css/components/SplitSection.module.css';
 
-export default SplitSection;
+export default function SplitSection({ id, primarySlot, secondarySlot, reverseOrder }) {
+  return (
+    <section id={id} className={container}>
+      <div className={primary}>{primarySlot}</div>
+      <div className={`${secondary} ${reverseOrder && secondaryReverse}`}>{secondarySlot}</div>
+    </section>
+  );
+}

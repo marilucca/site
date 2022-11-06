@@ -1,0 +1,68 @@
+/* Estilos do componente SplitSection */
+.container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secondary {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.secondaryReverse {
+  order: 9999;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    flex-direction: row;
+  }
+
+  .primary {
+    width: 50%;
+  }
+
+  .secondary {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  .secondaryReverse {
+    order: -9999;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}

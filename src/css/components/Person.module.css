@@ -1,0 +1,25 @@
+/* Estilos do componente Person */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: 1rem;
+}
+
+.nameText {
+  width: max-content;
+  font-weight: bold;
+}
+
+.picture {
+  border-radius: 100%;
+}

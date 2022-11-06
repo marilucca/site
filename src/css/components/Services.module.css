@@ -1,0 +1,32 @@
+/* Estilos do componente Services */
+@media (min-width: 1024px) {
+  .rightContainer {
+    padding-right: 8rem;
+  }
+
+  .leftContainer {
+    padding-left: 8rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .rightContainer {
+    padding-right: 12rem;
+  }
+
+  .leftContainer {
+    padding-left: 12rem;
+  }
+}
+
+.title {
+  font-size: 1.875rem;
+  line-height: 1.25rem;
+
+  font-weight: semibold;
+}
+
+.description {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}

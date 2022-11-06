@@ -1,12 +1,14 @@
 import React from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-const Person = ({ image, name, title }) => {
+import { container, info, nameText, picture } from '../css/components/Person.module.css';
+
+export default function Person({ image, name, title }) {
   return (
-    <div className="person-container">
-      <GatsbyImage image={image} alt={name} className="person-image" />
-      <div className="person-info">
-        <p className="person-name">{name}</p>
+    <div className={container}>
+      <GatsbyImage image={image} alt={name} className={picture} />
+      <div className={info}>
+        <p className={nameText}>{name}</p>
         {title ? (
           <>
             <p>{title}</p>
@@ -15,6 +17,4 @@ const Person = ({ image, name, title }) => {
       </div>
     </div>
   );
-};
-
-export default Person;
+}

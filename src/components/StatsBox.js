@@ -1,10 +1,12 @@
 import React from 'react';
 
-const StatsBox = ({ primaryText, secondaryText }) => (
-  <>
-    <p className="stats-box-primary">{primaryText}</p>
-    <p className="stats-box-secondary">{secondaryText}</p>
-  </>
-);
+import { statsBoxPrimary, statsBoxSecondary } from '../css/components/StatsBox.module.css';
 
-export default StatsBox;
+export default function StatsBox({ primaryText, secondaryText }) {
+  return (
+    <div>
+      <p className={statsBoxPrimary}>{primaryText}</p>
+      <p className={statsBoxSecondary}>{secondaryText}</p>
+    </div>
+  );
+}

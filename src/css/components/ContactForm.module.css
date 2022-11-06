@@ -1,0 +1,85 @@
+/* Estilos do componente ContactForm */
+.container {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.container > form {
+  flex: 1 1 0%;
+}
+
+.inputContainer {
+  margin-bottom: 1rem;
+}
+
+.inputContainer > label {
+  display: block;
+
+  color: black;
+  font-weight: bold;
+  text-align: left;
+
+  margin-bottom: 0.5rem;
+}
+
+.inputContainer > label > input,
+.inputContainer > label > textarea {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  width: 100%;
+
+  appearance: none;
+
+  border-width: 1px;
+  border-radius: 0.25rem;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  color: rgb(55 65 81);
+  line-height: 1.25;
+}
+
+.inputContainer > label > input:focus,
+.inputContainer > label > textarea:focus {
+  outline: none;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.45);
+}
+
+.inputContainer > label > textarea {
+  min-height: 300px;
+}
+
+.formButton {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .container > form {
+    margin-right: 4rem;
+  }
+
+  .infoContainer {
+    margin-top: 0;
+  }
+}

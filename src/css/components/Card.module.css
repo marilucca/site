@@ -1,0 +1,11 @@
+/* Estilos do componente Card */
+.container {
+  padding: 3rem;
+
+  border-width: 1px;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: rgb(229 231 235);
+
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}

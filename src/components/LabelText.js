@@ -1,7 +1,7 @@
 import React from 'react';
 
-const LabelText = ({ children, className = '' }) => (
-  <p className={`label-text ${className}`}>{children}</p>
-);
+import { text } from '../css/components/LabelText.module.css';
 
-export default LabelText;
+export default function LabelText({ children, className }) {
+  return <p className={`${text} ${className}`}>{children}</p>;
+}

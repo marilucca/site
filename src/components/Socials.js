@@ -9,6 +9,8 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
+import { container, title, item } from '../css/components/Socials.module.css';
+
 const capitalize = (string) =>
   string
     .split('')
@@ -23,7 +25,7 @@ const socialLogo = {
   linkedin: faLinkedin,
 };
 
-const Socials = () => {
+export default function Socials() {
   const data = useStaticQuery(graphql`
     query SocialsQuery {
       site {
@@ -43,11 +45,11 @@ const Socials = () => {
   const socials = data.site.siteMetadata?.social;
 
   return (
-    <div className="socials-container">
-      <h2 className="socials-title">Redes Sociais</h2>
+    <div className={container}>
+      <h2 className={title}>Redes Sociais</h2>
       <ul>
         {Object.entries(socials).map(([key, value]) => (
-          <li key={key} className="socials-item">
+          <li key={key} className={item}>
             <a href={value} target="_blank" rel="noopener norefferer">
               <FontAwesomeIcon icon={socialLogo[key]} size="lg" />
               <span>{capitalize(key)}</span>
@@ -58,5 +60,3 @@ const Socials = () => {
     </div>
   );
 };
-
-export default Socials;

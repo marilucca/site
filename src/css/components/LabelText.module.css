@@ -1,0 +1,5 @@
+/* Estilos do componente LabelText */
+.text {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

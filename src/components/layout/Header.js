@@ -48,6 +48,7 @@ const Header = () => {
             Blog
           </AnchorLink>
         </div>
+
         {isOpen ? (
           <div className="mobile-links-container">
             <AnchorLink to="/">Início</AnchorLink>
@@ -58,6 +59,7 @@ const Header = () => {
             <AnchorLink to="/blog">Blog</AnchorLink>
           </div>
         ) : null}
+
         <div className="contact-button-container">
           <Button className="text-sm" to="/#contact">
             Entre em contato

@@ -1,13 +1,11 @@
 import React from 'react';
 
 import Button from '../components/Button';
-import OutlinedButton from '../components/OutlinedButton';
 import Card from '../components/Card';
 import CustomerCard from '../components/CustomerCard';
 import LabelText from '../components/LabelText';
 import Layout from '../components/layout/Layout';
 import Seo from '../components/Seo';
-// import StatsBox from '../components/StatsBox';
 import ContactForm from '../components/ContactForm';
 import customerData from '../data/customer-data';
 import Services from '../components/Services';
@@ -30,9 +28,9 @@ const Index = () => (
             <Button className="mr-0 md:mr-8 mb-8 md:mb-0" size="lg" to="/#contact">
               Entre em contato
             </Button>
-            <OutlinedButton size="lg" to="/#features">
+            <Button type="outlined" size="lg" to="/#features">
               Saiba mais
-            </OutlinedButton>
+            </Button>
           </div>
         </div>
       </div>

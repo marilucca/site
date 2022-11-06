@@ -1,0 +1,21 @@
+/* Estilos do componente Bio */
+.container {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.logoContainer {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-bottom: 2rem;
+}
+
+.logoContainer p {
+  margin-left: 0.5rem;
+}

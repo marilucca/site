@@ -269,28 +269,6 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-/* Estilos do componente Bio */
-.bio-container {
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-.bio-logo-container {
-  display: flex;
-
-  align-items: center;
-  justify-content: flex-start;
-
-  margin-bottom: 2rem;
-}
-
-.bio-paragraph {
-  margin-left: 0.5rem;
-}
-
 /* Estilos do componente ContactForm */
 .form-container {
   display: flex;

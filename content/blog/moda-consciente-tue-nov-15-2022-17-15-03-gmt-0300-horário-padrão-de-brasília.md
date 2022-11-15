@@ -3,7 +3,12 @@ title: Moda Consciente
 featuredImage: ice-blue-playful-lesson-presentation.png
 date: 2022-11-15T20:15:03.087Z
 tags:
-  - "#ModaSustentavel#Consumo#Consumismo#MeioAmbiente#Sociedade#Atualidades"
+  - Moda Sustentável
+  - Consumo
+  - Consumismo
+  - Meio Ambiente
+  - Sociedade
+  - Atualidades
 ---
 <!--StartFragment-->
 

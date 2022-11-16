@@ -15,6 +15,26 @@
 .blog-post-content-container h5,
 .blog-post-content-container h6 {
   font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
+
+.blog-post-content-container h1 + p,
+.blog-post-content-container h2 + p,
+.blog-post-content-container h3 + p,
+.blog-post-content-container h4 + p,
+.blog-post-content-container h5 + p,
+.blog-post-content-container h6 + p,
+.blog-post-content-container p + h1,
+.blog-post-content-container p + h2,
+.blog-post-content-container p + h3,
+.blog-post-content-container p + h4,
+.blog-post-content-container p + h5,
+.blog-post-content-container p + h6 {
+  margin-top: 1rem;
+}
+
+.blog-post-content-container h3 {
+  font-size: 1.5rem;
 }
 
 .blog-post-content-container ul {

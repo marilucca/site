@@ -1,17 +1,16 @@
 ---
 title: Moda Consciente
-featuredImage: '../../static/images/uploads/ice-blue-playful-lesson-presentation.png'
+path: /moda-consciente
+featuredImage: ../../static/images/uploads/ice-blue-playful-lesson-presentation.png
 date: 2022-11-15T20:15:03.087Z
 tags:
-  - 'Moda Sustentável'
-  - 'Consumo'
-  - 'Consumismo'
-  - 'Meio Ambiente'
-  - 'Sociedade'
-  - 'Atualidades'
-path: /moda-consciente
+  - Moda Sustentável
+  - Consumo
+  - Consumismo
+  - Meio Ambiente
+  - Sociedade
+  - Atualidades
 ---
-
 <!--StartFragment-->
 
 ### **Impactos Ambientais e Sociais**
@@ -32,7 +31,7 @@ Graças ao aumento das discussões nas redes sociais acerca da moda Fast Fashion
 
 ### Consumo Consciente e Consumismo
 
-![](<https://s2.glbimg.com/eLmRd-LB2Weyn6OqvUkgP_Qabms=/0x0:1377x700/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_7d5b9b5029304d27b7ef8a7f28b4d70f/internal_photos/bs/2021/G/T/L3ZhVMSO2xcOwBY7f52g/montanhaderoupa.jpg>)
+![](https://s2.glbimg.com/eLmRd-LB2Weyn6OqvUkgP_Qabms=/0x0:1377x700/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_7d5b9b5029304d27b7ef8a7f28b4d70f/internal_photos/bs/2021/G/T/L3ZhVMSO2xcOwBY7f52g/montanhaderoupa.jpg)
 
 Na sociedade capitalista atual, se vê cada vez mais encorpada a necessidade de consumo, a qual, se praticada ao exagero, pode ser facilmente convertida em consumismo. Na indústria da moda, nota-se um consumo desenfreado muito presente, que se dá principalmente pelo já citado curto ciclo de vida das peças de roupa. O consumismo está diretamente relacionado com os impactos socioambientais dessa indústria (que é a segunda mais poluidora do mundo), portanto, em contrapartida ao problema, surge a possibilidade de adotar o consumo consciente, que é aquele que leva em conta, ao escolher os produtos ou serviços: o **meio ambiente a saúde humana e a animal, relações justas de trabalho**, além de questões como **preços e marcas**. Sendo assim, enquanto consumidor, há uma grande importância em compreender os processos de produção e os impactos gerados por suas ações, sempre buscando um estilo de vida mais sustentável.
 
@@ -40,14 +39,14 @@ Na sociedade capitalista atual, se vê cada vez mais encorpada a necessidade de 
 
 A feira do desapego ou feira de trocas é realizada quadrimestralmente nas dependências da Universidade Federal do ABC (UFABC), organizada pela Seiva Jr., com o intuito de incentivar o consumo cíclico de roupas e livros, fomentando questões de consumo responsável e práticas sustentáveis.
 
-_Recomendamos os seguintes textos, sites e mídias para saber mais._
+*Recomendamos os seguintes textos, sites e mídias para saber mais.*
 
-- Future of The Consumer Society - <https://orgprints.org/id/eprint/16410/1/consumer6.pdf>
-- Palestra: O Consumo Consciente não vai salvar o mundo | TEDx - <https://youtu.be/lmjwPnkZWh0>
-- Vídeo: "Fast Fashion" | DW Brasil - <https://youtu.be/U-FZnFcKEHA>
-- TRAMA Jr. - @tramajr - Empresa do curso de Têxtil e Moda da Escola de Artes Ciências e Humanidades da Universidade de São Paulo (EACH-USP).
-- Lara Sandres - @larasandres - influencer e estudante de moda.
-- Joyce de Albuquerque - @ateliedajoca - aborda em seus perfis temas relacionados a consumo e moda consciente de forma prática.
+* Future of The Consumer Society - <https://orgprints.org/id/eprint/16410/1/consumer6.pdf>
+* Palestra: O Consumo Consciente não vai salvar o mundo | TEDx - <https://youtu.be/lmjwPnkZWh0>
+* Vídeo: "Fast Fashion" | DW Brasil - <https://youtu.be/U-FZnFcKEHA>
+* TRAMA Jr. - @tramajr - Empresa do curso de Têxtil e Moda da Escola de Artes Ciências e Humanidades da Universidade de São Paulo (EACH-USP).
+* Lara Sandres - @larasandres - influencer e estudante de moda.
+* Joyce de Albuquerque - @ateliedajoca - aborda em seus perfis temas relacionados a consumo e moda consciente de forma prática.
 
 <!--StartFragment-->
 

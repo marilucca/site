@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import React from 'react';
 import { graphql } from 'gatsby';
 
@@ -25,6 +26,12 @@ const BlogPostTemplate = ({ data }) => {
               {post.frontmatter.title}
             </h1>
             <p className="text-md">{date}</p>
+
+            {post.frontmatter.audio ? (
+              <audio controls>
+                <source src={post.frontmatter.audio} type="audio/mpeg" />
+              </audio>
+            ) : null}
           </header>
           <div
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -58,6 +65,7 @@ export const pageQuery = graphql`
         date
         description
         tags
+        audio
       }
     }
   }

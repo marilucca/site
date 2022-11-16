@@ -103,6 +103,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       tags: [String]
       preview: String
       path: String
+      audio: String
     }
 
     type Fields {

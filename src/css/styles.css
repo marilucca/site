@@ -3,6 +3,14 @@
   width: 100%;
 }
 
+.blog-post-content-container p {
+  max-width: 100%;
+}
+
+.blog-post-content-container p > a {
+  overflow-wrap: break-word;
+}
+
 .blog-post-content-container p + p {
   margin-top: 2rem;
   text-align: justify;

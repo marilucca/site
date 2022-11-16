@@ -13,12 +13,13 @@ collections:
     label: 'Blog'
     folder: 'content/blog'
     create: true
-    slug: '{{title}}-{{date}}'
+    slug: '{{path}}'
     editor:
       preview: true
     locale: 'pt'
     fields:
       - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Caminho', name: 'path', widget: 'string' }
       - { label: 'Thumbnail', name: 'featuredImage', widget: 'image' }
       - { label: 'Data de Publicação', name: 'date', widget: 'datetime', date_format: 'DD/MM/YYYY', time_format: 'HH:mm' }
       - { label: 'Descrição', name: 'description', widget: 'string', required: false }

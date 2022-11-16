@@ -1,4 +1,8 @@
 /* Blog */
+.blog-article-container {
+  width: 100%;
+}
+
 .blog-post-content-container p + p {
   margin-top: 2rem;
   text-align: justify;
@@ -30,6 +34,8 @@
 .blog-post-content-container iframe {
   margin-left: auto;
   margin-right: auto;
+
+  max-width: 50%;
 }
 
 .blog-post-content-container * > img, 

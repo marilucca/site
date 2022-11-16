@@ -25,6 +25,7 @@ export const blogListQuery = graphql`
           title
           description
           tags
+          path
           featuredImage {
             childImageSharp {
               gatsbyImageData(width: 450, height: 300)
@@ -74,10 +75,10 @@ const BlogList = ({ data, pageContext }) => {
                       className="rounded-lg"
                       image={preview}
                       alt={title}
-                      // width={325}
-                      // height={225}
-                      // style={{ width: 325, height: 225 }}
-                      // imgStyle={{ width: 325, height: 225 }}
+                    // width={325}
+                    // height={225}
+                    // style={{ width: 325, height: 225 }}
+                    // imgStyle={{ width: 325, height: 225 }}
                     />
 
                     <div className="md:ml-4 flex flex-col items-start justify-center">

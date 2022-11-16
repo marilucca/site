@@ -1,5 +1,5 @@
 ---
-title: "A história de Gaia"
+title: 'A história de Gaia'
 date: 2018-04-22T00:00:00.000Z
 tags:
   - Gaia

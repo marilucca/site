@@ -1,9 +1,8 @@
 ---
-title: "A Compostagem como Saída Para a Problemática dos Resíduos Sólidos no Brasil"
+title: 'A Compostagem como Saída Para a Problemática dos Resíduos Sólidos no Brasil'
 date: 2021-08-02T00:00:00.000Z
 featuredImage: './featured.jpeg'
 ---
-
 <p>
   <span style="font-weight: 400;">
       Os aterros sanitários são espaços destinados à disposição final de resíduos sólidos gerados pela atividade humana, que são também conhecidos como Resíduos Sólidos Urbanos (RSU). Os mesmos são encontrados normalmente afastados dos centros urbanos para evitar transtornos à população. A quantidade de descarte desses, depende da situação socioeconômica de cada local, dentre esses resíduos são encontrados matéria orgânica juntamente com plásticos, vidros , metais, entre outros. Através de dados da Associação Brasileira de Empresas de Limpeza Pública e Resíduos Especiais (Abrelpe), só em 2018 foram geradas cerca de 79 milhões de toneladas de RSU, um aumento de 1% em relação ao ano anterior.
@@ -52,4 +51,3 @@ featuredImage: './featured.jpeg'
     <span style="font-weight: 400;"><br /></span>
   </a>
 </p>
-

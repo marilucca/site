@@ -19,7 +19,7 @@ const BlogPostTemplate = ({ data }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <section className="pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
-        <article itemScope itemType="http://schema.org/Article">
+        <article className="blog-article-container" itemScope itemType="http://schema.org/Article">
           <header className="mb-4">
             <h1 className="mb-0 text-primary-default text-4xl" itemProp="headline">
               {post.frontmatter.title}
@@ -41,33 +41,6 @@ const BlogPostTemplate = ({ data }) => {
           </footer>
         </article>
       </section>
-      {/* <nav>
-        <ul
-          className="m-0"
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav> */}
     </Layout>
   );
 };

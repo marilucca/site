@@ -9,8 +9,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
           nodes {
             id
-            fields {
-              slug
+            frontmatter {
+              path
             }
           }
         }
@@ -22,6 +22,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild(`There was an error loading your blog posts`, result.errors);
     return;
   }
+
+  // result.data.allMarkdownRemark.nodes.forEach((node) => {
+  //   if (!node.frontmatter.path) {
+  //     return;
+  //   }
+
+  //   createPage({
+  //     path: node.frontmatter.path,
+  //     component: require.resolve(`./src/templates/blog-post.js`),
+  //   });
+  // });
 
   const posts = result.data.allMarkdownRemark.nodes;
   const postsPerPage = 10;
@@ -45,7 +56,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
+    const value = node.frontmatter.path || createFilePath({ node, getNode });
 
     createNodeField({
       name: `slug`,
@@ -91,6 +102,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       tags: [String]
       preview: String
+      path: String
     }
 
     type Fields {

@@ -1,5 +1,5 @@
 ---
-title: "GREENWASHING – A prática por trás da adesão de produtos de empresas pelos consumidores em potencial."
+title: 'GREENWASHING – A prática por trás da adesão de produtos de empresas pelos consumidores em potencial.'
 date: 2021-11-15T00:00:00.000Z
 featuredImage: './featured.jpg'
 ---
@@ -105,7 +105,6 @@ featuredImage: './featured.jpg'
 <figure>
   <img src="https://media.giphy.com/media/eM0zUzVl65ycKrPe1j/giphy.gif" alt="" width="416" height="416"/>
 </figure>
-
 
 <p>Vem ser ativo e sustentável com a gente!</p>
 

@@ -2,7 +2,7 @@
 title: Biodegradável x Compostável
 path: /biodegradavel-vs-compostavel
 featuredImage: biodegradável-x-compostável.png
-date: 2022-12-12T21:16:22.918Z
+date: 2022-12-12T21:42:07.216Z
 tags:
   - Biodegradável Compostável Meio ambiente
 ---

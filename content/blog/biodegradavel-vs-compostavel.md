@@ -1,12 +1,13 @@
 ---
 title: Biodegradável x Compostável
 path: /biodegradavel-vs-compostavel
-featuredImage: biodegradável-x-compostável.png
+featuredImage: '../../static/images/uploads/biodegradável-x-compostável.png'
 date: 2022-12-12T21:42:07.216Z
 tags:
-  - Biodegradável Compostável Meio ambiente
+  - Biodegradável
+  - Meio Ambiente
+  - Compostável
 ---
-
 
 **O que é biodegradação e compostagem e suas diferenças**
 
@@ -24,20 +25,16 @@ Há dois tipos de compostagem principais. A compostagem doméstica (ou de quinta
 
 Com o exponencial crescimento da população diretamente ligado às consequências que já se demonstram notórias no cenário mundial atual, como a produção exacerbada de lixo orgânico e inorgânico, medidas para o seu correto descarte se tornam necessárias. Dessa forma, a compostagem se apresenta como um caminho promissor para deter parcialmente essa consequência habitual consumista presente no mundo todo, a fim de que seja possível principalmente retomar valores sociais e ambientais frente a questão do lixo orgânico.
 
-*Recomendamos os seguintes textos, sites e mídias para saber mais:*
+_Recomendamos os seguintes textos, sites e mídias para saber mais:_
 
-* Documentário: [Compostagem - PorQueNão?﻿](https://www.youtube.com/watch?v=88XyQPcNEIw&ab_channel=PorQueN%C3%A3o%3F)
-* TED - [Treasure, Not Trash](https://www.ted.com/talks/denise_polk_ph_d_treasure_not_trash_composting_and_food_recovery_is_good_for_communities)  
+- Documentário: [Compostagem - PorQueNão?﻿](https://www.youtube.com/watch?v=88XyQPcNEIw&ab_channel=PorQueN%C3%A3o%3F)
+- TED - [Treasure, Not Trash](https://www.ted.com/talks/denise_polk_ph_d_treasure_not_trash_composting_and_food_recovery_is_good_for_communities)
 
-Feito por: 
+Feito por:
 
-Lucas Marin 
-
-
+Lucas Marin
 
 Vitor Malavasi
-
-
 
 **Referências de conteúdo:**
 

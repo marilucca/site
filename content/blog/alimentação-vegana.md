@@ -10,7 +10,7 @@ tags:
   - Veganismo
   - Sociedade
   - Atualidades
-audio: 'https://docs.google.com/uc?export=download&id=13ak3zQwRK8FHNQv1tw1XdxG6lkm1LHwY'
+audio: 'https://alunoufabcedu.sharepoint.com/:u:/s/Marketing/EauhLu7JtXRBpfby-7Jx3OQBFHJOnnZeCmht_Qt2ZzlBdw?e=lOna0y&download=1'
 ---
 
 <!--StartFragment-->

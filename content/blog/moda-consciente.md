@@ -10,7 +10,7 @@ tags:
   - 'Sociedade'
   - 'Atualidades'
 path: /moda-consciente
-audio: 'https://docs.google.com/uc?export=download&id=10QXpScllpmhzte4gmcu19FzvVKiztSfE'
+audio: 'https://alunoufabcedu.sharepoint.com/:u:/s/Marketing/EQ39Ynjf9LBLtenVPhaPV7cBRxkKQAzU7KMemxQtaul_9Q?e=QePUvL&download=1'
 ---
 
 <!--StartFragment-->

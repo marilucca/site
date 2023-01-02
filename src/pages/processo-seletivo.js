@@ -12,16 +12,19 @@ const ProcessoSeletivo = () => {
 
         <div className="container mx-auto flex flex-col items-center md:items-start">
           <h2 className="text-3xl lg:text-5xl font-semibold">Processo Seletivo 2022</h2>
-          <div
+          <StaticImage
+            src="../../static/images/processo-seletivo.jpeg"
+            alt="Processo Seletivo Seiva Jr. 2022"
+            placeholder="blurred"
+            layout="constrained"
+            width={350}
+            className="mx-auto mt-4"
+          />
+          {/* <div
             style={{ width: 'min(400px, 80vw)', height: 'min(400px, 80vw)', alignSelf: 'center' }}
           >
-            <StaticImage
-              src="../../static/images/processo-seletivo.png"
-              alt="Processo Seletivo Seiva Jr. 2022"
-              placeholder="blurred"
-              layout="constrained"
-            />
-          </div>
+            
+          </div> */}
           <p className="mt-4 text-md md:text-lg px-8">
             O processo seletivo de 2022 abrirá em breve! Atente-se às nossas redes sociais para
             saber quando o processo abrirá e como ele funcionará!

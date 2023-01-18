@@ -9,7 +9,6 @@ tags:
   - 'Meio Ambiente'
   - 'Sociedade'
   - 'Atualidades'
-path: /moda-consciente
 audio: 'https://alunoufabcedu.sharepoint.com/:u:/s/Marketing/EQ39Ynjf9LBLtenVPhaPV7cBRxkKQAzU7KMemxQtaul_9Q?e=QePUvL&download=1'
 ---
 

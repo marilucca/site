@@ -1,4 +1,4 @@
-const { createFilePath } = require(`gatsby-source-filesystem`);
+// const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
@@ -9,9 +9,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
           nodes {
             id
-            frontmatter {
-              path
-            }
           }
         }
       }
@@ -22,17 +19,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild(`There was an error loading your blog posts`, result.errors);
     return;
   }
-
-  // result.data.allMarkdownRemark.nodes.forEach((node) => {
-  //   if (!node.frontmatter.path) {
-  //     return;
-  //   }
-
-  //   createPage({
-  //     path: node.frontmatter.path,
-  //     component: require.resolve(`./src/templates/blog-post.js`),
-  //   });
-  // });
 
   const posts = result.data.allMarkdownRemark.nodes;
   const postsPerPage = 10;
@@ -52,19 +38,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions;
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = node.frontmatter.path || createFilePath({ node, getNode });
+//   if (node.internal.type === `MarkdownRemark`) {
+//     const value = node.frontmatter.path || createFilePath({ node, getNode });
 
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    });
-  }
-};
+//     createNodeField({
+//       name: `slug`,
+//       node,
+//       value,
+//     });
+//   }
+// };
 
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
@@ -93,7 +79,6 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
-      fields: Fields
     }
 
     type Frontmatter {
@@ -102,12 +87,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       tags: [String]
       preview: String
-      path: String
       audio: String
-    }
-
-    type Fields {
-      slug: String
     }
   `);
 };

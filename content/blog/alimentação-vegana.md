@@ -1,6 +1,5 @@
 ---
 title: Veganismo
-path: /alimentacao-vegana
 featuredImage: '../../static/images/uploads/banner-blog.png'
 date: 2022-11-28T18:50:30.437Z
 tags:

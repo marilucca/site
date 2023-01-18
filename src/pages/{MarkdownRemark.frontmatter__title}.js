@@ -8,6 +8,8 @@ import Seo from '../components/Seo';
 import Tag from '../components/Tag';
 
 const BlogPostTemplate = ({ data }) => {
+  console.log(data);
+
   const post = data.markdownRemark;
 
   const date = new Date(post.frontmatter.date).toLocaleDateString();

@@ -1,6 +1,5 @@
 ---
 title: Biodegradável x Compostável
-path: /biodegradavel-vs-compostavel
 featuredImage: '../../static/images/uploads/biodegradável-x-compostável.png'
 date: 2022-12-12T21:42:07.216Z
 tags:

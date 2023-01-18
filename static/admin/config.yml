@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  # name: git-gateway
+  name: test-repo
   branch: main
   use_large_media_transforms_in_media_library: true
 
@@ -13,15 +14,15 @@ collections:
     label: 'Blog'
     folder: 'content/blog'
     create: true
-    slug: '{{path}}'
+    slug: '{{title}}'
     editor:
       preview: true
     locale: 'pt'
     fields:
       - { label: 'Título', name: 'title', widget: 'string' }
-      - { label: 'Caminho', name: 'path', widget: 'string' }
       - { label: 'Thumbnail', name: 'featuredImage', widget: 'image' }
       - { label: 'Data de Publicação', name: 'date', widget: 'datetime', date_format: 'DD/MM/YYYY', time_format: 'HH:mm' }
       - { label: 'Descrição', name: 'description', widget: 'string', required: false }
       - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Texto', name: 'body', widget: 'markdown' }
+      - { label: 'Áudio', name: 'audio', widget: 'string', pattern: ['[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?', "Link para o arquivo de áudio descrição do texto"] }

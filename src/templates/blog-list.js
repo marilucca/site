@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import slugify from 'slugify';
 
 import Layout from '../components/layout/Layout';
 import BlogButtons from '../components/layout/BlogButtons';
@@ -17,15 +18,11 @@ export const blogListQuery = graphql`
     ) {
       nodes {
         excerpt
-        fields {
-          slug
-        }
         frontmatter {
           date
           title
           description
           tags
-          path
           featuredImage {
             childImageSharp {
               gatsbyImageData(width: 450, height: 300)
@@ -62,14 +59,17 @@ const BlogList = ({ data, pageContext }) => {
       <section className="mt-8 pt-20 md:pt-40 container flex-col mx-auto px-8 lg:px-32 lg:flex">
         <ol style={{ listStyle: `none` }}>
           {posts.map((post) => {
-            const title = post.frontmatter.title || post.fields.slug;
+            const title = post.frontmatter.title;
             const preview = post.frontmatter.featuredImage?.childImageSharp.gatsbyImageData;
             const tags = post.frontmatter.tags || [];
             const date = new Date(post.frontmatter.date).toLocaleDateString();
 
+            const slug = slugify(title, { lower: true });
+            const path = `/${slug}`;
+
             return (
-              <li key={post.fields.slug}>
-                <Link to={post.fields.slug}>
+              <li key={slug}>
+                <Link to={path}>
                   <div className="mb-16 post-list-grid">
                     <GatsbyImage
                       className="rounded-lg"

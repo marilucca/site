@@ -4,7 +4,7 @@ date: '2018-01-20T20:05:00.000Z'
 tags:
   - 'São Paulo'
   - 'Urbanismo'
-featuredImage: https://i.imgur.com/5VOFLHO.jpg
+featuredImage: ../../static/images/uploads/urbanismo-a-braisleira.jpg
 ---
 
 ![Foto da cidade de São Paulo](https://i.imgur.com/5VOFLHO.jpg)

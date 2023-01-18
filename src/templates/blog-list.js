@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import slugify from 'slugify';
 
 import Layout from '../components/layout/Layout';
@@ -64,22 +64,22 @@ const BlogList = ({ data, pageContext }) => {
             const tags = post.frontmatter.tags || [];
             const date = new Date(post.frontmatter.date).toLocaleDateString();
 
-            const slug = slugify(title, { lower: true });
+            const slug = slugify(title, { lower: true, strict: true });
             const path = `/${slug}`;
 
             return (
               <li key={slug}>
                 <Link to={path}>
                   <div className="mb-16 post-list-grid">
-                    <GatsbyImage
-                      className="rounded-lg"
-                      image={preview}
-                      alt={title}
-                    // width={325}
-                    // height={225}
-                    // style={{ width: 325, height: 225 }}
-                    // imgStyle={{ width: 325, height: 225 }}
-                    />
+                    {preview ? (
+                      <GatsbyImage
+                        className="rounded-lg"
+                        image={preview}
+                        alt={title}
+                      />
+                    ) : (
+                      <div className="rounded-lg" />
+                    )}
 
                     <div className="md:ml-4 flex flex-col items-start justify-center">
                       <header className="mb-4 flex flex-col">

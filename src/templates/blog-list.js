@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import slugify from 'slugify';
 
 import Layout from '../components/layout/Layout';
 import BlogButtons from '../components/layout/BlogButtons';
@@ -17,18 +18,15 @@ export const blogListQuery = graphql`
     ) {
       nodes {
         excerpt
-        fields {
-          slug
-        }
         frontmatter {
           date
           title
           description
           tags
-          path
           featuredImage {
+            relativePath
             childImageSharp {
-              gatsbyImageData(width: 450, height: 300)
+              gatsbyImageData
             }
           }
         }
@@ -48,8 +46,6 @@ const BlogList = ({ data, pageContext }) => {
         <section className="mt-8 pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
           <Bio />
           <p>Ainda não possuimos nenhum texto em nosso blog. Logo adicionaremos mais textos.</p>
-
-          {/* <BlogButtons pageContext={pageContext} /> */}
         </section>
       </Layout>
     );
@@ -62,24 +58,23 @@ const BlogList = ({ data, pageContext }) => {
       <section className="mt-8 pt-20 md:pt-40 container flex-col mx-auto px-8 lg:px-32 lg:flex">
         <ol style={{ listStyle: `none` }}>
           {posts.map((post) => {
-            const title = post.frontmatter.title || post.fields.slug;
-            const preview = post.frontmatter.featuredImage?.childImageSharp.gatsbyImageData;
+            const { title, featuredImage } = post.frontmatter;
+            const preview = getImage(featuredImage);
             const tags = post.frontmatter.tags || [];
             const date = new Date(post.frontmatter.date).toLocaleDateString();
 
+            const slug = slugify(title, { lower: true, strict: true });
+            const path = `/${slug}`;
+
             return (
-              <li key={post.fields.slug}>
-                <Link to={post.fields.slug}>
+              <li key={slug}>
+                <Link to={path}>
                   <div className="mb-16 post-list-grid">
-                    <GatsbyImage
-                      className="rounded-lg"
-                      image={preview}
-                      alt={title}
-                    // width={325}
-                    // height={225}
-                    // style={{ width: 325, height: 225 }}
-                    // imgStyle={{ width: 325, height: 225 }}
-                    />
+                    {preview ? (
+                      <GatsbyImage image={preview} alt="" className="rounded-lg" />
+                    ) : (
+                      <div className="rounded-lg" />
+                    )}
 
                     <div className="md:ml-4 flex flex-col items-start justify-center">
                       <header className="mb-4 flex flex-col">
@@ -93,7 +88,7 @@ const BlogList = ({ data, pageContext }) => {
 
                         <div className="mt-2">
                           {tags.map((tag) => (
-                            <Tag>{tag}</Tag>
+                            <Tag key={tag}>{tag}</Tag>
                           ))}
                         </div>
                       </header>

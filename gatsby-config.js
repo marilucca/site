@@ -66,7 +66,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        name: 'blog',
+        path: `src/blog`,
       },
     },
     {
@@ -91,7 +92,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-netlify-cms`,

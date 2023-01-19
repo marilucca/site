@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import slugify from 'slugify';
 
 import Layout from '../components/layout/Layout';
@@ -24,8 +24,9 @@ export const blogListQuery = graphql`
           description
           tags
           featuredImage {
+            relativePath
             childImageSharp {
-              gatsbyImageData(width: 450, height: 300)
+              gatsbyImageData
             }
           }
         }
@@ -45,8 +46,6 @@ const BlogList = ({ data, pageContext }) => {
         <section className="mt-8 pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
           <Bio />
           <p>Ainda não possuimos nenhum texto em nosso blog. Logo adicionaremos mais textos.</p>
-
-          {/* <BlogButtons pageContext={pageContext} /> */}
         </section>
       </Layout>
     );
@@ -59,8 +58,8 @@ const BlogList = ({ data, pageContext }) => {
       <section className="mt-8 pt-20 md:pt-40 container flex-col mx-auto px-8 lg:px-32 lg:flex">
         <ol style={{ listStyle: `none` }}>
           {posts.map((post) => {
-            const title = post.frontmatter.title;
-            const preview = post.frontmatter.featuredImage?.childImageSharp.gatsbyImageData;
+            const { title, featuredImage } = post.frontmatter;
+            const preview = getImage(featuredImage);
             const tags = post.frontmatter.tags || [];
             const date = new Date(post.frontmatter.date).toLocaleDateString();
 
@@ -72,11 +71,7 @@ const BlogList = ({ data, pageContext }) => {
                 <Link to={path}>
                   <div className="mb-16 post-list-grid">
                     {preview ? (
-                      <GatsbyImage
-                        className="rounded-lg"
-                        image={preview}
-                        alt={title}
-                      />
+                      <GatsbyImage image={preview} alt="" className="rounded-lg" />
                     ) : (
                       <div className="rounded-lg" />
                     )}
@@ -93,7 +88,7 @@ const BlogList = ({ data, pageContext }) => {
 
                         <div className="mt-2">
                           {tags.map((tag) => (
-                            <Tag>{tag}</Tag>
+                            <Tag key={tag}>{tag}</Tag>
                           ))}
                         </div>
                       </header>

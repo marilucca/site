@@ -9,7 +9,7 @@ tags:
   - Meio ambiente
   - Recursos finitos
   - Equilíbrio
-audio: https://alunoufabcedu.sharepoint.com/:u:/s/Marketing/EVdShKuiT01Bu086bQkCWyEBEx4BYBgKpzrULdFNh8o6vg?e=EYEiyq"&download=1"
+audio: https://alunoufabcedu.sharepoint.com/:u:/s/Marketing/EVdShKuiT01Bu086bQkCWyEBEx4BYBgKpzrULdFNh8o6vg?e=EYEiyq&download=1
 ---
 <!--StartFragment-->
 

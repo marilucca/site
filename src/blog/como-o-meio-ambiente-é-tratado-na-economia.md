@@ -51,4 +51,14 @@ CECHIN, Andrei; VEIGA, José Eli da. O Fundamento Central da Economia Ecológica
 
 ROMEIRO, Ademar Ribeiro. Economia ou economia política da sustentabilidade. In: MAY, Peter H. Economia do Meio Ambiente: teoria e prática: 2.ed. Elsevier, p. 3-31, São Paulo, 2010.
 
+
+
+Feito por:
+
+Nadia Valentina Turato Pereira Bom
+
+<!--EndFragment-->
+
+
+
 <!--EndFragment-->

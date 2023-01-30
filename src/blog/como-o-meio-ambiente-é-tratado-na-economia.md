@@ -6,9 +6,9 @@ tags:
   - Economia
   - Sustentabilidade
   - Ecologia
-  - Meioambiente
-  - Recursosfinitos
-  - Equilibrio
+  - Meio ambiente
+  - Recursos finitos
+  - Equilíbrio
 audio: https://alunoufabcedu.sharepoint.com/:u:/s/Marketing/EVdShKuiT01Bu086bQkCWyEBEx4BYBgKpzrULdFNh8o6vg?e=EYEiyq"&download=1"
 ---
 <!--StartFragment-->

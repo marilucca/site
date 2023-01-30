@@ -1,7 +1,7 @@
 ---
 title: Como o meio ambiente é tratado na Economia?
 featuredImage: ../../static/images/uploads/copy-of-ice-blue-playful-lesson-presentation.png
-date: 2023-01-30T16:30:11.773Z
+date: 2023-01-30T20:02:22.447Z
 tags:
   - Economia
   - Sustentabilidade

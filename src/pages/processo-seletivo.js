@@ -26,7 +26,7 @@ const ProcessoSeletivo = () => {
             
           </div> */}
           <p className="mt-4 text-md md:text-lg px-8">
-            O processo seletivo de 2022 abrirá em breve! Atente-se às nossas redes sociais para
+            O processo seletivo de 2022 já foi encerrado! Atente-se às nossas redes sociais para
             saber quando o processo abrirá e como ele funcionará!
             <br />
             <br /> A Seiva Jr. é uma Empresa Júnior da Universidade Federal do ABC (UFABC) que visa

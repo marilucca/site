@@ -11,12 +11,12 @@
     },
     {
         "name": "Ana Carolina Zacarias",
-        "title": "Presidente",
+        "title": "Conselheira do Financeiro",
         "image": "../images/membros/Pres/AnaCarolinaZacarias.png"
     },
     {
         "name": "Ana Clara Muniz Filippini",
-        "title": "Membro Júnior do Comercial & Projetos",
+        "title": "Diretora de Projetos",
         "image": "../images/membros/CP/AnaClaraMunizFilippini.jpg"
     },
     {
@@ -41,12 +41,12 @@
     },
     {
         "name": "Eduarda Figueira",
-        "title": "Membro Júnior do Financeiro",
+        "title": "Diretora do Financeiro",
         "image": "../images/membros/Fin/EduardaFigueira.jpg"
     },
     {
         "name": "Elisa Silva Freire Aguilar",
-        "title": "Diretora do Financeiro",
+        "title": "Membro Sênior do Financeiro",
         "image": "../images/membros/Fin/ElisaSilvaFreireAguilar.png"
     },
     {
@@ -76,7 +76,7 @@
     },
     {
         "name": "Gabrielle Lui Santana",
-        "title": "Vice-Presidente",
+        "title": "Membro Sênior da Presidência",
         "image": "../images/membros/Pres/GabrielleLuiSantana.png"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
         "name": "Gustavo Teodoro Bauke",
-        "title": "Diretor de Marketing",
+        "title": "Vice-Presidente",
         "image": "../images/membros/MarketingPP/GustavoTeodoroBauke.png"
     },
     {
@@ -101,7 +101,7 @@
     },
     {
         "name": "Isabela da Costa Barrto",
-        "title": "Membro Júnior do Publicidade & Propaganda",
+        "title": "Diretora do Publicidade & Propaganda",
         "image": "../images/membros/MarketingPP/IsabelaDaCostaBarrto.jpeg"
     },
     {
@@ -111,7 +111,7 @@
     },
     {
         "name": "Jéssica Pioltini de Oliveira",
-        "title": "Diretora do Comercial & Projetos",
+        "title": "Diretora da Gestão de Talentos",
         "image": "../images/membros/CP/JessicaPioltinideOliveira.png"
     },
     {
@@ -121,7 +121,7 @@
     },
     {
         "name": "Larissa Mota de Araújo",
-        "title": "Membro Júnior do Comercial & Projetos",
+        "title": "Diretora do Comercial",
         "image": "../images/membros/CP/LarissaMotaDeAraujo.jpg"
     },
     {
@@ -151,7 +151,7 @@
     },
     {
         "name": "Mariane Becherer",
-        "title": "Diretora da Gestão de Talentos",
+        "title": "Membro Sênior da Gestão de Talentos",
         "image": "../images/membros/GT/MarianeBecherer.png"
     },
     {
@@ -161,12 +161,12 @@
     },
     {
         "name": "Matheus Barrionuevo de Souza",
-        "title": "Diretor do Comercial & Projetos",
+        "title": "Presidente",
         "image": "../images/membros/CP/MatheusBarrionuevodeSouza.png"
     },
     {
         "name": "Michelle Pereira Quaresma",
-        "title": "Membro Júnior do Marketing",
+        "title": "Diretora do Marketing",
         "image": "../images/membros/MarketingPP/MichelleQuaresma.jpg"
     },
     {
@@ -191,28 +191,23 @@
     },
     {
         "name": "Nathalia Banharoto Dutrada Silva",
-        "title": "Membro Sênior do Comercial & Projetos",
+        "title": "Conselheira da Presidência",
         "image": "../images/membros/CP/NathaliaBanharotoDutradaSilva.png"
     },
     {
         "name": "Nathália de Cassia Costa",
-        "title": "Diretora do Publicidade & Propaganda",
+        "title": "Membro Sênior do Publicidade & Propaganda",
         "image": "../images/membros/MarketingPP/NathaliadeCassiaCosta.png"
     },
     {
         "name": "Olivia de Macedo Gasparini",
-        "title": "Conselheira de Marketing",
+        "title": "Conselheira da Gestão de Talentos",
         "image": "../images/membros/MarketingPP/OliviadeMacedoGasparini.png"
     },
     {
         "name": "Priscila dos Santos Silva",
         "title": "Membro Sênior da Gestão de Talentos",
         "image": "../images/membros/GT/PrisciladosSantosSilva.png"
-    },
-    {
-        "name": "Rackel Fernandes Vieira",
-        "title": "Membro Júnior do Publicidade & Propaganda",
-        "image": "../images/membros/MarketingPP/RackelFernandesVieira.jpeg"
     },
     {
         "name": "Sofia Sericov Barbieri",

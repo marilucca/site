@@ -1,7 +1,7 @@
 ---
 title: Plano de Gerenciamento de Resíduos Sólidos (PGRS)
 featuredImage: ../../static/images/uploads/pgrs.jpg
-date: 2023-03-15T19:13:05.555Z
+date: 2023-03-15T19:19:19.940Z
 tags:
   - Resíduos sólidos
   - Plano de Gerenciamento de Resíduos Sólidos

@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Seiva Júnior`,
     description: `Seiva Júnior Consultoria em Sustentabilidade`,
-    siteUrl: `https://seivajr.com`,
+    siteUrl: `https://seivajr.com.br`,
     author: {
       name: 'Seiva Júnior',
       summary: 'Consultoria em Sustentabilidade',

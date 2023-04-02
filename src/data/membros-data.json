@@ -21,7 +21,7 @@
     },
     {
         "name": "Ana Harumi Fugitade Maria",
-        "title": "Membro Sênior do Publicidade & Propaganda",
+        "title": "Membro Sênior do Financeiro",
         "image": "../images/membros/MarketingPP/AnaHarumiFugitadeMaria.png"
     },
     {
@@ -63,11 +63,6 @@
         "name": "Felipe Silva Oliveira",
         "title": "Membro Sênior do Comercial & Projetos",
         "image": "../images/membros/CP/FelipeSilvaOliveira.png"
-    },
-    {
-        "name": "Gabriel Santana Silva",
-        "title": "Membro Júnior da Presidência",
-        "image": "../images/membros/Pres/GabrielSantanaSilva.jpeg"
     },
     {
         "name": "Gabriela Mazzieri da Silva",
@@ -140,11 +135,6 @@
         "image": "../images/membros/GT/LuizaMayumiIwamotoVieira.png"
     },
     {
-        "name": "Mariana Araújo Mota",
-        "title": "Membro Sênior do Comercial & Projetos",
-        "image": "../images/membros/CP/MarianaAraujoMota.png"
-    },
-    {
         "name": "Mariana Domingues Gonçalves da Silva",
         "title": "Membro Sênior do Comercial & Projetos",
         "image": "../images/membros/CP/MarianaDominguesGoncalvesdaSilva.png"
@@ -178,11 +168,6 @@
         "name": "Nádia Valentina Turato Pereira Bom",
         "title": "Membro do Financeiro",
         "image": "../images/membros/Fin/NadiaValentinaTuratoPereiraBom.png"
-    },
-    {
-        "name": "Naoki Kobayakawa",
-        "title": "Membro Sênior da Presidência",
-        "image": "../images/membros/Pres/NaokiKobayakawa.png"
     },
     {
         "name": "Natasha Paris Da Silva Pinheiro",

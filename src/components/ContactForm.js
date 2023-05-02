@@ -60,7 +60,7 @@ export default function ContactForm() {
         <Socials />
 
         <h3 className="footer-title">Ou nos envie um email</h3>
-        <a href="mailto:seiva.ambientaljr@gmail.com">
+        <a href="mailto:contato@seivajr.com.br">
           <FontAwesomeIcon icon={faEnvelope} />
           <span>seiva.ambientaljr@gmail.com</span>
         </a>

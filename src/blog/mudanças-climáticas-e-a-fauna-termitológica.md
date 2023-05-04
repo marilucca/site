@@ -3,8 +3,12 @@ title: Mudanças climáticas e a fauna termitológica
 featuredImage: ../../static/images/uploads/cópia-de-transição-energética-1-.png
 date: 2023-05-03T21:31:11.404Z
 tags:
-  - cupinsmudançasclimáticasdecompositoresextinção
-audio: https://drive.google.com/file/d/1lOZmKfb0H65dKMWDceCj6675PvjDf3wS/view?usp=share_link
+  - cupins
+  - mudanças
+  - climáticas
+  - decompositores
+  - extinção
+audio: https://alunoufabcedu.sharepoint.com/:v:/s/Marketing/Ea-TJ7aaO8VBpfQzAEJNHVYBcWN5SltXdo2JDTU6L19rdg?e=tSdRgZ&download=1
 ---
 Segundo o *Painel Intergovernamental sobre Mudanças* Climáticas (IPCC, na sigla em inglês) o aquecimento global vem causando mudanças significativas nos ecossistemas, reduzindo a diversidade da fauna e da flora. Além disso, o aumento da temperatura média observada está relacionado com o crescimento das concentrações de gases de efeito estufa na atmosfera resultante de ações humanas. 
 

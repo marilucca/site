@@ -39,7 +39,6 @@
     "gatsby-plugin-react-helmet": "^5.10.0",
     "gatsby-plugin-sharp": "^4.12.1",
     "gatsby-plugin-sitemap": "^5.7.0",
-    "gatsby-remark-copy-linked-files": "^6.9.0",
     "gatsby-remark-embed-spotify": "^2.1.1",
     "gatsby-remark-images": "^6.7.0",
     "gatsby-remark-prismjs": "^6.7.0",

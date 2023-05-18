@@ -90,7 +90,6 @@ module.exports = {
             },
           },
           `gatsby-remark-embed-spotify`,
-          `gatsby-remark-copy-linked-files`,
           `gatsby-remark-relative-images`,
         ],
       },

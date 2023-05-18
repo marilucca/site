@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  color: var(--color-black) !important;
+}
+
+.container > ul {
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.item span {
+  margin-left: 1rem;
+}

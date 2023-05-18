@@ -1,0 +1,46 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-gap: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card-container {
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.25rem;
+
+  padding: 1rem 1rem 2rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-white);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.card-title {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-2xl);
+  font-family: 'Montserrat', sans-serif;
+
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.card-content {
+  color: var(--color-black);
+  text-align: center;
+}
+
+.card-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

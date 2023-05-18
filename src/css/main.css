@@ -1,0 +1,65 @@
+@import '../../node_modules/modern-normalize/modern-normalize.css';
+
+:root {
+  --color-primary: hsl(103 44% 39%);
+  --color-primary-dark: hsl(103 44% 34%);
+
+  --color-white: #fff;
+  --color-black: #000;
+  --color-lighter-gray: #f2f2f2;
+  --color-light-gray: #b5b5b5;
+  --color-gray: #2e2e2e;
+
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 4rem;
+  --font-size-7xl: 5rem;
+
+  --line-height-sm: 1.25rem;
+  --line-height-md: 1.5rem;
+  --line-height-lg: 1.75rem;
+  --line-height-xl: 1.75rem;
+  --line-height-2xl: 2rem;
+  --line-height-3xl: 2.25rem;
+  --line-height-4xl: 2.5rem;
+  --line-height-5xl: 1;
+  --line-height-6xl: 1;
+  --line-height-7xl: 1;
+
+  --font-family-sans: 'Montserrat', sans-serif;
+  --font-family-serif: 'Bebas Neue', cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bebas Neue', cursive;
+  padding: 0;
+}
+
+p,
+div,
+span {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+main {
+  background-color: #fefefe;
+}

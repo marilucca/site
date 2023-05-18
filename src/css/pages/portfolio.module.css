@@ -1,0 +1,15 @@
+.container {
+  padding: 0 3rem;
+}
+
+.last-container {
+  padding: 0 3rem;
+  margin-bottom: 3rem;
+}
+
+.container p {
+  width: 100%;
+  text-align: justify;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}

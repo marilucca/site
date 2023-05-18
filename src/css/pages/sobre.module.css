@@ -1,0 +1,38 @@
+p, h2, ul {
+  color: var(--color-black);
+}
+
+.container {
+  padding: 0 3rem;
+}
+
+.last-container {
+  padding: 0 3rem;
+  margin-bottom: 3rem;
+}
+
+.container p {
+  width: 100%;
+  text-align: justify;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+.container ul {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  align-self: flex-start;
+  margin: 0;
+}
+
+.members-container {
+  display: grid;
+  align-self: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .members-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

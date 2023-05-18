@@ -1,0 +1,99 @@
+backend:
+  # name: git-gateway
+  name: test-repo
+  branch: main
+  use_large_media_transforms_in_media_library: true
+
+local_backend: true
+media_folder: static/images/uploads
+public_folder: ../../static/images/uploads
+publish_mode: editorial_workflow
+
+collections:
+  # Textos do blog são configurados a partir das definições desse arquivo
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/blog'
+    create: true
+    slug: '{{title}}'
+    editor:
+      preview: true
+    locale: 'pt'
+    fields:
+      - { label: 'Identificador', name: 'templateKey', widget: hidden, default: blog }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Thumbnail', name: 'featuredImage', widget: 'image' }
+      - { label: 'Data de Publicação', name: 'date', widget: 'datetime', date_format: 'DD/MM/YYYY', time_format: 'HH:mm' }
+      - { label: 'Descrição', name: 'description', widget: 'string', required: false }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Texto', name: 'body', widget: 'markdown' }
+      - { label: 'Áudio', name: 'audio', widget: 'string', pattern: ['[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?', "Link para o arquivo de áudio descrição do texto"] }
+  
+  # Coleção que contém todos os membros ativos da Seiva para que apareçam na parte de membros do site
+  - name: 'members'
+    label: 'Membro'
+    editor:
+      preview: false
+    folder: 'src/data/members'
+    create: true
+    slug: '{{name}}'
+    locale: 'pt'
+    fields:
+      - { label: 'Identificador', name: 'templateKey', widget: hidden, default: member }
+      - { name: 'name', label: 'Nome', widget: string }
+      - label: 'Grupo Administrativo'
+        name: 'ga'
+        widget: select
+        options: ['Comercial & Projetos', 'Gestão de Talentos', 'Presidência', 'Marketing', 'Publicidade & Propaganda', 'Financeiro']
+      - label: 'Cargo'
+        name: 'cargo'
+        widget: select
+        options: ['Sênior', 'Júnior', 'Conselheiro', 'Conselheira', 'Diretor', 'Diretora', 'Presidente', 'Vice-Presidente']
+      - { name: 'memberImage', label: 'Foto', widget: image }
+
+  # Arquivos com descrições de nossos serviços prestados
+  - name: 'services'
+    label: 'Serviços'
+    folder: 'src/data/services'
+    create: true
+    slug: '{{name}}'
+    editor:
+      preview: false
+    locale: 'pt'
+    fields:
+      - { label: 'Identificador', name: 'templateKey', widget: hidden, default: service }
+      - { label: 'Nome', name: 'name', widget: string }
+      - { label: 'Descrição', name: 'description', widget: markdown }
+      - { label: 'Imagem', name: 'image', widget: image }
+  
+  # Arquivo com nossas parcerias
+  - name: 'reviews'
+    label: 'Comentários Parcerias'
+    folder: 'src/data/reviews'
+    create: true
+    locale: 'pt'
+    slug: '{{title}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Identificador', name: 'templateKey', widget: hidden, default: review }
+      - { label: 'Nome', name: 'title', widget: string }
+      - { label: 'Nome da Pessoa', name: 'customerName', widget: string }
+      - { label: 'Cargo da Pessoa', name: 'customerTitle', widget: string }
+      - { label: 'Logo Parceiro', name: 'customerImage', widget: image }
+      - { label: 'Comentário', name: 'comment', widget: markdown }
+
+  # Arquivo contento nossas parcerias e serviços que realizamos para elas
+  - name: 'partners'
+    label: 'Parcerias'
+    folder: 'src/data/partners'
+    create: true
+    locale: 'pt'
+    slug: '{{title}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Identificador', name: 'templateKey', widget: hidden, default: partner }
+      - { label: 'Nome', name: 'title', widget: string }
+      - { label: 'Descrição', name: 'description', widget: markdown }
+    

@@ -1,0 +1,96 @@
+.input-container {
+  margin-bottom: 1rem;
+}
+
+.input-container > label {
+  display: block;
+
+  color: black;
+  font-weight: bold;
+  text-align: left;
+
+  margin-bottom: 0.5rem;
+}
+
+.input-container > label > input,
+.input-container > label > textarea {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  width: 100%;
+
+  appearance: none;
+
+  border-width: 1px;
+  border-radius: 0.25rem;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  color: rgb(55 65 81);
+  line-height: 1.25;
+}
+
+.input-container > label > input:focus,
+.input-container > label > textarea:focus {
+  outline: none;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.45);
+}
+
+.input-container > label > textarea {
+  min-height: 300px;
+}
+
+.form-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-top: 2rem;
+}
+
+.form-info-container p {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  color: var(--color-black) !important;
+  font-family: var(--font-family-serif);
+  font-weight: bold;
+}
+
+.form-info-container a > span {
+  margin-left: 1rem;
+}
+
+.form-button {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.contact-form-container > form {
+  flex: 1 1 0%;
+}
+
+@media (min-width: 768px) {
+  .contact-form-container {
+    flex-direction: row;
+  }
+
+  .contact-form-container > form {
+    margin-right: 4rem;
+  }
+
+  .form-info-container {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,15 @@
+.container {
+  padding: 0 3rem;
+}
+
+.container p {
+  width: 100%;
+  text-align: justify;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+.container p span {
+  color: var(--color-primary);
+  font-weight: bold;
+}

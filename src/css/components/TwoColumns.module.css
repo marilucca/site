@@ -1,0 +1,56 @@
+.container {}
+
+.container + .container {
+  margin-top: 2rem;
+}
+
+.left-container {}
+
+.right-container {}
+
+.container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+} 
+
+.left-container p,
+.right-container p {
+  color: var(--color-black);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-reversed {
+    flex-direction: row-reverse;
+  }
+
+  .left-container {
+    width: 50%;
+    padding-right: 2rem;
+  }
+
+  .container-reversed .left-container {
+    padding-right: 0;
+    padding-left: 2rem;
+  }
+
+  .right-container {
+    width: 50%;
+    padding-left: 2rem;
+  }
+
+  .container-reversed .right-container {
+    padding-left: 0;
+    padding-right: 2rem;
+  }
+
+  .container + .container {
+    margin-top: 5rem;
+  }
+}

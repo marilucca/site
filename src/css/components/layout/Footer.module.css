@@ -1,4 +1,4 @@
-.content-container {
+.contentContainer {
   display: flex;
   flex-direction: flex;
   justify-content: space-between;
@@ -9,30 +9,30 @@
   margin-top: 3rem;
 }
 
-.content-container h2 {
+.contentContainer h2 {
   margin: 0;
   font-size: var(--font-size-xl);
   line-height: var(--line-height-xl);
   font-weight: normal;
 }
 
-.logo-container {
+.logoContainer {
   display: flex;
   height: 80px;
   gap: 1rem;
 }
 
-.logo-container p {
+.logoContainer p {
   margin: 0;
 }
 
-.logo-container p:first-child {
+.logoContainer p:first-child {
   font-weight: bold;
   font-size: var(--font-size-lg);
   line-height: var(--line-height-lg);
 }
 
-.links-container {
+.linksContainer {
   list-style: none;
   margin: 0;
   padding: 0;

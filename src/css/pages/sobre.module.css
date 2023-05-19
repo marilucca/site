@@ -6,7 +6,7 @@ p, h2, ul {
   padding: 0 3rem;
 }
 
-.last-container {
+.lastContainer {
   padding: 0 3rem;
   margin-bottom: 3rem;
 }
@@ -25,14 +25,14 @@ p, h2, ul {
   margin: 0;
 }
 
-.members-container {
+.membersContainer {
   display: grid;
   align-self: center;
   gap: 2rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .members-container {
+  .membersContainer {
     grid-template-columns: repeat(3, 1fr);
   }
 }

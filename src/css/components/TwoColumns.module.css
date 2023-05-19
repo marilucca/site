@@ -4,9 +4,9 @@
   margin-top: 2rem;
 }
 
-.left-container {}
+.leftContainer {}
 
-.right-container {}
+.rightContainer {}
 
 .container img {
   width: 100%;
@@ -14,8 +14,8 @@
   object-fit: cover;
 } 
 
-.left-container p,
-.right-container p {
+.leftContainer p,
+.rightContainer p {
   color: var(--color-black);
 }
 
@@ -26,26 +26,26 @@
     align-items: center;
   }
 
-  .container-reversed {
+  .containerReversed {
     flex-direction: row-reverse;
   }
 
-  .left-container {
+  .leftContainer {
     width: 50%;
     padding-right: 2rem;
   }
 
-  .container-reversed .left-container {
+  .containerReversed .leftContainer {
     padding-right: 0;
     padding-left: 2rem;
   }
 
-  .right-container {
+  .rightContainer {
     width: 50%;
     padding-left: 2rem;
   }
 
-  .container-reversed .right-container {
+  .containerReversed .rightContainer {
     padding-left: 0;
     padding-right: 2rem;
   }

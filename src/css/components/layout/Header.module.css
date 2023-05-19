@@ -1,19 +1,17 @@
-.navbar-container {
+.navbarContainer {
   position: fixed;
   top: 0;
 
   background-color: var(--color-white);
   z-index: 50;
 
-  width: 100%;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
   padding: 0 1rem;
+
+  width: 100%;
 }
 
-.navbar-container > nav {
-  width: 100%;
-
+.navbarContainer > nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +22,7 @@
   padding: 1rem;
 }
 
-.logo-container {
+.logoContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -35,7 +33,7 @@
   width: 100%;
 }
 
-.logo-wrapper {
+.logoWrapper {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -43,7 +41,7 @@
   text-decoration: none;
 }
 
-.hamburger-menu {
+.hamburgerMenu {
   outline: none;
   border: none;
   background-color: transparent;
@@ -53,15 +51,15 @@
   cursor: pointer;
 }
 
-.hamburger-menu:focus-within {
+.hamburgerMenu:focus-within {
   box-shadow: inset 0 0 0 2px var(--color-primary);
 }
 
-.hamburger-menu:active {
+.hamburgerMenu:active {
   color: var(--color-primary-dark);
 }
 
-.links-wrapper {
+.linksWrapper {
   position: fixed;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
@@ -79,62 +77,60 @@
   background-color: var(--color-white);
 }
 
-.links-wrapper-active {
+.linksWrapperActive {
   transform: translateX(0%);
   transition: transform 0.3s ease-in-out;
 }
 
-.links-wrapper > ul {
+.linksWrapper > ul {
   list-style: none;
   margin: 0;
   padding: 0;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
-
-  height: 80%;
-  margin-right: 1rem;
+  gap: 2rem;
 }
 
-.links-wrapper a {
+.linksWrapper a {
   text-decoration: none;
 }
 
 @media screen and (min-width: 1024px) {
-  .logo-container {
-    width: 30%;
+  .logoContainer {
+    max-width: fit-content;
     margin-right: auto;
   }
 
-  .navbar-container {
+  .navbarContainer {
     padding: 0 4rem;
   }
 
-  .hamburger-menu {
+  .hamburgerMenu {
     display: none;
   }
 
-  .links-wrapper {
+  .linksWrapper {
     position: static;
     transform: translateX(0%);
     transition: none;
+    width: fit-content;
 
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
 
     height: auto;
     background-color: transparent;
   }
 
-  .links-wrapper > ul {
+  .linksWrapper > ul {
     flex-direction: row;
     align-items: center;
 
-    width: 70%;
+    /* width: 70%; */
+    margin-right: 2rem;
     height: auto;
   }
 }

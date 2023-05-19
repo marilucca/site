@@ -10,7 +10,7 @@
   }
 }
 
-.card-container {
+.cardContainer {
   border: 1px solid rgb(229 231 235);
   border-radius: 0.25rem;
 
@@ -25,7 +25,7 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-.card-title {
+.cardTitle {
   font-size: var(--font-size-2xl);
   line-height: var(--line-height-2xl);
   font-family: 'Montserrat', sans-serif;
@@ -34,12 +34,12 @@
   margin: 1rem 0;
 }
 
-.card-content {
+.cardContent {
   color: var(--color-black);
   text-align: center;
 }
 
-.card-content ul {
+.cardContent ul {
   list-style: none;
   padding: 0;
   margin: 0;

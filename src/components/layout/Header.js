@@ -58,7 +58,7 @@ export default function Header() {
             <AnchorLink to="/blog">Blog</AnchorLink>
           </ul>
 
-          <Button to="/#contact">Entre em contato</Button>
+          <Button to="/#contato">Entre em contato</Button>
         </div>
       </nav>
     </header>

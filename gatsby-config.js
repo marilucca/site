@@ -1,3 +1,6 @@
+const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   siteMetadata: {
     title: `Seiva Júnior`,
@@ -28,6 +31,22 @@ module.exports = {
     //     enableWebVitalsTracking: true,
     //   },
     // },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          tailwindcss(`${__dirname}/tailwind.config.js`),
+          autoprefixer,
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: [`src/css/tailwind.css`],
+      },
+    },
     {
       resolve: 'gatsby-omni-font-loader',
       options: {

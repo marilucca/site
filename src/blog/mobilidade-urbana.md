@@ -4,7 +4,9 @@ title: Mobilidade Urbana
 featuredImage: ../../static/images/uploads/capa-mobilidadeurbana.png
 date: 2023-04-12T17:09:02.489Z
 tags:
-  - mobilidadeurbanamodaisdetransporteinfraestrutura
+  - mobilidade urbana
+  - modais de transporte
+  - infraestrutura
 audio: https://drive.google.com/drive/folders/1-mfy2JIGTwOfrqRN0KaP_XrK485lyTWW?usp=sharing
 ---
 

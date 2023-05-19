@@ -22,7 +22,6 @@ export const blogListQuery = graphql`
         frontmatter {
           date
           title
-          description
           tags
           featuredImage {
             relativePath
@@ -47,7 +46,7 @@ const BlogList = ({ data, pageContext }) => {
         <section className="mt-8 pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
           <Bio />
           <p>
-            Ainda não possuimos nenhum texto em nosso blog. Logo adicionaremos
+            Ainda não possuímos nenhum texto em nosso blog. Logo adicionaremos
             mais textos.
           </p>
         </section>

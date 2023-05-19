@@ -3,7 +3,10 @@ title: Carbono de show
 featuredImage: ../../static/images/uploads/1.png
 date: 2023-04-27T21:15:51.683Z
 tags:
-  - showsustentávelcoldplaypegadadecarbonocalculodecarbono
+  - show sustentável
+  - cold play
+  - pegada de carbono
+  - calculo de carbono
 audio: https://drive.google.com/drive/folders/1JgR-1w8IicbvJVyQllHY4XrTNzHfJjHr?usp=sharing
 templateKey: blog
 ---

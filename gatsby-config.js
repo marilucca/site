@@ -109,7 +109,6 @@ module.exports = {
             },
           },
           `gatsby-remark-embed-spotify`,
-          `gatsby-remark-relative-images`,
         ],
       },
     },

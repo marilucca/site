@@ -4,7 +4,10 @@ title: 'Transição Energética: uma possível solução para o problema climát
 featuredImage: ../../static/images/uploads/transição-energética.png
 date: 2023-03-03T19:05:04.229Z
 tags:
-  - Transiçãoenergeticafonterenovaveissustentabilidademudançasclimaticas
+  - Transição energética
+  - fontes renováveis
+  - sustentabilidade
+  - mudanças climáticas
 audio: https://www.seivajr.com/
 ---
 

@@ -25,10 +25,15 @@ const Bio = () => {
   return (
     <div className={container}>
       <div className={logoContainer}>
-        <StaticImage src="../images/logo-seiva.png" width={48} height={48} />
-        <p>
-          <strong>{author.name}</strong> {author.summary}
-        </p>
+        <StaticImage src="../../static/images/logo-seiva.png" width={48} height={48} />
+        <div>
+          <p>
+            <strong>{author.name}</strong>
+          </p>
+          <p>
+            {author.summary}
+          </p>
+        </div>
       </div>
       <Socials />
     </div>

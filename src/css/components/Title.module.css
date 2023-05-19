@@ -3,4 +3,6 @@
   line-height: var(--line-height-4xl);
   text-align: center;
   align-self: center;
+
+  margin: 1rem 0;
 }

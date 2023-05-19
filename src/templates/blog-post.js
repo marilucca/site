@@ -7,6 +7,22 @@ import Layout from '../components/layout/Layout';
 import Seo from '../components/Seo';
 import Tag from '../components/Tag';
 
+export const pageQuery = graphql`
+  query BlogPostBySlug($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      excerpt
+      html
+      frontmatter {
+        title
+        date
+        tags
+        audio
+      }
+    }
+  }
+`;
+
 const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
 
@@ -20,9 +36,16 @@ const BlogPostTemplate = ({ data }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <section className="pt-20 md:pt-40 container mx-auto px-8 lg:px-32 lg:flex">
-        <article className="blog-article-container" itemScope itemType="http://schema.org/Article">
+        <article
+          className="blog-article-container"
+          itemScope
+          itemType="http://schema.org/Article"
+        >
           <header className="mb-4">
-            <h1 className="mb-0 text-primary-default text-4xl" itemProp="headline">
+            <h1
+              className="mb-0 text-primary-default text-4xl"
+              itemProp="headline"
+            >
               {post.frontmatter.title}
             </h1>
             <p className="text-md">{date}</p>
@@ -53,20 +76,3 @@ const BlogPostTemplate = ({ data }) => {
 };
 
 export default BlogPostTemplate;
-
-export const pageQuery = graphql`
-  query BlogPostBySlug($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      excerpt
-      html
-      frontmatter {
-        title
-        date
-        description
-        tags
-        audio
-      }
-    }
-  }
-`;

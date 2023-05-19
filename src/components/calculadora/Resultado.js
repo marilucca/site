@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { dados, calcularEnergia } from '../../data/calculadora';
 
 const Resultado = ({
@@ -29,13 +31,7 @@ const Resultado = ({
 
         <p>
           <span className="results-type-text">Computador:</span>{' '}
-          {(dados.kgCarbono.porEnergia * calcularEnergiaComputador()).toFixed(4)} kg de CO
-          <sub>2</sub> por dia.
-        </p>
-
-        <p>
-          <span className="results-type-text">Tablet:</span>{' '}
-          {(dados.kgCarbono.porEnergia * calcularEnergia(dados.potencias.tablet, tablet)).toFixed(
+          {(dados.kgCarbono.porEnergia * calcularEnergiaComputador()).toFixed(
             4
           )}{' '}
           kg de CO
@@ -43,9 +39,20 @@ const Resultado = ({
         </p>
 
         <p>
+          <span className="results-type-text">Tablet:</span>{' '}
+          {(
+            dados.kgCarbono.porEnergia *
+            calcularEnergia(dados.potencias.tablet, tablet)
+          ).toFixed(4)}{' '}
+          kg de CO
+          <sub>2</sub> por dia.
+        </p>
+
+        <p>
           <span className="results-type-text">Ventilador:</span>{' '}
           {(
-            (dados.kgCarbono.porEnergia * calcularEnergia(dados.potencias.ventilador, ventilador)) /
+            (dados.kgCarbono.porEnergia *
+              calcularEnergia(dados.potencias.ventilador, ventilador)) /
             pessoasVentilador
           ).toFixed(4)}{' '}
           kg de CO
@@ -66,7 +73,8 @@ const Resultado = ({
         <p>
           <span className="results-type-text">Impressora:</span>{' '}
           {(
-            (dados.kgCarbono.porEnergia * calcularEnergia(dados.potencias.impressora, impressora)) /
+            (dados.kgCarbono.porEnergia *
+              calcularEnergia(dados.potencias.impressora, impressora)) /
             pessoasImpressora
           ).toFixed(4)}{' '}
           kg de CO
@@ -75,9 +83,10 @@ const Resultado = ({
 
         <p>
           <span className="results-type-text">Celular:</span>{' '}
-          {(dados.kgCarbono.porEnergia * calcularEnergia(dados.potencias.celular, celular)).toFixed(
-            4
-          )}{' '}
+          {(
+            dados.kgCarbono.porEnergia *
+            calcularEnergia(dados.potencias.celular, celular)
+          ).toFixed(4)}{' '}
           kg de CO
           <sub>2</sub> por dia.
         </p>
@@ -87,7 +96,8 @@ const Resultado = ({
         <h5 className="results-division-title">Internet 📡</h5>
         <p>
           {(
-            (dados.kgCarbono.porEnergia * calcularEnergia(dados.potencias.roteador, roteador)) /
+            (dados.kgCarbono.porEnergia *
+              calcularEnergia(dados.potencias.roteador, roteador)) /
             pessoasRoteador
           ).toFixed(4)}{' '}
           kg de CO<sub>2</sub> por dia.
@@ -97,8 +107,11 @@ const Resultado = ({
       <div id={`${slug}-luz`} className="mt-4">
         <h5 className="results-division-title">Luz 💡</h5>
         <p>
-          {((dados.kgCarbono.porEnergia * calcularEnergiaLuz()) / pessoasLampada).toFixed(4)} kg de
-          CO
+          {(
+            (dados.kgCarbono.porEnergia * calcularEnergiaLuz()) /
+            pessoasLampada
+          ).toFixed(4)}{' '}
+          kg de CO
           <sub>2</sub> por dia.
         </p>
       </div>

@@ -218,7 +218,7 @@ export default function Index({ data }) {
                 </label>
               </div>
 
-              <Button size="lg" className={formButton}>
+              <Button size="lg" className={formButton} asButton>
                 Enviar
               </Button>
             </form>

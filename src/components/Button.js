@@ -22,11 +22,20 @@ export default function Button({
   className = '',
   size,
   to,
+  asButton = false,
 }) {
   const sizeStyles = sizes[size] || sizes.default;
   const typeStyles = type === 'filled' ? buttonFilled : buttonOutlined;
 
   const classNames = `${buttonBase} ${sizeStyles} ${typeStyles} ${className}`;
+
+  if (asButton) {
+    return (
+      <button className={classNames} type="submit">
+        {children}
+      </button>
+    );
+  }
 
   return (
     <AnchorLink className={classNames} to={to}>

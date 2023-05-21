@@ -30,6 +30,8 @@
 
   color: rgb(55 65 81);
   line-height: 1.25;
+
+  font-weight: normal;
 }
 
 .inputContainer > label > input:focus,

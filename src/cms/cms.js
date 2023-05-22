@@ -3,8 +3,12 @@
  * extension registration methods, such as `registerWidget` and
  * `registerPreviewTemplate`.
  */
+import '../css/editor.css';
+
 import CMS from 'netlify-cms-app';
 import { pt } from 'netlify-cms-locales';
+
+import ImageWithCaption from './ImageWithCaption';
 
 /**
  * Any imported styles should be automatically be applied to the editor preview
@@ -15,7 +19,7 @@ import { pt } from 'netlify-cms-locales';
  * https://www.netlifycms.org/docs/beta-features/#raw-css-in-registerpreviewstyle
  * All of the example imports below would result in styles being applied to the
  * preview pane.
- */
+//  */
 // import 'module-that-imports-styles.js';
 // import 'styles.scss';
 // import '../other-styles.css';
@@ -33,3 +37,4 @@ import { pt } from 'netlify-cms-locales';
 // CMS.registerWidget(`image-gallery`, ImageGalleryWidget, ImageGalleryPreview);
 
 CMS.registerLocale('pt', pt);
+CMS.registerEditorComponent(ImageWithCaption);

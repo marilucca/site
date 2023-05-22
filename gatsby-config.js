@@ -114,18 +114,18 @@ module.exports = {
     },
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-fontawesome-css`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `Seiva Júnior`,
-    //     short_name: `Seiva Júnior`,
-    //     description: `Seiva Júnior Consultoria em Sustentabilidade`,
-    //     start_url: `/`,
-    //     background_color: `#ffffff`,
-    //     theme_color: `#508f38`,
-    //     display: `minimal-ui`,
-    //     icon: 'src/images/logo-seiva.png',
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Seiva Júnior`,
+        short_name: `Seiva Júnior`,
+        description: `Seiva Júnior Consultoria em Sustentabilidade`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#508f38`,
+        display: `minimal-ui`,
+        icon: 'static/images/logo-seiva.png',
+      }
+    }
   ],
 };

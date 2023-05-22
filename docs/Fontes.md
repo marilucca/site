@@ -31,13 +31,13 @@ Para adicionar uma fonte do Google Fonts, primeiro precisamos ir até o site (fo
 
 ```js
 {
-    web: [
-        // ...outras fontes
-        {
-            file: '<link da fonte do Google Fonts>',
-            name: 'Nome da fonte'
-        }
-    ]
+  web: [
+    // ...outras fontes
+    {
+      file: '<link da fonte do Google Fonts>',
+      name: 'Nome da fonte',
+    },
+  ];
 }
 ```
 
@@ -47,13 +47,13 @@ Para utilizar arquivos de fontes locais, realizamos um procedimento similar ao a
 
 ```js
 {
-    custom: [
-        // ...outras fontes
-        {
-            file: '<caminho para o arquivo de fonte>',
-            name: 'Nome da Fonte'
-        }
-    ]
+  custom: [
+    // ...outras fontes
+    {
+      file: '<caminho para o arquivo de fonte>',
+      name: 'Nome da Fonte',
+    },
+  ];
 }
 ```
 
@@ -63,7 +63,7 @@ Para aplicar a fonte aos nossos elementos HTML, primiero devemos criar um estilo
 
 ```css
 .minha-fonte {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 ```
 
@@ -72,18 +72,25 @@ Depois de criar nosso estilo no arquivo CSS, devemos aplicá-lo em algum element
 Para aplicar nosso estilo em algum elemento HTML, abra o arquivo que ele esteja localizado e inclua o identificador do estilo na propriedade **className** do seu elemento HTML. Exemplo:
 
 Alterando a fonte de um parágrafo na página inicial (`src/pages/index.js`)
+
 ```jsx
-<p className="minha-fonte">
-    Meu texto aqui
-</p>
+<p className="minha-fonte">Meu texto aqui</p>
 ```
 
 Outra forma de mudar a fonte, é mudá-la em todos os elementos HTML responsáveis pelos textos do site. No nosso arquivo de estilos (`src/css/styles.css`), podemos fazer a seguinte regra de estilo:
 
 ```css
-h1, h2, h3, h4, h5, h6, p, div, span {
-    font-family: 'Minha Fonte', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span {
+  font-family: 'Minha Fonte', sans-serif;
 }
 ```
 
-Essa regra seleciona todos os elementos HTML comumente utilizados para renderizar textos e muda a fonte que usam. 
+Essa regra seleciona todos os elementos HTML comumente utilizados para renderizar textos e muda a fonte que usam.

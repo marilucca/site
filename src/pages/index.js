@@ -190,6 +190,12 @@ export default function Index({ data }) {
               data-netlify-honeypot="bot-field"
               action="/sucesso"
             >
+              <input
+                type="hidden"
+                name="form-name"
+                value="Formulário de Contato"
+              />
+
               <div className={inputContainer}>
                 <label htmlFor="name">
                   Nome

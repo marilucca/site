@@ -119,13 +119,12 @@ export default function Index({ data }) {
               <CardTitle>Valores</CardTitle>
               <CardContent>
                 <ul>
-                  <li>Sustentabilidade</li>
+                  <li>Compromisso com o cliente</li>
                   <li>Transparência</li>
-                  <li>Diversidade</li>
-                  <li>Interdisciplinaridade</li>
-                  <li>Integridade</li>
-                  <li>Comprometimento</li>
-                  <li>Respeito</li>
+                  <li>Sinergia</li>
+                  <li>Proatividade</li>
+                  <li>Inconformismo</li>
+                  <li>Desenvolvimento Contínuo</li>
                 </ul>
               </CardContent>
             </Card>

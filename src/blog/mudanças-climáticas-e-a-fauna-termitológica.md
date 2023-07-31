@@ -9,6 +9,7 @@ tags:
   - decompositores
   - extinção
 audio: https://alunoufabcedu.sharepoint.com/:v:/s/Marketing/Ea-TJ7aaO8VBpfQzAEJNHVYBcWN5SltXdo2JDTU6L19rdg?e=tSdRgZ&download=1
+templateKey: blog
 ---
 Segundo o *Painel Intergovernamental sobre Mudanças* Climáticas (IPCC, na sigla em inglês) o aquecimento global vem causando mudanças significativas nos ecossistemas, reduzindo a diversidade da fauna e da flora. Além disso, o aumento da temperatura média observada está relacionado com o crescimento das concentrações de gases de efeito estufa na atmosfera resultante de ações humanas. 
 

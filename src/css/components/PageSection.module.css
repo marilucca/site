@@ -1,5 +1,5 @@
 .sectionContainer {
-  padding: 5rem 0;
+  padding-top: 5rem;
 
   position: relative;
   display: flex;
@@ -8,8 +8,4 @@
   align-items: center;
 
   color: var(--color-white);
-}
-
-main section:first-child {
-  margin-top: 5rem;
 }

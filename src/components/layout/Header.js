@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { StaticImage } from 'gatsby-plugin-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,16 +6,18 @@ import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '../Button';
 import {
-  navbarContainer,
+  container,
+  navigationContainer,
   logoContainer,
-  logoWrapper,
   hamburgerMenu,
-  linksWrapper,
-  linksWrapperActive,
+  linksContainer,
+  open,
+  closed,
 } from '../../css/components/layout/Header.module.css';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef(null);
 
   const toggle = () => setIsOpen((state) => !state);
   const handleKeyDown = (event) => {
@@ -24,42 +26,40 @@ export default function Header() {
     }
   };
 
+  const linksClassName = `${linksContainer} ${isOpen ? open : closed}`;
+
   return (
-    <header className={navbarContainer}>
-      <nav>
-        <div className={logoContainer}>
-          <AnchorLink to="/" className={logoWrapper}>
-            <StaticImage
-              src="../../../static/images/logo-seiva.png"
-              alt="Logo da Seiva Jr."
-              width={48}
-              height={48}
-            />
-            Seiva Jr.
-          </AnchorLink>
+    <header className={container}>
+      <nav ref={navRef} className={navigationContainer}>
+        <AnchorLink className={logoContainer} to="/">
+          <StaticImage
+            src="../../../static/images/logo-seiva.png"
+            alt="Logo da Seiva Jr."
+            width={64}
+            height={64}
+          />
+          <span>Seiva Jr.</span>
+        </AnchorLink>
 
-          <button
-            type="button"
-            className={hamburgerMenu}
-            onClick={toggle}
-            onKeyDown={handleKeyDown}
-          >
-            <FontAwesomeIcon icon={isOpen ? faClose : faBars} size="lg" />
-          </button>
-        </div>
+        <button
+          type="button"
+          aria-label="Abrir menu"
+          className={hamburgerMenu}
+          onClick={toggle}
+          onKeyDown={handleKeyDown}
+        >
+          <FontAwesomeIcon icon={isOpen ? faClose : faBars} size="lg" />
+        </button>
 
-        <div className={`${linksWrapper} ${isOpen ? linksWrapperActive : ''}`}>
-          <ul>
-            <AnchorLink to="/">Início</AnchorLink>
-            <AnchorLink to="/sobre">Sobre</AnchorLink>
-            <AnchorLink to="/portfolio">Portfólio</AnchorLink>
-            <AnchorLink to="/processo-seletivo">Processo seletivo</AnchorLink>
-            <AnchorLink to="/calculadora">Calculadora carbônica</AnchorLink>
-            <AnchorLink to="/blog">Blog</AnchorLink>
-          </ul>
+        <ul style={{ top: navRef.current?.clientHeight || '8vh' }} className={linksClassName}>
+          <li><AnchorLink to="/">Início</AnchorLink></li>
+          <li><AnchorLink to="/sobre">Sobre</AnchorLink></li>
+          <li><AnchorLink to="/portfolio">Portfólio</AnchorLink></li>
+          <li><AnchorLink to="/calculadora">Calculadora carbônica</AnchorLink></li>
+          <li><AnchorLink to="/blog">Blog</AnchorLink></li>
+          <li><Button to="/#contato">Entre em contato</Button></li>
+        </ul>
 
-          <Button to="/#contato">Entre em contato</Button>
-        </div>
       </nav>
     </header>
   );

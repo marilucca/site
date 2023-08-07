@@ -34,9 +34,7 @@ import {
 
 export const pageData = graphql`
   query IndexPageServicesQuery {
-    partners: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "partner" } } }
-    ) {
+    partners: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "partner" } } }) {
       nodes {
         id
         html
@@ -46,9 +44,7 @@ export const pageData = graphql`
       }
     }
 
-    reviews: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "review" } } }
-    ) {
+    reviews: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "review" } } }) {
       nodes {
         frontmatter {
           title
@@ -77,9 +73,9 @@ export default function Index({ data }) {
           <h1>Ideias Sustentáveis integrando o mundo</h1>
 
           <p>
-            A Seiva Jr. acredita que, juntos, podemos tornar o mundo mais
-            sustentável, criando uma relação de respeito com o meio ambiente. É
-            possível fazer as coisas de um jeito diferente!
+            A Seiva Jr. acredita que, juntos, podemos tornar o mundo mais sustentável, criando uma
+            relação de respeito com o meio ambiente. É possível fazer as coisas de um jeito
+            diferente!
           </p>
 
           <ButtonGroup>
@@ -101,17 +97,16 @@ export default function Index({ data }) {
             <Card>
               <CardTitle>Missão</CardTitle>
               <CardContent>
-                Promover soluções sustentáveis e inovadoras através de equipes
-                interdisciplinares comprometidas em integrar os espaços
-                acadêmico, empresarial e ambiental.
+                Promover soluções sustentáveis e inovadoras através de equipes interdisciplinares
+                comprometidas em integrar os espaços acadêmico, empresarial e ambiental.
               </CardContent>
             </Card>
 
             <Card>
               <CardTitle>Visão</CardTitle>
               <CardContent>
-                Ser uma empresa júnior reconhecida em âmbito nacional por sua
-                excelência em serviços de sustentabilidade.
+                Ser uma empresa júnior reconhecida em âmbito nacional por sua excelência em serviços
+                de sustentabilidade.
               </CardContent>
             </Card>
 
@@ -150,9 +145,7 @@ export default function Index({ data }) {
             ))}
           </Grid>
 
-          <h4 className={partnerSectionTitle}>
-            O que nossos clientes e parceiros estão dizendo
-          </h4>
+          <h4 className={partnerSectionTitle}>O que nossos clientes e parceiros estão dizendo</h4>
 
           <Grid>
             {reviews.map((review) => (
@@ -189,11 +182,7 @@ export default function Index({ data }) {
               data-netlify-honeypot="bot-field"
               action="/sucesso"
             >
-              <input
-                type="hidden"
-                name="form-name"
-                value="Formulário de Contato"
-              />
+              <input type="hidden" name="form-name" value="Formulário de Contato" />
 
               <div className={inputContainer}>
                 <label htmlFor="name">

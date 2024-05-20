@@ -223,7 +223,7 @@ export default function Index({ data }) {
               <p>Ou nos envie um email</p>
               <a href="mailto:contato@seivajr.com.br">
                 <FontAwesomeIcon icon={faEnvelope} />
-                <span>seiva.ambientaljr@gmail.com</span>
+                <span>vendas@seivajr.com</span>
               </a>
             </div>
           </div>
